@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* SWH palette */
+  --swh-bg: #0A0F1C;
+  --swh-bg-elev: #111827;
+  --swh-surface: #1A2332;
+  --swh-text: #F0F0F0;
+  --swh-text-muted: #9CA3AF;
+  --swh-gold: #C5A54E;
+  --swh-blue: #60A5FA;
+  --swh-border: #1F2937;
+
+  /* Semantic aliases */
+  --background: var(--swh-bg);
+  --foreground: var(--swh-text);
 }
 
 @theme inline {
+  /* Expose SWH tokens as Tailwind v4 color utilities */
+  --color-bg: var(--swh-bg);
+  --color-bg-elev: var(--swh-bg-elev);
+  --color-surface: var(--swh-surface);
+  --color-text: var(--swh-text);
+  --color-text-muted: var(--swh-text-muted);
+  --color-gold: var(--swh-gold);
+  --color-blue: var(--swh-blue);
+  --color-border: var(--swh-border);
+
+  /* Semantic aliases */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Font families (wired from next/font CSS variables on <html>) */
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--swh-bg);
+  color: var(--swh-text);
 }
+
+/* === TYPOGRAPHY === */
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-optical-sizing: auto;
+    font-variation-settings: "opsz" 144;
+  }
+
+  .text-heading {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.875rem, 3.5vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    font-optical-sizing: auto;
+  }
+
+  .text-subheading {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .text-body {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.1vw, 1.125rem);
+    line-height: 1.7;
+    color: var(--swh-text-muted);
+  }
+
+  .text-caption {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--swh-text-muted);
+  }
+}
+
