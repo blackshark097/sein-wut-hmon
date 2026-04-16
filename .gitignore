@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Playwright MCP
+.playwright-mcp/
+
+# Root-level PNGs (not those in public/)
+/*.png
