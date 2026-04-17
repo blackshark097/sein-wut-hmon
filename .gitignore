@@ -45,3 +45,7 @@ next-env.d.ts
 
 # Root-level PNGs (not those in public/)
 /*.png
+
+# design reference library (gitignored, not shipped)
+/docs/design-refs/
+

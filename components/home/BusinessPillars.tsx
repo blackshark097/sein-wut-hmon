@@ -67,21 +67,29 @@ export function BusinessPillars() {
       const root = containerRef.current;
       if (!root) return;
 
-      const cards = root.querySelectorAll(".swh-pillar-card");
+      const cards = gsap.utils.toArray<HTMLElement>(
+        root.querySelectorAll(".swh-pillar-card"),
+      );
       if (!cards.length) return;
 
-      gsap.from(cards, {
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        ease: "power3.out",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: root,
-          start: "top 75%",
-          once: true,
-        },
+      cards.forEach((card, index) => {
+        gsap.from(card, {
+          y: 40,
+          opacity: 0,
+          duration: 0.9,
+          ease: "power3.out",
+          delay: index * 0.08,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 92%",
+            once: true,
+          },
+        });
       });
+
+      // Recompute trigger positions once layout has settled so cards already
+      // in the viewport on load still progress to opacity 1.
+      requestAnimationFrame(() => ScrollTrigger.refresh());
     },
     { scope: containerRef }
   );
