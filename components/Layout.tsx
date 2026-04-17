@@ -21,12 +21,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
     const lenis = new Lenis({});
 
+    // Lenis drives scroll, so ScrollTrigger must read its position to stay in sync.
+    lenis.on("scroll", ScrollTrigger.update);
+
     const rafCallback = (time: number) => {
       lenis.raf(time * 1000);
     };
 
     gsap.ticker.add(rafCallback);
     gsap.ticker.lagSmoothing(0);
+    ScrollTrigger.refresh();
 
     return () => {
       gsap.ticker.remove(rafCallback);
