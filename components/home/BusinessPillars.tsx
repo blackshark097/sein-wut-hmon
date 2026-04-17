@@ -10,7 +10,15 @@ import { ArrowUpRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PILLARS = [
+type Pillar = {
+  name: string;
+  blurb: string;
+  href: string;
+  image: string | null;
+  placeholder?: { gradient: string; initial: string };
+};
+
+const PILLARS: Pillar[] = [
   {
     name: "Food & Agriculture",
     blurb: "Livestock feed, poultry, and veterinary products.",
@@ -21,13 +29,17 @@ const PILLARS = [
     name: "Fisheries",
     blurb: "Marine harvest from a twenty vessel fleet across Myanmar waters.",
     href: "/fisheries",
-    image: "/images/legacy/fishery-intro.jpg",
+    image: null,
+    placeholder: {
+      gradient: "from-[#071a2e] via-[#0b2a47] to-[#020814]",
+      initial: "F",
+    },
   },
   {
     name: "Trading & Distribution",
     blurb: "Nationwide reach through 14 branch offices and 145+ vehicles.",
     href: "/distribution",
-    image: "/images/legacy/distributing-intro.jpg",
+    image: "/images/legacy/distribution-map.jpg",
   },
   {
     name: "Industrial Inputs",
@@ -36,21 +48,13 @@ const PILLARS = [
     image: "/images/legacy/fertilizer-intro.jpg",
   },
   {
-    name: "Hospitality",
-    blurb: "Vista Heights, a modern residence in the heart of Yangon.",
-    href: "/hospitality",
-    image: null,
-  },
-  {
     name: "CSR",
     blurb: "Schools, disaster relief, and community investment.",
     href: "/csr",
     image:
       "/images/legacy/school-donation-north-shanstate-lasho-20150717-full.jpg",
   },
-] as const;
-
-type Pillar = (typeof PILLARS)[number];
+];
 
 export function BusinessPillars() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -107,7 +111,7 @@ export function BusinessPillars() {
             Our Portfolio
           </h2>
           <p className="text-body max-w-2xl mt-4">
-            Six integrated divisions operating across Myanmar&apos;s essential
+            Five integrated divisions operating across Myanmar&apos;s essential
             industries, from farm to distribution.
           </p>
         </div>
@@ -116,7 +120,7 @@ export function BusinessPillars() {
           ref={containerRef}
           className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
-          {PILLARS.map((pillar: Pillar) => (
+          {PILLARS.map((pillar) => (
             <Link
               key={pillar.name}
               href={pillar.href}
@@ -134,14 +138,14 @@ export function BusinessPillars() {
                 ) : (
                   <>
                     <div
-                      className="absolute inset-0 bg-gradient-to-br from-surface via-bg-elev to-bg"
+                      className={`absolute inset-0 bg-gradient-to-br ${pillar.placeholder?.gradient ?? "from-surface via-bg-elev to-bg"}`}
                       aria-hidden="true"
                     />
                     <span
                       className="absolute inset-0 flex items-center justify-center font-display text-gold/40 text-6xl"
                       aria-hidden="true"
                     >
-                      VH
+                      {pillar.placeholder?.initial ?? pillar.name.charAt(0)}
                     </span>
                   </>
                 )}
