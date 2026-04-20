@@ -95,7 +95,7 @@ export function FisheriesOperations() {
             className="mt-5 font-display font-medium tracking-[-0.02em] text-text"
             style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", lineHeight: 1.08 }}
           >
-            An end to end marine chain.
+            An end-to-end marine chain.
           </h2>
           <p className="mt-5 max-w-lg text-body text-text-muted">
             From vessel to port to buyer. Four connected capabilities, one

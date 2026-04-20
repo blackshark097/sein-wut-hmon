@@ -12,6 +12,7 @@ type Stat = {
   prefix?: string;
   unit?: string;
   preLabel?: string;
+  noGroup?: boolean;
   label: string;
 };
 
@@ -19,8 +20,11 @@ const STATS: Stat[] = [
   { value: 20, label: "Vessels in fleet" },
   { value: 10, prefix: "$", unit: "M", label: "Asset base" },
   { value: 2832, unit: "km", label: "Coastline worked" },
-  { value: 2000, preLabel: "Est.", label: "Operating since" },
+  { value: 2000, preLabel: "Since", noGroup: true, label: "Operating since" },
 ];
+
+const formatValue = (n: number, noGroup?: boolean) =>
+  noGroup ? String(n) : n.toLocaleString();
 
 export function FisheriesStats() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -38,7 +42,7 @@ export function FisheriesStats() {
       if (reduce) {
         STATS.forEach((stat, i) => {
           const el = numberRefs.current[i];
-          if (el) el.textContent = stat.value.toLocaleString();
+          if (el) el.textContent = formatValue(stat.value, stat.noGroup);
         });
         return;
       }
@@ -58,7 +62,7 @@ export function FisheriesStats() {
             duration: 2.2,
             ease: "power2.out",
             onUpdate: () => {
-              el.textContent = Math.round(proxy.v).toLocaleString();
+              el.textContent = formatValue(Math.round(proxy.v), stat.noGroup);
             },
           },
           0,

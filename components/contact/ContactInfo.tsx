@@ -9,7 +9,7 @@ const ADDRESS =
   "No-24, Phan Chat Won U Shwe Ohh St., Industrial Zone (2), Hlaing Thar Yar Township, Yangon";
 const PHONE_DISPLAY = "(+959) 73126116";
 const PHONE_HREF = "+95973126116";
-const EMAIL = "info@seinwuthmon.com";
+const EMAIL = "nwa@swh.com.mm";
 const DIRECTIONS_URL = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}`;
 
 export function ContactInfo() {
