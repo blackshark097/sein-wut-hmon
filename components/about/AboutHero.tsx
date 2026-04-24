@@ -32,7 +32,7 @@ export function AboutHero() {
         className="pointer-events-none absolute inset-0 bg-bg"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 80% 60% at 30% 0%, rgba(197,165,78,0.12), transparent 60%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(96,165,250,0.05), transparent 65%), linear-gradient(180deg, #0A0F1C 0%, #070B15 100%)",
+            "radial-gradient(ellipse 80% 60% at 30% 0%, rgba(0,173,238,0.12), transparent 60%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(96,165,250,0.05), transparent 65%), linear-gradient(180deg, #0A0F1C 0%, #070B15 100%)",
         }}
       />
 

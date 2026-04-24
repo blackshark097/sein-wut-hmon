@@ -26,7 +26,7 @@ export function FisheriesCta() {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 60% 80% at 50% 100%, rgba(96,165,250,0.08), transparent 65%), radial-gradient(ellipse 80% 50% at 50% 0%, rgba(197,165,78,0.05), transparent 60%), linear-gradient(180deg, var(--swh-bg) 0%, #060A14 100%)",
+            "radial-gradient(ellipse 60% 80% at 50% 100%, rgba(96,165,250,0.08), transparent 65%), radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,173,238,0.05), transparent 60%), linear-gradient(180deg, var(--swh-bg) 0%, #060A14 100%)",
         }}
       />
 

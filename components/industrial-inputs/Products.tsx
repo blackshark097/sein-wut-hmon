@@ -63,7 +63,8 @@ export function Products() {
             The product lines
           </h2>
           <p className="mt-4 max-w-2xl text-body text-text-muted">
-            Two core lines anchor the division, each built on long standing distribution partnerships.
+            Two core lines anchor the division, each built on long standing
+            distribution partnerships.
           </p>
         </div>
 
@@ -72,7 +73,7 @@ export function Products() {
             <motion.article
               key={product.name}
               {...fadeUp}
-              className="group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(197,165,78,0.25),0_24px_60px_-20px_rgba(197,165,78,0.2)]"
+              className="group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_24px_60px_-20px_rgba(0,173,238,0.2)]"
             >
               <div className="relative block aspect-[4/3] w-full">
                 {product.image ? (
@@ -108,7 +109,9 @@ export function Products() {
                 <h3 className="mt-3 font-display text-3xl leading-tight tracking-tight text-text md:text-4xl">
                   {product.name}
                 </h3>
-                <p className="mt-4 text-body text-text-muted">{product.blurb}</p>
+                <p className="mt-4 text-body text-text-muted">
+                  {product.blurb}
+                </p>
                 <ul className="mt-6 space-y-3">
                   {product.bullets.map((bullet) => (
                     <li

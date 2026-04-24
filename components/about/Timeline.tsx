@@ -32,12 +32,6 @@ const MILESTONES: Milestone[] = [
     description:
       "Sein Wut Hmon expands into marine harvest, building toward a twenty vessel fleet.",
   },
-  {
-    year: "YYYY",
-    title: "Vista Heights breaks ground",
-    description:
-      "The group diversifies into hospitality with Vista Heights, a modern residence in the heart of Yangon.",
-  },
 ];
 
 export function Timeline() {
@@ -54,7 +48,7 @@ export function Timeline() {
       }
 
       const items = gsap.utils.toArray<HTMLElement>(
-        containerRef.current.querySelectorAll(".swh-milestone")
+        containerRef.current.querySelectorAll(".swh-milestone"),
       );
 
       items.forEach((item) => {
@@ -73,7 +67,7 @@ export function Timeline() {
 
       requestAnimationFrame(() => ScrollTrigger.refresh());
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
@@ -83,10 +77,7 @@ export function Timeline() {
     >
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <p className="text-subheading text-gold">Heritage</p>
-        <h2
-          id="heritage-heading"
-          className="mt-4 text-heading text-text"
-        >
+        <h2 id="heritage-heading" className="mt-4 text-heading text-text">
           Milestones
         </h2>
         <p className="mt-4 max-w-2xl text-body text-text-muted">

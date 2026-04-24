@@ -118,7 +118,7 @@ export function BusinessPillars() {
             <Link
               key={pillar.name}
               href={pillar.href}
-              className="swh-pillar-card group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(197,165,78,0.25),0_24px_60px_-20px_rgba(197,165,78,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              className="swh-pillar-card group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_24px_60px_-20px_rgba(0,173,238,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
               <div className="relative block w-full aspect-[4/3]">
                 {pillar.image ? (

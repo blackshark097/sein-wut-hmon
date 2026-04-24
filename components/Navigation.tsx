@@ -100,7 +100,7 @@ export function Navigation() {
               aria-label="Current language: English"
               className="inline-flex items-center rounded-full border border-border/60 bg-bg-elev/40 p-1 text-sm font-sans tracking-wide"
             >
-              <span className="rounded-full px-3 py-1 text-text">EN</span>
+              <span className="rounded-full px-3 py-1 text-accent">EN</span>
               <span className="rounded-full px-3 py-1 text-text-muted">MM</span>
             </div>
 

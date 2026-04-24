@@ -29,10 +29,7 @@ export function ContactForm() {
   const formBlock = (
     <>
       <span className="text-subheading text-gold">Send a note</span>
-      <h2
-        id="contact-form-heading"
-        className="mt-4 text-heading text-text"
-      >
+      <h2 id="contact-form-heading" className="mt-4 text-heading text-text">
         Write to the head office
       </h2>
 
@@ -48,7 +45,8 @@ export function ContactForm() {
             <h3 className="font-display text-2xl text-text">Message queued</h3>
           </div>
           <p className="mt-4 text-body text-text-muted">
-            Thanks. The form isn&apos;t wired to a backend yet, but the address, phone, and email above reach the right desk.
+            Thanks. The form isn&apos;t wired to a backend yet, but the address,
+            phone, and email above reach the right desk.
           </p>
           <button
             type="button"
@@ -60,7 +58,11 @@ export function ContactForm() {
         </div>
       ) : (
         <>
-          <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-8" noValidate={false}>
+          <form
+            onSubmit={handleSubmit}
+            className="mt-10 flex flex-col gap-8"
+            noValidate={false}
+          >
             <div>
               <label htmlFor="contact-name" className={labelClass}>
                 Name
@@ -114,7 +116,7 @@ export function ContactForm() {
             <div>
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#0A0F1C] transition hover:bg-[#d4b762] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#0A0F1C] transition hover:bg-[#33C3F2] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:opacity-60"
               >
                 Send Message
                 <ArrowRight className="h-4 w-4" aria-hidden />

@@ -26,7 +26,8 @@ const INITIATIVES: Initiative[] = [
     eyebrow: "Emergency response",
     blurb:
       "Practical relief during floods, storms, and other community emergencies in Myanmar.",
-    image: "/images/legacy/donations-disaster-flood-ayeyarwadi-2015-08-08-thumb.jpg",
+    image:
+      "/images/legacy/donations-disaster-flood-ayeyarwadi-2015-08-08-thumb.jpg",
   },
   {
     name: "Community Development",
@@ -51,10 +52,7 @@ export function Initiatives() {
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <p className="text-subheading text-gold">Initiatives</p>
-        <h2
-          id="initiatives-heading"
-          className="mt-4 text-heading text-text"
-        >
+        <h2 id="initiatives-heading" className="mt-4 text-heading text-text">
           Where we contribute
         </h2>
 
@@ -70,7 +68,7 @@ export function Initiatives() {
                 ease: EASE,
                 delay: index * 0.07,
               }}
-              className="group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(197,165,78,0.25),0_24px_60px_-20px_rgba(197,165,78,0.2)]"
+              className="group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_24px_60px_-20px_rgba(0,173,238,0.2)]"
             >
               <div className="relative block w-full aspect-[4/3]">
                 {initiative.image ? (
@@ -91,7 +89,8 @@ export function Initiatives() {
                       className="absolute inset-0 flex items-center justify-center font-display text-gold/40 text-6xl"
                       aria-hidden="true"
                     >
-                      {initiative.placeholder?.initial ?? initiative.name.charAt(0)}
+                      {initiative.placeholder?.initial ??
+                        initiative.name.charAt(0)}
                     </span>
                   </>
                 )}

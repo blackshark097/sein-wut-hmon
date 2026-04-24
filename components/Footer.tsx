@@ -88,7 +88,7 @@ export function Footer() {
                 Rendered as static text today to avoid fake interactivity. */}
             <ul className="flex flex-col gap-3 text-sm">
               <li>
-                <span className="text-text">English</span>
+                <span className="text-accent">English</span>
               </li>
               <li>
                 <span className="text-text-muted">Myanmar</span>

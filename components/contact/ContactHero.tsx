@@ -31,7 +31,7 @@ export function ContactHero() {
         className="pointer-events-none absolute inset-0 bg-bg"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 80% 60% at 30% 0%, rgba(197,165,78,0.12), transparent 60%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(96,165,250,0.05), transparent 65%), linear-gradient(180deg, #0A0F1C 0%, #070B15 100%)",
+            "radial-gradient(ellipse 80% 60% at 30% 0%, rgba(0,173,238,0.12), transparent 60%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(96,165,250,0.05), transparent 65%), linear-gradient(180deg, #0A0F1C 0%, #070B15 100%)",
         }}
       />
 
@@ -47,10 +47,7 @@ export function ContactHero() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-36 pb-20 text-center sm:px-10 md:pt-40 md:pb-24">
-        <motion.span
-          {...fadeUp(0.1)}
-          className="text-subheading text-gold"
-        >
+        <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
           Contact
         </motion.span>
 

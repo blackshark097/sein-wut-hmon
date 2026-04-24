@@ -110,14 +110,14 @@ export function FisheriesOperations() {
           {OPS.map((op) => (
             <article
               key={op.num}
-              className="swh-fish-card group relative flex min-h-[380px] flex-col overflow-hidden border border-border/70 bg-bg-elev px-10 pt-12 pb-11 transition duration-500 hover:-translate-y-1 hover:border-gold/55 hover:bg-[#131c2f] hover:shadow-[0_0_0_1px_rgba(197,165,78,0.25),0_30px_60px_-20px_rgba(197,165,78,0.18)]"
+              className="swh-fish-card group relative flex min-h-[380px] flex-col overflow-hidden border border-border/70 bg-bg-elev px-10 pt-12 pb-11 transition duration-500 hover:-translate-y-1 hover:border-gold/55 hover:bg-[#131c2f] hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_30px_60px_-20px_rgba(0,173,238,0.18)]"
             >
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 style={{
                   backgroundImage:
-                    "radial-gradient(ellipse 60% 60% at 100% 0%, rgba(197,165,78,0.14), transparent 60%), radial-gradient(ellipse 80% 40% at 0% 100%, rgba(96,165,250,0.06), transparent 65%)",
+                    "radial-gradient(ellipse 60% 60% at 100% 0%, rgba(0,173,238,0.14), transparent 60%), radial-gradient(ellipse 80% 40% at 0% 100%, rgba(96,165,250,0.06), transparent 65%)",
                 }}
               />
 

@@ -28,7 +28,7 @@ export function FisheriesHero() {
         style={{
           backgroundImage: [
             "radial-gradient(ellipse 90% 60% at 20% 100%, rgba(96,165,250,0.18), transparent 55%)",
-            "radial-gradient(ellipse 70% 50% at 80% 10%, rgba(197,165,78,0.10), transparent 60%)",
+            "radial-gradient(ellipse 70% 50% at 80% 10%, rgba(0,173,238,0.10), transparent 60%)",
             "radial-gradient(ellipse 120% 80% at 50% 120%, rgba(10,30,56,0.9), transparent 70%)",
             "linear-gradient(180deg, #050914 0%, #0A1628 35%, #0A0F1C 70%, #04070E 100%)",
           ].join(","),
@@ -40,7 +40,7 @@ export function FisheriesHero() {
         className="pointer-events-none absolute inset-0 mix-blend-screen"
         style={{
           backgroundImage:
-            "linear-gradient(105deg, transparent 40%, rgba(96,165,250,0.04) 50%, transparent 60%), linear-gradient(95deg, transparent 55%, rgba(197,165,78,0.03) 62%, transparent 68%)",
+            "linear-gradient(105deg, transparent 40%, rgba(96,165,250,0.04) 50%, transparent 60%), linear-gradient(95deg, transparent 55%, rgba(0,173,238,0.03) 62%, transparent 68%)",
           opacity: 0.9,
         }}
       />
@@ -56,7 +56,7 @@ export function FisheriesHero() {
         className="pointer-events-none absolute left-[-10%] right-[-10%] bottom-[22%] h-px opacity-50"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(197,165,78,0.35), transparent)",
+            "linear-gradient(90deg, transparent, rgba(0,173,238,0.35), transparent)",
         }}
       />
 

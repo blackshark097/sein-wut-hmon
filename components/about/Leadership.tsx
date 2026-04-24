@@ -24,8 +24,7 @@ const LEADERS: Leader[] = [
   {
     title: "Chief Operating Officer",
     initial: "O",
-    brief:
-      "Owns cross group operations, from distribution to marine harvest and hospitality.",
+    brief: "Owns cross group operations, from distribution to marine harvest.",
   },
 ];
 
@@ -39,10 +38,7 @@ export function Leadership() {
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <p className="text-subheading text-gold">Leadership</p>
-        <h2
-          id="leaders-heading"
-          className="mt-4 text-heading text-text"
-        >
+        <h2 id="leaders-heading" className="mt-4 text-heading text-text">
           The people in charge
         </h2>
         <p className="mt-4 max-w-2xl text-body text-text-muted">

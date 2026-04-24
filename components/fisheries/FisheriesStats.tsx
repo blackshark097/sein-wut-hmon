@@ -82,7 +82,7 @@ export function FisheriesStats() {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 50% 80% at 0% 50%, rgba(96,165,250,0.05), transparent 60%), radial-gradient(ellipse 50% 80% at 100% 50%, rgba(197,165,78,0.04), transparent 60%)",
+            "radial-gradient(ellipse 50% 80% at 0% 50%, rgba(96,165,250,0.05), transparent 60%), radial-gradient(ellipse 50% 80% at 100% 50%, rgba(0,173,238,0.04), transparent 60%)",
         }}
       />
       <div
@@ -139,7 +139,7 @@ export function FisheriesStats() {
               className="mt-3.5 h-px w-full"
               style={{
                 background:
-                  "linear-gradient(to right, rgba(197,165,78,0.35), transparent)",
+                  "linear-gradient(to right, rgba(0,173,238,0.35), transparent)",
               }}
             />
             <div className="mt-4 text-subheading text-text-muted transition-colors duration-200 group-hover:text-text">

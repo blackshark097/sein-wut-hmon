@@ -2,14 +2,19 @@
 
 :root {
   /* SWH palette */
-  --swh-bg: #0A0F1C;
+  --swh-bg: #0a0f1c;
   --swh-bg-elev: #111827;
-  --swh-surface: #1A2332;
-  --swh-text: #F0F0F0;
-  --swh-text-muted: #9CA3AF;
-  --swh-gold: #C5A54E;
-  --swh-blue: #60A5FA;
-  --swh-border: #1F2937;
+  --swh-surface: #1a2332;
+  --swh-text: #f0f0f0;
+  --swh-text-muted: #9ca3af;
+  /* SWH logo cyan, sampled from public/images/legacy/logo.png. Gold is reserved for the GoldWyn brand. */
+  --swh-accent: #00adee;
+  --swh-accent-rgb: 0, 173, 238;
+  --swh-blue: #60a5fa;
+  --swh-border: #1f2937;
+
+  /* Legacy alias: preserves existing text-gold/bg-gold/border-gold utility classes and any direct var(--swh-gold) references. */
+  --swh-gold: var(--swh-accent);
 
   /* Semantic aliases */
   --background: var(--swh-bg);
@@ -23,7 +28,9 @@
   --color-surface: var(--swh-surface);
   --color-text: var(--swh-text);
   --color-text-muted: var(--swh-text-muted);
-  --color-gold: var(--swh-gold);
+  --color-accent: var(--swh-accent);
+  /* Legacy alias so existing *-gold utility classes keep resolving. */
+  --color-gold: var(--swh-accent);
   --color-blue: var(--swh-blue);
   --color-border: var(--swh-border);
 
@@ -87,4 +94,3 @@ body {
     color: var(--swh-text-muted);
   }
 }
-

@@ -45,10 +45,7 @@ export function EntityStructure() {
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <p className="text-subheading text-gold">Structure</p>
-        <h2
-          id="entities-heading"
-          className="mt-4 text-heading text-text"
-        >
+        <h2 id="entities-heading" className="mt-4 text-heading text-text">
           Companies in the group
         </h2>
         <p className="mt-4 max-w-2xl text-body text-text-muted">
@@ -67,7 +64,7 @@ export function EntityStructure() {
                 ease: [0.22, 1, 0.36, 1],
                 delay: index * 0.05,
               }}
-              className="group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev p-8 md:p-10 transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(197,165,78,0.25),0_24px_60px_-20px_rgba(197,165,78,0.2)]"
+              className="group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev p-8 md:p-10 transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_24px_60px_-20px_rgba(0,173,238,0.2)]"
             >
               <span className="text-subheading text-gold">{entity.role}</span>
               <h3 className="mt-4 font-display text-2xl md:text-3xl text-text tracking-tight leading-tight">
