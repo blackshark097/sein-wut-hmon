@@ -1,35 +1,19 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
-type Leader = {
-  title: string;
-  initial: string;
-  brief: string;
-};
+type LeaderKey = "chairman" | "managingDirector" | "coo";
 
-const LEADERS: Leader[] = [
-  {
-    title: "Chairman",
-    initial: "C",
-    brief:
-      "Sets the long term direction for the group and anchors founding family stewardship.",
-  },
-  {
-    title: "Managing Director",
-    initial: "M",
-    brief:
-      "Runs the holding structure day to day, linking operating companies and the boardroom.",
-  },
-  {
-    title: "Chief Operating Officer",
-    initial: "O",
-    brief: "Owns cross group operations, from distribution to marine harvest.",
-  },
+const LEADERS: Array<{ key: LeaderKey; initial: string }> = [
+  { key: "chairman", initial: "C" },
+  { key: "managingDirector", initial: "M" },
+  { key: "coo", initial: "O" },
 ];
 
 export function Leadership() {
   const reduce = useReducedMotion();
+  const t = useTranslations("about.leadership");
 
   return (
     <section
@@ -37,19 +21,16 @@ export function Leadership() {
       className="relative bg-bg-elev py-24 md:py-32 lg:py-36"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <p className="text-subheading text-gold">Leadership</p>
+        <p className="text-subheading text-gold">{t("eyebrow")}</p>
         <h2 id="leaders-heading" className="mt-4 text-heading text-text">
-          The people in charge
+          {t("heading")}
         </h2>
-        <p className="mt-4 max-w-2xl text-body text-text-muted">
-          Names and portraits are being confirmed. This section will be
-          completed as part of the next content pass.
-        </p>
+        <p className="mt-4 max-w-2xl text-body text-text-muted">{t("intro")}</p>
 
         <ul className="mt-16 md:mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {LEADERS.map((leader, index) => (
             <motion.li
-              key={leader.title}
+              key={leader.key}
               initial={reduce ? undefined : { opacity: 0, y: 24 }}
               whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -77,12 +58,14 @@ export function Leadership() {
                 />
               </div>
               <div className="p-6 md:p-7">
-                <p className="text-subheading text-gold">{leader.title}</p>
+                <p className="text-subheading text-gold">
+                  {t(`items.${leader.key}.title`)}
+                </p>
                 <h3 className="mt-3 font-display text-xl md:text-2xl text-text tracking-tight leading-tight">
-                  Name to be confirmed
+                  {t("nameToBeConfirmed")}
                 </h3>
                 <p className="mt-3 text-sm text-text-muted leading-relaxed">
-                  {leader.brief}
+                  {t(`items.${leader.key}.brief`)}
                 </p>
               </div>
             </motion.li>

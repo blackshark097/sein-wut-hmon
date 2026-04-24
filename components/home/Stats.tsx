@@ -4,19 +4,29 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const STATS = [
-  { value: 250, suffix: "+", label: "Employees across SWH entities" },
-  { value: 20, suffix: "", label: "Fishing Vessels" },
-  { value: 14, suffix: "", label: "Branch Offices" },
-  { value: 145, suffix: "+", label: "Distribution Vehicles" },
-] as const;
+type StatKey = "employees" | "vessels" | "branches" | "vehicles";
+
+type StatConfig = {
+  key: StatKey;
+  value: number;
+  suffix: string;
+};
+
+const STATS: StatConfig[] = [
+  { key: "employees", value: 250, suffix: "+" },
+  { key: "vessels", value: 20, suffix: "" },
+  { key: "branches", value: 14, suffix: "" },
+  { key: "vehicles", value: 145, suffix: "+" },
+];
 
 export function Stats() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const numberRefs = useRef<Array<HTMLSpanElement | null>>([]);
+  const t = useTranslations("home.stats");
 
   useGSAP(
     () => {
@@ -66,7 +76,7 @@ export function Stats() {
 
   return (
     <section
-      aria-label="Key statistics"
+      aria-label={t("ariaLabel")}
       className="relative border-y border-border/60 bg-bg-elev"
     >
       <div
@@ -74,29 +84,34 @@ export function Stats() {
         className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-12">
-          {STATS.map((stat, index) => (
-            <div
-              key={stat.label}
-              aria-label={`${stat.value}${stat.suffix} ${stat.label}`}
-              className="group flex flex-col gap-2 text-center md:text-left"
-            >
-              <div className="font-display text-gold text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight tabular-nums">
-                <span
-                  ref={(el) => {
-                    numberRefs.current[index] = el;
-                  }}
-                >
-                  0
-                </span>
-                {stat.suffix ? (
-                  <span className="font-display text-gold">{stat.suffix}</span>
-                ) : null}
+          {STATS.map((stat, index) => {
+            const label = t(`items.${stat.key}`);
+            return (
+              <div
+                key={stat.key}
+                aria-label={`${stat.value}${stat.suffix} ${label}`}
+                className="group flex flex-col gap-2 text-center md:text-left"
+              >
+                <div className="font-display text-gold text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight tabular-nums">
+                  <span
+                    ref={(el) => {
+                      numberRefs.current[index] = el;
+                    }}
+                  >
+                    0
+                  </span>
+                  {stat.suffix ? (
+                    <span className="font-display text-gold">
+                      {stat.suffix}
+                    </span>
+                  ) : null}
+                </div>
+                <div className="mt-3 text-subheading text-text-muted transition-colors duration-200 group-hover:text-text">
+                  {label}
+                </div>
               </div>
-              <div className="mt-3 text-subheading text-text-muted transition-colors duration-200 group-hover:text-text">
-                {stat.label}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,45 +1,41 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
-const STATS = [
-  { value: "250+", label: "Employees across SWH entities" },
-  { value: "14", label: "Branch offices" },
-  { value: "20", label: "Fishing vessels" },
-  { value: "145+", label: "Distribution vehicles" },
-] as const;
+type StatKey = "employees" | "branches" | "vessels" | "vehicles";
+
+const STATS: Array<{ key: StatKey; value: string }> = [
+  { key: "employees", value: "250+" },
+  { key: "branches", value: "14" },
+  { key: "vessels", value: "20" },
+  { key: "vehicles", value: "145+" },
+];
 
 export function CompanyOverview() {
   const reduce = useReducedMotion();
+  const t = useTranslations("about.overview");
 
   const content = (
     <>
-      <p className="text-subheading text-gold">The Business</p>
+      <p className="text-subheading text-gold">{t("eyebrow")}</p>
       <h2 id="overview-heading" className="mt-4 text-heading text-text">
-        An integrated operator
+        {t("heading")}
       </h2>
-      <p className="mt-6 text-body text-text-muted">
-        Sein Wut Hmon Group is one of Myanmar&apos;s leading conglomerates,
-        operating across marine resources, industrial supply, and nationwide
-        distribution. The businesses reinforce each other: the fishery fleet
-        anchors the marine line, industrial inputs serve agriculture and
-        manufacturing, and the distribution network moves every product to 14
-        branch offices across Lower and Upper Myanmar.
-      </p>
-      <p className="mt-6 text-body text-text-muted">
-        Today the group counts 250+ employees, 145+ distribution vehicles, 80
-        motorcycles, and 20 fishing vessels.
-      </p>
+      <p className="mt-6 text-body text-text-muted">{t("paragraph1")}</p>
+      <p className="mt-6 text-body text-text-muted">{t("paragraph2")}</p>
 
       <dl className="mt-10 grid grid-cols-2 gap-y-8 gap-x-6 md:grid-cols-4">
         {STATS.map((stat) => (
-          <div key={stat.label} className="flex flex-col gap-1">
+          <div key={stat.key} className="flex flex-col gap-1">
             <dt className="font-display text-2xl md:text-3xl text-gold leading-none tracking-tight tabular-nums">
               {stat.value}
             </dt>
-            <dd className="text-subheading text-text-muted">{stat.label}</dd>
+            <dd className="text-subheading text-text-muted">
+              {t(`stats.${stat.key}`)}
+            </dd>
           </div>
         ))}
       </dl>

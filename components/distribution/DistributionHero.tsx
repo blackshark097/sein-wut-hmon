@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -9,6 +10,8 @@ const GRAIN_URL =
 
 export function DistributionHero() {
   const reduce = useReducedMotion();
+  const t = useTranslations("distribution.hero");
+  const tCommon = useTranslations("Common");
 
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 24 },
@@ -18,7 +21,7 @@ export function DistributionHero() {
 
   return (
     <section
-      aria-label="Distribution hero"
+      aria-label={t("ariaLabel")}
       className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-bg"
       style={{ minHeight: "90vh" }}
     >
@@ -125,11 +128,11 @@ export function DistributionHero() {
         className="pointer-events-none absolute right-10 top-1/2 hidden origin-right -translate-y-1/2 rotate-90 text-[11px] font-sans uppercase tracking-[0.32em] text-text-muted xl:block"
       >
         <span className="mx-3.5 text-accent">◆</span>
-        Yangon
+        {t("marginYangon")}
         <span className="mx-3.5 text-accent">◆</span>
-        Mandalay
+        {t("marginMandalay")}
         <span className="mx-3.5 text-accent">◆</span>
-        Nationwide Network
+        {t("marginNetwork")}
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col px-6 pt-40 pb-32 md:px-10 md:pt-44 md:pb-36">
@@ -137,7 +140,7 @@ export function DistributionHero() {
           {...fadeUp(0.1)}
           className="inline-flex items-center gap-3.5 text-subheading text-accent before:block before:h-px before:w-9 before:bg-accent"
         >
-          Trading &amp; Distribution
+          {t("eyebrow")}
         </motion.span>
 
         <motion.h1
@@ -149,17 +152,18 @@ export function DistributionHero() {
             maxWidth: "14ch",
           }}
         >
-          Myanmar, <em className="font-normal italic text-accent">moved</em>.
+          {t.rich("heading", {
+            em: (chunks) => (
+              <em className="font-normal italic text-accent">{chunks}</em>
+            ),
+          })}
         </motion.h1>
 
         <motion.p
           {...fadeUp(0.55)}
           className="mt-10 max-w-2xl text-body text-text-muted"
         >
-          Fourteen branches. One hundred forty-five vehicles. Two hundred fifty
-          employees. Sein Wut Hmon operates one of Myanmar&apos;s most
-          comprehensive distribution networks, carrying international brands to
-          every region of the country.
+          {t("intro")}
         </motion.p>
       </div>
 
@@ -171,7 +175,7 @@ export function DistributionHero() {
         aria-hidden="true"
       >
         <span className="text-caption uppercase tracking-[0.22em] text-text-muted">
-          Scroll
+          {tCommon("scroll")}
         </span>
         <span
           className="block h-12 w-px"

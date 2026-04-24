@@ -5,50 +5,22 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type Op = {
-  num: string;
-  eyebrow: string;
-  title: string;
-  body: string;
-  meta: string;
-};
+type OpKey = "fleet" | "capture" | "coldChain" | "export";
 
-const OPS: Op[] = [
-  {
-    num: "01",
-    eyebrow: "Fleet",
-    title: "Fleet & Vessels",
-    body: "Twenty modernized commercial fishing vessels, operated year-round across Myanmar's territorial waters and exclusive economic zone.",
-    meta: "20 Vessels · Est. 2000",
-  },
-  {
-    num: "02",
-    eyebrow: "Capture",
-    title: "Wild Capture Operations",
-    body: "A commercial trawling operation focused on high-value marine species. Catch profiles are managed to international export standards.",
-    meta: "EEZ · Export-grade",
-  },
-  {
-    num: "03",
-    eyebrow: "Cold Chain",
-    title: "Cold Chain & Processing",
-    body: "Onboard handling and shoreside cold storage preserve product integrity from harvest to port, enabling both domestic distribution and export.",
-    meta: "Harvest → Port",
-  },
-  {
-    num: "04",
-    eyebrow: "Export",
-    title: "Export & Distribution",
-    body: "Integration with SWH's broader logistics network connects catch to regional and international buyers, with documented traceability from vessel to market.",
-    meta: "Regional · International",
-  },
+const OPS: Array<{ num: string; key: OpKey }> = [
+  { num: "01", key: "fleet" },
+  { num: "02", key: "capture" },
+  { num: "03", key: "coldChain" },
+  { num: "04", key: "export" },
 ];
 
 export function FisheriesOperations() {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const t = useTranslations("fisheries.operations");
 
   useGSAP(
     () => {
@@ -88,18 +60,17 @@ export function FisheriesOperations() {
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="mb-16 max-w-xl md:mb-20">
           <span className="inline-flex items-center gap-3.5 text-subheading text-gold before:block before:h-px before:w-7 before:bg-gold">
-            Operations
+            {t("eyebrow")}
           </span>
           <h2
             id="fisheries-ops-heading"
             className="mt-5 font-display font-medium tracking-[-0.02em] text-text"
             style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", lineHeight: 1.08 }}
           >
-            An end-to-end marine chain.
+            {t("heading")}
           </h2>
           <p className="mt-5 max-w-lg text-body text-text-muted">
-            From vessel to port to buyer. Four connected capabilities, one
-            operator.
+            {t("intro")}
           </p>
         </div>
 
@@ -134,7 +105,7 @@ export function FisheriesOperations() {
               </span>
 
               <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-gold before:block before:h-px before:w-6 before:bg-gold">
-                {op.eyebrow}
+                {t(`items.${op.key}.eyebrow`)}
               </span>
               <h3
                 className="mt-5 max-w-[14ch] font-display font-medium tracking-[-0.02em] text-text"
@@ -143,16 +114,16 @@ export function FisheriesOperations() {
                   lineHeight: 1.1,
                 }}
               >
-                {op.title}
+                {t(`items.${op.key}.title`)}
               </h3>
               <p className="mt-5 max-w-[42ch] text-[15.5px] leading-relaxed text-text-muted">
-                {op.body}
+                {t(`items.${op.key}.body`)}
               </p>
 
               <div className="mt-auto flex items-center justify-between pt-9 text-[11px] uppercase tracking-[0.16em] text-text-muted">
-                <span>{op.meta}</span>
+                <span>{t(`items.${op.key}.meta`)}</span>
                 <span className="inline-flex items-center gap-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-gold">
-                  Detail
+                  {t("detailLabel")}
                   <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                 </span>
               </div>

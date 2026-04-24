@@ -4,24 +4,23 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-type Stat = {
-  value: number;
-  label: string;
-};
+type StatKey = "branches" | "vehicles" | "motorcycles" | "employees";
 
-const STATS: Stat[] = [
-  { value: 14, label: "Branch offices" },
-  { value: 145, label: "Vehicles" },
-  { value: 80, label: "Motorcycles" },
-  { value: 250, label: "Employees" },
+const STATS: Array<{ key: StatKey; value: number }> = [
+  { key: "branches", value: 14 },
+  { key: "vehicles", value: 145 },
+  { key: "motorcycles", value: 80 },
+  { key: "employees", value: 250 },
 ];
 
 export function DistributionStats() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const numberRefs = useRef<Array<HTMLSpanElement | null>>([]);
+  const t = useTranslations("distribution.stats");
 
   useGSAP(
     () => {
@@ -67,7 +66,7 @@ export function DistributionStats() {
 
   return (
     <section
-      aria-label="Distribution key statistics"
+      aria-label={t("ariaLabel")}
       className="relative overflow-hidden border-y border-border/60 bg-bg-elev"
     >
       <div
@@ -83,7 +82,7 @@ export function DistributionStats() {
         className="relative mx-auto grid max-w-[1280px] grid-cols-2 gap-y-14 gap-x-8 px-6 py-24 md:grid-cols-4 md:gap-10 md:px-10 md:py-32"
       >
         {STATS.map((stat, i) => (
-          <div key={stat.label} className="group text-left">
+          <div key={stat.key} className="group text-left">
             <div
               className="flex items-baseline font-display font-medium text-accent tabular-nums tracking-[-0.03em]"
               style={{ fontSize: "clamp(3.25rem, 6vw, 5.5rem)", lineHeight: 1 }}
@@ -105,7 +104,7 @@ export function DistributionStats() {
               }}
             />
             <div className="mt-4 text-subheading text-text-muted transition-colors duration-200 group-hover:text-text">
-              {stat.label}
+              {t(`items.${stat.key}`)}
             </div>
           </div>
         ))}

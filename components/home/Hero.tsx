@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -11,6 +12,8 @@ const GRAIN_URL =
 
 export function Hero() {
   const reduce = useReducedMotion();
+  const t = useTranslations("home.hero");
+  const tCommon = useTranslations("Common");
 
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 24 },
@@ -24,7 +27,7 @@ export function Hero() {
 
   return (
     <section
-      aria-label="Hero"
+      aria-label={t("ariaLabel")}
       className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-bg"
     >
       {/* future: swap with hero video/image fill */}
@@ -50,7 +53,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 text-center sm:px-10">
         <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
-          Sein Wut Hmon Group
+          {t("eyebrow")}
         </motion.span>
 
         <motion.h1
@@ -61,15 +64,14 @@ export function Hero() {
             lineHeight: 1.02,
           }}
         >
-          Building Myanmar&apos;s Essential Industries
+          {t("heading")}
         </motion.h1>
 
         <motion.p
           {...fadeUp(0.55)}
           className="text-body mt-8 max-w-2xl text-text-muted"
         >
-          A diversified conglomerate powering marine resources, industrial
-          supply chains, and distribution networks.
+          {t("intro")}
         </motion.p>
       </div>
 
@@ -80,7 +82,7 @@ export function Hero() {
         className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2"
       >
         <span className="text-caption uppercase tracking-[0.18em] text-text-muted">
-          Scroll
+          {tCommon("scroll")}
         </span>
         <motion.span
           aria-hidden="true"

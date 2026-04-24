@@ -1,24 +1,21 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 export function CsrOverview() {
   const prefersReducedMotion = useReducedMotion();
+  const t = useTranslations("csr.overview");
 
   const content = (
     <>
-      <span className="text-subheading text-gold">Approach</span>
-      <h2
-        id="csr-overview-heading"
-        className="mt-4 text-heading text-text"
-      >
-        Why we invest
+      <span className="text-subheading text-gold">{t("eyebrow")}</span>
+      <h2 id="csr-overview-heading" className="mt-4 text-heading text-text">
+        {t("heading")}
       </h2>
-      <p className="mt-6 text-body text-text-muted">
-        Community investment runs alongside the business. Where Sein Wut Hmon operates, schools, families, and neighbours are part of the operating picture. The group contributes through school support and learning facilities, disaster relief during floods and other emergencies, and longer term community development tied to the places it does business in.
-      </p>
+      <p className="mt-6 text-body text-text-muted">{t("body")}</p>
     </>
   );
 

@@ -4,23 +4,26 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-type Stat = {
+type StatKey = "vessels" | "assetBase" | "coastline" | "since";
+
+type StatConfig = {
+  key: StatKey;
   value: number;
   prefix?: string;
   unit?: string;
-  preLabel?: string;
+  hasPreLabel?: boolean;
   noGroup?: boolean;
-  label: string;
 };
 
-const STATS: Stat[] = [
-  { value: 20, label: "Vessels in fleet" },
-  { value: 10, prefix: "$", unit: "M", label: "Asset base" },
-  { value: 2832, unit: "km", label: "Coastline worked" },
-  { value: 2000, preLabel: "Since", noGroup: true, label: "Operating since" },
+const STATS: StatConfig[] = [
+  { key: "vessels", value: 20 },
+  { key: "assetBase", value: 10, prefix: "$", unit: "M" },
+  { key: "coastline", value: 2832, unit: "km" },
+  { key: "since", value: 2000, hasPreLabel: true, noGroup: true },
 ];
 
 const formatValue = (n: number, noGroup?: boolean) =>
@@ -29,6 +32,7 @@ const formatValue = (n: number, noGroup?: boolean) =>
 export function FisheriesStats() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const numberRefs = useRef<Array<HTMLSpanElement | null>>([]);
+  const t = useTranslations("fisheries.stats");
 
   useGSAP(
     () => {
@@ -74,7 +78,7 @@ export function FisheriesStats() {
 
   return (
     <section
-      aria-label="Fisheries key statistics"
+      aria-label={t("ariaLabel")}
       className="relative overflow-hidden border-y border-border/60 bg-bg-elev"
     >
       <div
@@ -90,17 +94,17 @@ export function FisheriesStats() {
         className="relative mx-auto grid max-w-[1280px] grid-cols-2 gap-y-14 gap-x-8 px-6 py-24 md:grid-cols-4 md:gap-10 md:px-10 md:py-32"
       >
         {STATS.map((stat, i) => (
-          <div key={stat.label} className="group text-left">
+          <div key={stat.key} className="group text-left">
             <div
               className="flex items-baseline gap-1 font-display font-medium text-gold tabular-nums tracking-[-0.03em]"
               style={{ fontSize: "clamp(3.25rem, 6vw, 5.5rem)", lineHeight: 1 }}
             >
-              {stat.preLabel ? (
+              {stat.hasPreLabel ? (
                 <span
                   className="font-display font-normal italic opacity-85"
                   style={{ fontSize: "0.65em", marginRight: 8 }}
                 >
-                  {stat.preLabel}
+                  {t(`items.${stat.key}.preLabel`)}
                 </span>
               ) : null}
               {stat.prefix ? (
@@ -143,7 +147,7 @@ export function FisheriesStats() {
               }}
             />
             <div className="mt-4 text-subheading text-text-muted transition-colors duration-200 group-hover:text-text">
-              {stat.label}
+              {t(`items.${stat.key}.label`)}
             </div>
           </div>
         ))}

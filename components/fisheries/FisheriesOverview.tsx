@@ -1,11 +1,13 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function FisheriesOverview() {
   const reduce = useReducedMotion();
+  const t = useTranslations("fisheries.overview");
 
   const anim = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 24 },
@@ -22,7 +24,7 @@ export function FisheriesOverview() {
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 md:grid-cols-[1fr_1.4fr] md:gap-20 md:px-10">
         <motion.div {...anim(0)}>
           <span className="inline-flex items-center gap-3.5 text-subheading text-gold before:block before:h-px before:w-7 before:bg-gold">
-            The Geography
+            {t("eyebrow")}
           </span>
           <h2
             id="fisheries-overview-heading"
@@ -32,37 +34,21 @@ export function FisheriesOverview() {
               lineHeight: 1.08,
             }}
           >
-            Built for the water that built it.
+            {t("heading")}
           </h2>
         </motion.div>
 
         <motion.div {...anim(0.15)} className="text-body">
           <p className="mb-7">
-            Myanmar&apos;s marine geography is among the most productive in the
-            region. A{" "}
-            <strong className="font-display font-normal italic text-text">
-              2,832 km coastline
-            </strong>
-            ,{" "}
-            <strong className="font-display font-normal italic text-text">
-              0.5 million hectares
-            </strong>{" "}
-            of coastal swampland, and{" "}
-            <strong className="font-display font-normal italic text-text">
-              8.2 million hectares
-            </strong>{" "}
-            of inland water bodies together yield roughly{" "}
-            <strong className="font-display font-normal italic text-text">
-              70,000 tons
-            </strong>{" "}
-            of flood fisheries output each year.
+            {t.rich("paragraph1", {
+              fig: (chunks) => (
+                <strong className="font-display font-normal italic text-text">
+                  {chunks}
+                </strong>
+              ),
+            })}
           </p>
-          <p>
-            SWH&apos;s fishery division was built to operate at the scale this
-            geography allows, pairing a modernized fleet with onboard handling,
-            shoreside cold storage, and documented traceability from vessel to
-            market.
-          </p>
+          <p>{t("paragraph2")}</p>
           <blockquote
             className="mt-12 border-l border-gold/50 pl-7 font-display italic text-text"
             style={{
@@ -70,8 +56,7 @@ export function FisheriesOverview() {
               lineHeight: 1.4,
             }}
           >
-            A single operator from harvest to export, rare in Myanmar, and
-            deliberately so.
+            {t("quote")}
           </blockquote>
         </motion.div>
       </div>

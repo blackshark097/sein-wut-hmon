@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -10,6 +11,7 @@ const GRAIN_URL =
 
 export function AboutHero() {
   const reduce = useReducedMotion();
+  const t = useTranslations("about.hero");
 
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 20 },
@@ -23,7 +25,7 @@ export function AboutHero() {
 
   return (
     <section
-      aria-label="About hero"
+      aria-label={t("ariaLabel")}
       className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-bg"
       style={{ minHeight: "60vh" }}
     >
@@ -49,7 +51,7 @@ export function AboutHero() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-40 pb-24 text-center sm:px-10 md:pt-48 md:pb-32">
         <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
-          The Group
+          {t("eyebrow")}
         </motion.span>
 
         <motion.h1
@@ -60,16 +62,14 @@ export function AboutHero() {
             lineHeight: 1.05,
           }}
         >
-          Our Story
+          {t("heading")}
         </motion.h1>
 
         <motion.p
           {...fadeUp(0.45)}
           className="mt-6 max-w-2xl text-body text-text-muted"
         >
-          From a single distribution line in Yangon to an integrated group
-          operating across marine resources, industrial supply, and nationwide
-          distribution.
+          {t("intro")}
         </motion.p>
       </div>
     </section>

@@ -1,11 +1,13 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function DistributionOverview() {
   const reduce = useReducedMotion();
+  const t = useTranslations("distribution.overview");
 
   const anim = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 24 },
@@ -22,7 +24,7 @@ export function DistributionOverview() {
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 md:grid-cols-[1fr_1.4fr] md:gap-20 md:px-10">
         <motion.div {...anim(0)}>
           <span className="inline-flex items-center gap-3.5 text-subheading text-accent before:block before:h-px before:w-7 before:bg-accent">
-            The Discipline
+            {t("eyebrow")}
           </span>
           <h2
             id="distribution-overview-heading"
@@ -32,25 +34,21 @@ export function DistributionOverview() {
               lineHeight: 1.08,
             }}
           >
-            The country, reached.
+            {t("heading")}
           </h2>
         </motion.div>
 
         <motion.div {...anim(0.15)} className="text-body">
           <p className="mb-7">
-            Distribution in Myanmar is{" "}
-            <strong className="font-display font-normal italic text-text">
-              not a logistics problem
-            </strong>
-            . It is an infrastructure challenge, a relationship business, and a
-            test of operational discipline across geography that spans
-            coastline, delta, and highland.
+            {t.rich("paragraph1", {
+              em: (chunks) => (
+                <strong className="font-display font-normal italic text-text">
+                  {chunks}
+                </strong>
+              ),
+            })}
           </p>
-          <p>
-            Sein Wut Hmon has spent decades building the branch network, fleet
-            capacity, and partner trust that turn imported products into
-            nationwide availability.
-          </p>
+          <p>{t("paragraph2")}</p>
           <blockquote
             className="mt-12 border-l border-accent/50 pl-7 font-display italic text-text"
             style={{
@@ -58,8 +56,7 @@ export function DistributionOverview() {
               lineHeight: 1.4,
             }}
           >
-            Reach is not a route. It is the sum of fourteen offices, a fleet
-            that runs, and the people who keep the promises behind both.
+            {t("quote")}
           </blockquote>
         </motion.div>
       </div>

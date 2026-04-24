@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -9,6 +10,8 @@ const GRAIN_URL =
 
 export function FisheriesHero() {
   const reduce = useReducedMotion();
+  const t = useTranslations("fisheries.hero");
+  const tCommon = useTranslations("Common");
 
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 24 },
@@ -18,7 +21,7 @@ export function FisheriesHero() {
 
   return (
     <section
-      aria-label="Fisheries hero"
+      aria-label={t("ariaLabel")}
       className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-bg"
       style={{ minHeight: "90vh" }}
     >
@@ -70,7 +73,7 @@ export function FisheriesHero() {
           {...fadeUp(0.1)}
           className="inline-flex items-center gap-3.5 text-subheading text-gold before:block before:h-px before:w-9 before:bg-gold"
         >
-          Fisheries
+          {t("eyebrow")}
         </motion.span>
 
         <motion.h1
@@ -82,18 +85,18 @@ export function FisheriesHero() {
             maxWidth: "16ch",
           }}
         >
-          A coastline of <em className="font-normal italic text-gold">2,832</em>{" "}
-          kilometers. A fleet built to work it.
+          {t.rich("heading", {
+            em: (chunks) => (
+              <em className="font-normal italic text-gold">{chunks}</em>
+            ),
+          })}
         </motion.h1>
 
         <motion.p
           {...fadeUp(0.55)}
           className="mt-10 max-w-2xl text-body text-text-muted"
         >
-          Since 2000, Sein Wut Hmon has operated one of Myanmar&apos;s most
-          established commercial fishing fleets. Twenty vessels. Ten million
-          dollars in assets. A proven export capability rooted in one of
-          Southeast Asia&apos;s richest marine environments.
+          {t("intro")}
         </motion.p>
       </div>
 
@@ -105,7 +108,7 @@ export function FisheriesHero() {
         aria-hidden="true"
       >
         <span className="text-caption uppercase tracking-[0.22em] text-text-muted">
-          Scroll
+          {tCommon("scroll")}
         </span>
         <span
           className="block h-12 w-px"

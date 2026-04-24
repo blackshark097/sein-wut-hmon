@@ -68,5 +68,417 @@
     "navigationLabel": "Footer navigation",
     "copyright": "© {year} Sein Wut Hmon Group. All rights reserved.",
     "builtIn": "Built in Yangon."
+  },
+  "Common": {
+    "scroll": "Scroll"
+  },
+  "home": {
+    "hero": {
+      "ariaLabel": "Hero",
+      "eyebrow": "Sein Wut Hmon Group",
+      "heading": "Building Myanmar's Essential Industries",
+      "intro": "A diversified conglomerate powering marine resources, industrial supply chains, and distribution networks."
+    },
+    "companyIntro": {
+      "eyebrow": "The Group",
+      "heading": "About Sein Wut Hmon",
+      "body": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating integrated businesses across marine resources, industrial supply, and nationwide distribution.",
+      "cta": "Learn more"
+    },
+    "pillars": {
+      "eyebrow": "Portfolio",
+      "heading": "Our Portfolio",
+      "intro": "Four integrated divisions operating across Myanmar's essential industries, from marine harvest to nationwide distribution.",
+      "exploreLabel": "Explore",
+      "items": {
+        "fisheries": {
+          "name": "Fisheries",
+          "blurb": "Marine harvest from a twenty vessel fleet across Myanmar waters."
+        },
+        "distribution": {
+          "name": "Trading & Distribution",
+          "blurb": "Nationwide reach through 14 branch offices and 145+ vehicles."
+        },
+        "industrialInputs": {
+          "name": "Industrial Inputs",
+          "blurb": "Fertilizer, feed ingredients, and industrial raw materials."
+        },
+        "csr": {
+          "name": "CSR",
+          "blurb": "Schools, disaster relief, and community investment."
+        }
+      }
+    },
+    "stats": {
+      "ariaLabel": "Key statistics",
+      "items": {
+        "employees": "Employees across SWH entities",
+        "vessels": "Fishing Vessels",
+        "branches": "Branch Offices",
+        "vehicles": "Distribution Vehicles"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "ariaLabel": "About hero",
+      "eyebrow": "The Group",
+      "heading": "Our Story",
+      "intro": "From a single distribution line in Yangon to an integrated group operating across marine resources, industrial supply, and nationwide distribution."
+    },
+    "overview": {
+      "eyebrow": "The Business",
+      "heading": "An integrated operator",
+      "paragraph1": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating across marine resources, industrial supply, and nationwide distribution. The businesses reinforce each other: the fishery fleet anchors the marine line, industrial inputs serve agriculture and manufacturing, and the distribution network moves every product to 14 branch offices across Lower and Upper Myanmar.",
+      "paragraph2": "Today the group counts 250+ employees, 145+ distribution vehicles, 80 motorcycles, and 20 fishing vessels.",
+      "stats": {
+        "employees": "Employees across SWH entities",
+        "branches": "Branch offices",
+        "vessels": "Fishing vessels",
+        "vehicles": "Distribution vehicles"
+      }
+    },
+    "timeline": {
+      "eyebrow": "Heritage",
+      "heading": "Milestones",
+      "intro": "Decades of building in Myanmar, one industry at a time. Dates shown with a TBD marker are being confirmed.",
+      "tbdBadge": "TBD",
+      "items": {
+        "founding": {
+          "year": "YYYY",
+          "title": "Founding of Sein Wut Hmon",
+          "description": "The group is founded in Yangon with a focus on essential consumer distribution."
+        },
+        "distribution": {
+          "year": "YYYY",
+          "title": "First distribution operations",
+          "description": "The logistics arm launches, seeding the branch network that reaches every state and region today."
+        },
+        "fleet": {
+          "year": "YYYY",
+          "title": "Marine fleet launch",
+          "description": "Sein Wut Hmon expands into marine harvest, building toward a twenty vessel fleet."
+        }
+      }
+    },
+    "entities": {
+      "eyebrow": "Structure",
+      "heading": "Companies in the group",
+      "intro": "Four operating companies, one shared brand and leadership.",
+      "roles": {
+        "distribution": "Distribution",
+        "manufacturing": "Manufacturing",
+        "trading": "Trading"
+      },
+      "items": {
+        "swhCoLtd": {
+          "name": "Sein Wut Hmon Co., Ltd.",
+          "roleKey": "distribution",
+          "description": "The distribution parent, running the branch network and consumer reach across Myanmar."
+        },
+        "imu": {
+          "name": "IMU Enterprise Ltd.",
+          "roleKey": "manufacturing",
+          "description": "Manufacturing arm covering industrial inputs, feed processing, and related production."
+        },
+        "seinMyoDaw": {
+          "name": "Sein Myo Daw Co., Ltd.",
+          "roleKey": "trading",
+          "description": "The trading house for imports, raw materials, and cross-sector commercial partnerships."
+        },
+        "starWay": {
+          "name": "Star Way Co., Ltd.",
+          "roleKey": "distribution",
+          "description": "A specialist distributor within the group, complementing the Sein Wut Hmon network."
+        }
+      }
+    },
+    "leadership": {
+      "eyebrow": "Leadership",
+      "heading": "The people in charge",
+      "intro": "Names and portraits are being confirmed. This section will be completed as part of the next content pass.",
+      "nameToBeConfirmed": "Name to be confirmed",
+      "items": {
+        "chairman": {
+          "title": "Chairman",
+          "brief": "Sets the long term direction for the group and anchors founding family stewardship."
+        },
+        "managingDirector": {
+          "title": "Managing Director",
+          "brief": "Runs the holding structure day to day, linking operating companies and the boardroom."
+        },
+        "coo": {
+          "title": "Chief Operating Officer",
+          "brief": "Owns cross group operations, from distribution to marine harvest."
+        }
+      }
+    }
+  },
+  "fisheries": {
+    "hero": {
+      "ariaLabel": "Fisheries hero",
+      "eyebrow": "Fisheries",
+      "heading": "A coastline of <em>2,832</em> kilometers. A fleet built to work it.",
+      "intro": "Since 2000, Sein Wut Hmon has operated one of Myanmar's most established commercial fishing fleets. Twenty vessels. Ten million dollars in assets. A proven export capability rooted in one of Southeast Asia's richest marine environments."
+    },
+    "overview": {
+      "eyebrow": "The Geography",
+      "heading": "Built for the water that built it.",
+      "paragraph1": "Myanmar's marine geography is among the most productive in the region. A <fig>2,832 km coastline</fig>, <fig>0.5 million hectares</fig> of coastal swampland, and <fig>8.2 million hectares</fig> of inland water bodies together yield roughly <fig>70,000 tons</fig> of flood fisheries output each year.",
+      "paragraph2": "SWH's fishery division was built to operate at the scale this geography allows, pairing a modernized fleet with onboard handling, shoreside cold storage, and documented traceability from vessel to market.",
+      "quote": "A single operator from harvest to export, rare in Myanmar, and deliberately so."
+    },
+    "stats": {
+      "ariaLabel": "Fisheries key statistics",
+      "items": {
+        "vessels": {
+          "label": "Vessels in fleet"
+        },
+        "assetBase": {
+          "label": "Asset base"
+        },
+        "coastline": {
+          "label": "Coastline worked"
+        },
+        "since": {
+          "preLabel": "Since",
+          "label": "Operating since"
+        }
+      }
+    },
+    "operations": {
+      "eyebrow": "Operations",
+      "heading": "An end-to-end marine chain.",
+      "intro": "From vessel to port to buyer. Four connected capabilities, one operator.",
+      "detailLabel": "Detail",
+      "items": {
+        "fleet": {
+          "eyebrow": "Fleet",
+          "title": "Fleet & Vessels",
+          "body": "Twenty modernized commercial fishing vessels, operated year-round across Myanmar's territorial waters and exclusive economic zone.",
+          "meta": "20 Vessels · Est. 2000"
+        },
+        "capture": {
+          "eyebrow": "Capture",
+          "title": "Wild Capture Operations",
+          "body": "A commercial trawling operation focused on high-value marine species. Catch profiles are managed to international export standards.",
+          "meta": "EEZ · Export-grade"
+        },
+        "coldChain": {
+          "eyebrow": "Cold Chain",
+          "title": "Cold Chain & Processing",
+          "body": "Onboard handling and shoreside cold storage preserve product integrity from harvest to port, enabling both domestic distribution and export.",
+          "meta": "Harvest → Port"
+        },
+        "export": {
+          "eyebrow": "Export",
+          "title": "Export & Distribution",
+          "body": "Integration with SWH's broader logistics network connects catch to regional and international buyers, with documented traceability from vessel to market.",
+          "meta": "Regional · International"
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Partnership",
+      "heading": "Partner with <em>Sein Wut Hmon</em>.",
+      "intro": "For export inquiries, capacity partnerships, and direct procurement from the SWH fleet.",
+      "button": "Get in touch"
+    }
+  },
+  "distribution": {
+    "hero": {
+      "ariaLabel": "Distribution hero",
+      "eyebrow": "Trading & Distribution",
+      "heading": "Myanmar, <em>moved</em>.",
+      "intro": "Fourteen branches. One hundred forty-five vehicles. Two hundred fifty employees. Sein Wut Hmon operates one of Myanmar's most comprehensive distribution networks, carrying international brands to every region of the country.",
+      "marginYangon": "Yangon",
+      "marginMandalay": "Mandalay",
+      "marginNetwork": "Nationwide Network"
+    },
+    "overview": {
+      "eyebrow": "The Discipline",
+      "heading": "The country, reached.",
+      "paragraph1": "Distribution in Myanmar is <em>not a logistics problem</em>. It is an infrastructure challenge, a relationship business, and a test of operational discipline across geography that spans coastline, delta, and highland.",
+      "paragraph2": "Sein Wut Hmon has spent decades building the branch network, fleet capacity, and partner trust that turn imported products into nationwide availability.",
+      "quote": "Reach is not a route. It is the sum of fourteen offices, a fleet that runs, and the people who keep the promises behind both."
+    },
+    "stats": {
+      "ariaLabel": "Distribution key statistics",
+      "items": {
+        "branches": "Branch offices",
+        "vehicles": "Vehicles",
+        "motorcycles": "Motorcycles",
+        "employees": "Employees"
+      }
+    },
+    "operations": {
+      "eyebrow": "Operations",
+      "heading": "A network built for the whole country.",
+      "intro": "Four connected capabilities that turn international product into nationwide availability.",
+      "detailLabel": "Detail",
+      "items": {
+        "network": {
+          "eyebrow": "Network",
+          "title": "Branch Network",
+          "body": "Fourteen offices across Lower and Upper Myanmar, positioned to reach population centers from Yangon to Mandalay, with last-mile coverage into secondary cities and townships.",
+          "meta": "14 Offices · Nationwide"
+        },
+        "fleet": {
+          "eyebrow": "Fleet",
+          "title": "Fleet Capacity",
+          "body": "A combined fleet of one hundred forty-five vehicles and eighty motorcycles, scaled for the realities of Myanmar's road network and sized to handle cold chain, dry goods, and industrial distribution in parallel.",
+          "meta": "145 Vehicles · 80 Motorcycles"
+        },
+        "categories": {
+          "eyebrow": "Categories",
+          "title": "Category Breadth",
+          "body": "Consumer electronics, food and beverage imports, industrial lubricants, and specialty retail. Each category supported by dedicated trade teams with product expertise.",
+          "meta": "4 Trade Categories"
+        },
+        "partnerships": {
+          "eyebrow": "Partnerships",
+          "title": "Partner Relationships",
+          "body": "Long-term partnerships with international brands seeking reliable, compliant, nationwide distribution in Myanmar, backed by documented performance and regulatory coverage.",
+          "meta": "International · Long-term"
+        }
+      }
+    },
+    "partners": {
+      "eyebrow": "Partner Brands",
+      "heading": "International brands, locally delivered.",
+      "importedFromLabel": "Imported from",
+      "items": {
+        "ok": {
+          "name": "OK",
+          "category": "Condensed Milk & Evaporated Creamer",
+          "origin": "Singapore & Malaysia"
+        },
+        "hisense": {
+          "name": "Hisense",
+          "category": "Consumer Electronics",
+          "origin": "China"
+        },
+        "nasa": {
+          "name": "Nasa",
+          "category": "Oil & Lubricants",
+          "origin": "Malaysia, AC Lubricants Sdn Bhd"
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Partnership",
+      "heading": "Partner with <em>Sein Wut Hmon</em>.",
+      "intro": "For distribution inquiries, brand partnerships, and market entry into Myanmar.",
+      "button": "Get in touch"
+    }
+  },
+  "industrialInputs": {
+    "hero": {
+      "ariaLabel": "Industrial Inputs hero",
+      "imageAlt": "Sein Wut Hmon and Marubeni Myanmar Fertilizer cooperation at Thilawa",
+      "eyebrow": "Division",
+      "heading": "Industrial Inputs",
+      "intro": "Fertilizer, lubricants, and raw materials supporting Myanmar's agriculture and transportation sectors."
+    },
+    "products": {
+      "eyebrow": "Portfolio",
+      "heading": "The product lines",
+      "intro": "Two core lines anchor the division, each built on long standing distribution partnerships.",
+      "items": {
+        "fertilizer": {
+          "name": "Fertilizer",
+          "partner": "MMF",
+          "blurb": "Distribution of fertilizer products across Myanmar, backed by the group's joint venture with Marubeni Corporation and a plant at Thilawa Industrial Zone.",
+          "bullets": {
+            "item1": "Nationwide fertilizer distribution",
+            "item2": "Support for smallholder and commercial farms",
+            "item3": "Integrated with the group's trading and logistics arms"
+          }
+        },
+        "lubricants": {
+          "name": "Lubricants",
+          "partner": "Nasa and Sunoco",
+          "blurb": "Industrial and automotive lubricants for transportation, machinery, and manufacturing customers across Myanmar. Sole agent of NASA Total Lubricating Solution from AC Lubricants Sdn Bhd, Malaysia.",
+          "bullets": {
+            "item1": "Automotive and industrial grades",
+            "item2": "Nationwide distribution through the group network",
+            "item3": "Trusted Nasa and Sunoco product lines"
+          }
+        }
+      }
+    }
+  },
+  "csr": {
+    "hero": {
+      "ariaLabel": "Community hero",
+      "imageAlt": "A Sein Wut Hmon community school donation in northern Shan State",
+      "eyebrow": "Community",
+      "heading": "Community",
+      "intro": "Investing in the communities where we operate."
+    },
+    "overview": {
+      "eyebrow": "Approach",
+      "heading": "Why we invest",
+      "body": "Community investment runs alongside the business. Where Sein Wut Hmon operates, schools, families, and neighbours are part of the operating picture. The group contributes through school support and learning facilities, disaster relief during floods and other emergencies, and longer term community development tied to the places it does business in."
+    },
+    "initiatives": {
+      "eyebrow": "Initiatives",
+      "heading": "Where we contribute",
+      "items": {
+        "education": {
+          "name": "Education",
+          "eyebrow": "Schools and learning",
+          "blurb": "Supporting basic schools and learning facilities in the regions where the group operates."
+        },
+        "disaster": {
+          "name": "Disaster Relief",
+          "eyebrow": "Emergency response",
+          "blurb": "Practical relief during floods, storms, and other community emergencies in Myanmar."
+        },
+        "community": {
+          "name": "Community Development",
+          "eyebrow": "Long term investment",
+          "blurb": "Infrastructure, local partnerships, and quiet, ongoing contributions where our branches operate."
+        }
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "ariaLabel": "Contact hero",
+      "eyebrow": "Contact",
+      "heading": "Contact",
+      "intro": "Get in touch with Sein Wut Hmon Group."
+    },
+    "form": {
+      "eyebrow": "Send a note",
+      "heading": "Write to the head office",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "How can we help?",
+      "submit": "Send Message",
+      "responseTime": "We typically respond within 2 business days.",
+      "successHeading": "Message queued",
+      "successBody": "Thanks. The form isn't wired to a backend yet, but the address, phone, and email above reach the right desk.",
+      "sendAnother": "Send another"
+    },
+    "info": {
+      "eyebrow": "Reach us",
+      "heading": "Office, phone, email",
+      "officeLabel": "Office",
+      "address": "No-24, Phan Chat Won U Shwe Ohh St., Industrial Zone (2), Hlaing Thar Yar Township, Yangon",
+      "getDirections": "Get directions",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email"
+    },
+    "map": {
+      "ariaLabel": "Office map",
+      "eyebrow": "Location",
+      "heading": "Hlaing Thar Yar, Yangon",
+      "mapTitle": "Sein Wut Hmon Group office map"
+    }
   }
 }

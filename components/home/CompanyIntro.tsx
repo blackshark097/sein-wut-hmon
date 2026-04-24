@@ -1,30 +1,30 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 export function CompanyIntro() {
   const prefersReducedMotion = useReducedMotion();
+  const t = useTranslations("home.companyIntro");
 
   const content = (
     <>
-      <span className="text-subheading text-gold">THE GROUP</span>
+      <span className="text-subheading text-gold">{t("eyebrow")}</span>
       <h2 id="intro-heading" className="mt-4 text-heading text-text">
-        About Sein Wut Hmon
+        {t("heading")}
       </h2>
       <p className="mt-6 text-body text-text-muted max-w-3xl mx-auto md:mx-0">
-        Sein Wut Hmon Group is one of Myanmar&apos;s leading conglomerates,
-        operating integrated businesses across marine resources, industrial
-        supply, and nationwide distribution.
+        {t("body")}
       </p>
       <Link
         href="/about"
         className="mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-[0.12em] text-gold transition hover:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
       >
-        Learn more <ArrowRight className="h-4 w-4" aria-hidden />
+        {t("cta")} <ArrowRight className="h-4 w-4" aria-hidden />
       </Link>
     </>
   );

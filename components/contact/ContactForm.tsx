@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -12,6 +13,7 @@ const labelClass = "text-subheading text-gold";
 
 export function ContactForm() {
   const reduce = useReducedMotion();
+  const t = useTranslations("contact.form");
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,9 +30,9 @@ export function ContactForm() {
 
   const formBlock = (
     <>
-      <span className="text-subheading text-gold">Send a note</span>
+      <span className="text-subheading text-gold">{t("eyebrow")}</span>
       <h2 id="contact-form-heading" className="mt-4 text-heading text-text">
-        Write to the head office
+        {t("heading")}
       </h2>
 
       {sent ? (
@@ -42,18 +44,17 @@ export function ContactForm() {
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gold/60 text-gold">
               <Check className="h-5 w-5" aria-hidden />
             </span>
-            <h3 className="font-display text-2xl text-text">Message queued</h3>
+            <h3 className="font-display text-2xl text-text">
+              {t("successHeading")}
+            </h3>
           </div>
-          <p className="mt-4 text-body text-text-muted">
-            Thanks. The form isn&apos;t wired to a backend yet, but the address,
-            phone, and email above reach the right desk.
-          </p>
+          <p className="mt-4 text-body text-text-muted">{t("successBody")}</p>
           <button
             type="button"
             onClick={() => setSent(false)}
             className="mt-6 text-sm uppercase tracking-[0.12em] text-gold transition hover:text-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
           >
-            Send another
+            {t("sendAnother")}
           </button>
         </div>
       ) : (
@@ -65,7 +66,7 @@ export function ContactForm() {
           >
             <div>
               <label htmlFor="contact-name" className={labelClass}>
-                Name
+                {t("nameLabel")}
               </label>
               <input
                 id="contact-name"
@@ -76,13 +77,13 @@ export function ContactForm() {
                 value={name}
                 onChange={(event) => setName(event.target.value)}
                 className={inputClass}
-                placeholder="Your full name"
+                placeholder={t("namePlaceholder")}
               />
             </div>
 
             <div>
               <label htmlFor="contact-email" className={labelClass}>
-                Email
+                {t("emailLabel")}
               </label>
               <input
                 id="contact-email"
@@ -92,13 +93,13 @@ export function ContactForm() {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 className={inputClass}
-                placeholder="you@example.com"
+                placeholder={t("emailPlaceholder")}
               />
             </div>
 
             <div>
               <label htmlFor="contact-message" className={labelClass}>
-                Message
+                {t("messageLabel")}
               </label>
               <textarea
                 id="contact-message"
@@ -109,7 +110,7 @@ export function ContactForm() {
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 className={inputClass}
-                placeholder="How can we help?"
+                placeholder={t("messagePlaceholder")}
               />
             </div>
 
@@ -118,15 +119,13 @@ export function ContactForm() {
                 type="submit"
                 className="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#0A0F1C] transition hover:bg-[#33C3F2] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:opacity-60"
               >
-                Send Message
+                {t("submit")}
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </button>
             </div>
           </form>
 
-          <p className="mt-6 text-caption">
-            We typically respond within 2 business days.
-          </p>
+          <p className="mt-6 text-caption">{t("responseTime")}</p>
         </>
       )}
     </>

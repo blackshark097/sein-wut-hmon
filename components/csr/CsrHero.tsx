@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -10,6 +11,7 @@ const GRAIN_URL =
 
 export function CsrHero() {
   const reduce = useReducedMotion();
+  const t = useTranslations("csr.hero");
 
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 24 },
@@ -23,14 +25,14 @@ export function CsrHero() {
 
   return (
     <section
-      aria-label="Community hero"
+      aria-label={t("ariaLabel")}
       className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-bg"
       style={{ minHeight: "60vh" }}
     >
       <div aria-hidden="true" className="absolute inset-0">
         <Image
           src="/images/legacy/school-donation-north-shanstate-lasho-20150717-full.jpg"
-          alt="A Sein Wut Hmon community school donation in northern Shan State"
+          alt={t("imageAlt")}
           fill
           sizes="100vw"
           priority
@@ -56,7 +58,7 @@ export function CsrHero() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-32 text-center sm:px-10 md:py-40">
         <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
-          Community
+          {t("eyebrow")}
         </motion.span>
 
         <motion.h1
@@ -67,14 +69,14 @@ export function CsrHero() {
             lineHeight: 1.05,
           }}
         >
-          Community
+          {t("heading")}
         </motion.h1>
 
         <motion.p
           {...fadeUp(0.45)}
           className="mt-8 max-w-2xl text-body text-text-muted"
         >
-          Investing in the communities where we operate.
+          {t("intro")}
         </motion.p>
       </div>
     </section>

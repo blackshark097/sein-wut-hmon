@@ -5,50 +5,22 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type Op = {
-  num: string;
-  eyebrow: string;
-  title: string;
-  body: string;
-  meta: string;
-};
+type OpKey = "network" | "fleet" | "categories" | "partnerships";
 
-const OPS: Op[] = [
-  {
-    num: "01",
-    eyebrow: "Network",
-    title: "Branch Network",
-    body: "Fourteen offices across Lower and Upper Myanmar, positioned to reach population centers from Yangon to Mandalay, with last-mile coverage into secondary cities and townships.",
-    meta: "14 Offices · Nationwide",
-  },
-  {
-    num: "02",
-    eyebrow: "Fleet",
-    title: "Fleet Capacity",
-    body: "A combined fleet of one hundred forty-five vehicles and eighty motorcycles, scaled for the realities of Myanmar's road network and sized to handle cold chain, dry goods, and industrial distribution in parallel.",
-    meta: "145 Vehicles · 80 Motorcycles",
-  },
-  {
-    num: "03",
-    eyebrow: "Categories",
-    title: "Category Breadth",
-    body: "Consumer electronics, food and beverage imports, industrial lubricants, and specialty retail. Each category supported by dedicated trade teams with product expertise.",
-    meta: "4 Trade Categories",
-  },
-  {
-    num: "04",
-    eyebrow: "Partnerships",
-    title: "Partner Relationships",
-    body: "Long-term partnerships with international brands seeking reliable, compliant, nationwide distribution in Myanmar, backed by documented performance and regulatory coverage.",
-    meta: "International · Long-term",
-  },
+const OPS: Array<{ num: string; key: OpKey }> = [
+  { num: "01", key: "network" },
+  { num: "02", key: "fleet" },
+  { num: "03", key: "categories" },
+  { num: "04", key: "partnerships" },
 ];
 
 export function DistributionOperations() {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const t = useTranslations("distribution.operations");
 
   useGSAP(
     () => {
@@ -88,18 +60,17 @@ export function DistributionOperations() {
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="mb-16 max-w-xl md:mb-20">
           <span className="inline-flex items-center gap-3.5 text-subheading text-accent before:block before:h-px before:w-7 before:bg-accent">
-            Operations
+            {t("eyebrow")}
           </span>
           <h2
             id="distribution-ops-heading"
             className="mt-5 font-display font-medium tracking-[-0.02em] text-text"
             style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", lineHeight: 1.08 }}
           >
-            A network built for the whole country.
+            {t("heading")}
           </h2>
           <p className="mt-5 max-w-lg text-body text-text-muted">
-            Four connected capabilities that turn international product into
-            nationwide availability.
+            {t("intro")}
           </p>
         </div>
 
@@ -134,7 +105,7 @@ export function DistributionOperations() {
               </span>
 
               <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-accent before:block before:h-px before:w-6 before:bg-accent">
-                {op.eyebrow}
+                {t(`items.${op.key}.eyebrow`)}
               </span>
               <h3
                 className="mt-5 max-w-[14ch] font-display font-medium tracking-[-0.02em] text-text"
@@ -143,16 +114,16 @@ export function DistributionOperations() {
                   lineHeight: 1.1,
                 }}
               >
-                {op.title}
+                {t(`items.${op.key}.title`)}
               </h3>
               <p className="mt-5 max-w-[44ch] text-[15.5px] leading-relaxed text-text-muted">
-                {op.body}
+                {t(`items.${op.key}.body`)}
               </p>
 
               <div className="mt-auto flex items-center justify-between pt-9 text-[11px] uppercase tracking-[0.16em] text-text-muted">
-                <span>{op.meta}</span>
+                <span>{t(`items.${op.key}.meta`)}</span>
                 <span className="inline-flex items-center gap-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent">
-                  Detail
+                  {t("detailLabel")}
                   <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                 </span>
               </div>

@@ -1,13 +1,15 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function DistributionCta() {
   const reduce = useReducedMotion();
+  const t = useTranslations("distribution.cta");
 
   const anim = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 24 },
@@ -35,7 +37,7 @@ export function DistributionCta() {
           {...anim(0)}
           className="inline-flex items-center justify-center gap-3.5 text-subheading text-accent"
         >
-          Partnership
+          {t("eyebrow")}
         </motion.span>
 
         <motion.h2
@@ -44,16 +46,18 @@ export function DistributionCta() {
           className="mt-6 font-display font-medium tracking-[-0.028em] text-text"
           style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.04 }}
         >
-          Partner with{" "}
-          <em className="font-normal italic text-accent">Sein Wut Hmon</em>.
+          {t.rich("heading", {
+            em: (chunks) => (
+              <em className="font-normal italic text-accent">{chunks}</em>
+            ),
+          })}
         </motion.h2>
 
         <motion.p
           {...anim(0.22)}
           className="mx-auto mt-8 max-w-xl text-body text-text-muted"
         >
-          For distribution inquiries, brand partnerships, and market entry into
-          Myanmar.
+          {t("intro")}
         </motion.p>
 
         <motion.div {...anim(0.32)} className="mt-12">
@@ -65,7 +69,7 @@ export function DistributionCta() {
               aria-hidden="true"
               className="absolute inset-0 -z-10 -translate-x-full bg-accent transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0"
             />
-            Get in touch
+            {t("button")}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </motion.div>

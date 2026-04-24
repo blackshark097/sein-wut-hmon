@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -9,6 +10,7 @@ const GRAIN_URL =
 
 export function ContactHero() {
   const reduce = useReducedMotion();
+  const t = useTranslations("contact.hero");
 
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 20 },
@@ -22,7 +24,7 @@ export function ContactHero() {
 
   return (
     <section
-      aria-label="Contact hero"
+      aria-label={t("ariaLabel")}
       className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-bg"
       style={{ minHeight: "40vh" }}
     >
@@ -48,7 +50,7 @@ export function ContactHero() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-36 pb-20 text-center sm:px-10 md:pt-40 md:pb-24">
         <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
-          Contact
+          {t("eyebrow")}
         </motion.span>
 
         <motion.h1
@@ -59,14 +61,14 @@ export function ContactHero() {
             lineHeight: 1.05,
           }}
         >
-          Contact
+          {t("heading")}
         </motion.h1>
 
         <motion.p
           {...fadeUp(0.35)}
           className="mt-6 max-w-2xl text-body text-text-muted"
         >
-          Get in touch with Sein Wut Hmon Group.
+          {t("intro")}
         </motion.p>
       </div>
     </section>
