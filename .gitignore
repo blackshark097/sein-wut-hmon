@@ -49,3 +49,6 @@ next-env.d.ts
 # design reference library (gitignored, not shipped)
 /docs/design-refs/
 
+# Evolve Lite session captures (local telemetry)
+.evolve/
+
