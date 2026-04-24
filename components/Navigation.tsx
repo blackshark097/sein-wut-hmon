@@ -1,24 +1,38 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
+
+type NavKey =
+  | "home"
+  | "about"
+  | "fisheries"
+  | "distribution"
+  | "industrialInputs"
+  | "csr"
+  | "contact";
 
 type NavLink = {
-  label: string;
+  key: NavKey;
   href: string;
 };
 
+// Hrefs here are pre-localization; `Link` from @/i18n/navigation prepends the
+// `/my` prefix when needed (and leaves English alone thanks to the `as-needed`
+// strategy). Order matches the legacy site hierarchy.
 const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Fisheries", href: "/fisheries" },
-  { label: "Distribution", href: "/distribution" },
-  { label: "Industrial Inputs", href: "/industrial-inputs" },
-  { label: "CSR", href: "/csr" },
-  { label: "Contact", href: "/contact" },
+  { key: "home", href: "/" },
+  { key: "about", href: "/about" },
+  { key: "fisheries", href: "/fisheries" },
+  { key: "distribution", href: "/distribution" },
+  { key: "industrialInputs", href: "/industrial-inputs" },
+  { key: "csr", href: "/csr" },
+  { key: "contact", href: "/contact" },
 ];
 
 /**
@@ -31,6 +45,11 @@ export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const prefersReducedMotion = useReducedMotion();
+
+  const t = useTranslations("Navigation");
+  const locale = useLocale() as Locale;
+  const pathname = usePathname();
+  const router = useRouter();
 
   // Lock body scroll while the overlay is open.
   useEffect(() => {
@@ -73,6 +92,15 @@ export function Navigation() {
     ? { opacity: 0 }
     : { opacity: 0, y: 20 };
 
+  const switchLocale = (nextLocale: Locale) => {
+    if (nextLocale === locale) {
+      return;
+    }
+    // Preserve the current path while swapping the locale prefix. `replace`
+    // avoids adding the language toggle to browser history.
+    router.replace(pathname, { locale: nextLocale });
+  };
+
   return (
     <>
       {/* Fixed top bar, always visible above overlay content. */}
@@ -81,12 +109,12 @@ export function Navigation() {
           <Link
             href="/"
             onClick={closeMenu}
-            aria-label="Sein Wut Hmon Group, home"
+            aria-label={t("logoLinkLabel")}
             className="relative z-[70] inline-flex items-center"
           >
             <Image
               src="/images/legacy/logo.png"
-              alt="Sein Wut Hmon Group"
+              alt={t("logoAlt")}
               width={140}
               height={40}
               priority
@@ -94,20 +122,46 @@ export function Navigation() {
           </Link>
 
           <div className="relative z-[70] flex items-center gap-4">
-            {/* TODO: replace with next-intl locale switcher. Rendered as static
-                text (not buttons) to avoid fake interactivity until routing exists. */}
             <div
-              aria-label="Current language: English"
+              role="group"
+              aria-label={t("languageCurrent", {
+                language: t(`languages.${locale}`),
+              })}
               className="inline-flex items-center rounded-full border border-border/60 bg-bg-elev/40 p-1 text-sm font-sans tracking-wide"
             >
-              <span className="rounded-full px-3 py-1 text-accent">EN</span>
-              <span className="rounded-full px-3 py-1 text-text-muted">MM</span>
+              {routing.locales.map((candidate) => {
+                const isActive = candidate === locale;
+                return (
+                  <button
+                    key={candidate}
+                    type="button"
+                    onClick={() => switchLocale(candidate)}
+                    aria-current={isActive ? "true" : undefined}
+                    aria-label={
+                      isActive
+                        ? t("languageCurrent", {
+                            language: t(`languages.${candidate}`),
+                          })
+                        : t("languageSwitchTo", {
+                            language: t(`languages.${candidate}`),
+                          })
+                    }
+                    className={`rounded-full px-3 py-1 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+                      isActive
+                        ? "text-accent"
+                        : "text-text-muted hover:text-text"
+                    }`}
+                  >
+                    {t(`languageShort.${candidate}`)}
+                  </button>
+                );
+              })}
             </div>
 
             <button
               type="button"
               onClick={toggleMenu}
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-label={menuOpen ? t("menuClose") : t("menuOpen")}
               aria-expanded={menuOpen}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border/60 bg-bg-elev/40 text-text transition-colors hover:border-gold/60 hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
@@ -136,7 +190,7 @@ export function Navigation() {
             className="fixed inset-0 z-40 bg-bg/95 backdrop-blur-xl"
             role="dialog"
             aria-modal="true"
-            aria-label="Site navigation"
+            aria-label={t("dialogLabel")}
           >
             {/* Hover gradient placeholder. TODO: swap for real hover imagery per link */}
             <AnimatePresence>
@@ -154,7 +208,7 @@ export function Navigation() {
             </AnimatePresence>
 
             <nav
-              aria-label="Primary"
+              aria-label={t("primaryLabel")}
               className="relative flex min-h-full items-center px-6 pt-28 pb-16 md:px-10"
             >
               <ul className="flex w-full flex-col gap-3 md:gap-4">
@@ -187,7 +241,7 @@ export function Navigation() {
                       onClick={closeMenu}
                       className="font-display block text-4xl font-semibold leading-[1.05] tracking-tight text-text transition-colors hover:text-gold focus-visible:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold md:text-6xl lg:text-7xl"
                     >
-                      {link.label}
+                      {t(`links.${link.key}`)}
                     </Link>
                   </motion.li>
                 ))}

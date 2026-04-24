@@ -1,0 +1,72 @@
+{
+  "Metadata": {
+    "siteName": "Sein Wut Hmon Group",
+    "defaultDescription": "Myanmar conglomerate in distribution, fisheries, and industrial inputs.",
+    "home": {
+      "title": "Sein Wut Hmon Group, Building Myanmar's Essential Industries",
+      "description": "A diversified Myanmar conglomerate operating across marine resources, industrial supply, and nationwide distribution."
+    },
+    "about": {
+      "title": "About, Sein Wut Hmon Group",
+      "description": "Sein Wut Hmon Group, a Myanmar conglomerate building essential industries in fisheries, industrial supply, and nationwide distribution."
+    },
+    "fisheries": {
+      "title": "Fisheries, Sein Wut Hmon Group",
+      "description": "One of Myanmar's most established commercial fishing fleets. Twenty vessels, ten million in assets, export-capable operations across a 2,832 km coastline."
+    },
+    "distribution": {
+      "title": "Trading & Distribution, Sein Wut Hmon Group",
+      "description": "Fourteen branches, one hundred forty-five vehicles, two hundred fifty employees. One of Myanmar's most comprehensive distribution networks, carrying international brands to every region of the country."
+    },
+    "industrialInputs": {
+      "title": "Industrial Inputs, Sein Wut Hmon Group",
+      "description": "Fertilizer and lubricants for Myanmar, anchored by the MMF joint venture with Marubeni at Thilawa and the Nasa and Sunoco lubricant lines."
+    },
+    "csr": {
+      "title": "Corporate Social Responsibility, Sein Wut Hmon Group",
+      "description": "How Sein Wut Hmon invests in the communities where it operates, through school support, disaster relief, and long term community development."
+    },
+    "contact": {
+      "title": "Contact, Sein Wut Hmon Group",
+      "description": "Reach the Sein Wut Hmon Group head office in Yangon."
+    }
+  },
+  "Navigation": {
+    "logoAlt": "Sein Wut Hmon Group",
+    "logoLinkLabel": "Sein Wut Hmon Group, home",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "dialogLabel": "Site navigation",
+    "primaryLabel": "Primary",
+    "languageCurrent": "Current language, {language}",
+    "languageSwitchTo": "Switch language to {language}",
+    "languages": {
+      "en": "English",
+      "my": "Myanmar"
+    },
+    "languageShort": {
+      "en": "EN",
+      "my": "MM"
+    },
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "fisheries": "Fisheries",
+      "distribution": "Distribution",
+      "industrialInputs": "Industrial Inputs",
+      "csr": "CSR",
+      "contact": "Contact"
+    }
+  },
+  "Footer": {
+    "brand": "Sein Wut Hmon Group",
+    "logoAlt": "Sein Wut Hmon Group",
+    "address": "No-24, Phan Chat Won U Shwe Ohh St., Industrial Zone (2), Hlaing Thar Yar Township, Yangon",
+    "exploreHeading": "Explore",
+    "contactHeading": "Contact",
+    "languageHeading": "Language",
+    "navigationLabel": "Footer navigation",
+    "copyright": "© {year} Sein Wut Hmon Group. All rights reserved.",
+    "builtIn": "Built in Yangon."
+  }
+}

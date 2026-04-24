@@ -1,23 +1,30 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 
 // Contact details sourced from content/scraped-content.md (legacy seinwuthmon.com).
 // Address and phone are the real values from the legacy site footer.
-// TODO: No public email address was listed on the legacy site. Replace the
-// placeholder below once marketing confirms a canonical contact address.
-const ADDRESS =
-  "No-24, Phan Chat Won U Shwe Ohh St., Industrial Zone (2), Hlaing Thar Yar Township, Yangon";
+// Email canonicalized as nwa@swh.com.mm; keep in sync with contact/ContactInfo.tsx.
 const PHONE_DISPLAY = "(+959) 73126116";
 const PHONE_HREF = "+95973126116";
 const EMAIL = "nwa@swh.com.mm";
 
-const exploreLinks = [
-  { href: "/about", label: "About" },
-  { href: "/fisheries", label: "Fisheries" },
-  { href: "/industrial-inputs", label: "Industrial Inputs" },
-  { href: "/distribution", label: "Distribution" },
-  { href: "/csr", label: "CSR" },
-  { href: "/contact", label: "Contact" },
+type ExploreKey =
+  | "about"
+  | "fisheries"
+  | "industrialInputs"
+  | "distribution"
+  | "csr"
+  | "contact";
+
+const exploreLinks: Array<{ href: string; key: ExploreKey }> = [
+  { href: "/about", key: "about" },
+  { href: "/fisheries", key: "fisheries" },
+  { href: "/industrial-inputs", key: "industrialInputs" },
+  { href: "/distribution", key: "distribution" },
+  { href: "/csr", key: "csr" },
+  { href: "/contact", key: "contact" },
 ];
 
 const subheadingClass = "mb-4 text-xs uppercase tracking-wider text-text-muted";
@@ -27,6 +34,12 @@ const linkBaseClass =
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const t = useTranslations("Footer");
+  const tNav = useTranslations("Navigation");
+  const activeLocale = useLocale() as Locale;
+  // usePathname here returns the pathname without the locale prefix, which is
+  // exactly what the locale-aware <Link> expects when switching languages.
+  const pathname = usePathname();
 
   return (
     <footer
@@ -39,25 +52,23 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Image
               src="/images/legacy/logo.png"
-              alt="Sein Wut Hmon Group"
+              alt={t("logoAlt")}
               width={160}
               height={44}
               className="h-auto w-40"
             />
-            <p className="font-display text-xl text-text">
-              Sein Wut Hmon Group
-            </p>
-            <p className="text-sm text-text-muted">{ADDRESS}</p>
+            <p className="font-display text-xl text-text">{t("brand")}</p>
+            <p className="text-sm text-text-muted">{t("address")}</p>
           </div>
 
           {/* Explore column */}
-          <nav aria-label="Footer navigation">
-            <h2 className={subheadingClass}>Explore</h2>
+          <nav aria-label={t("navigationLabel")}>
+            <h2 className={subheadingClass}>{t("exploreHeading")}</h2>
             <ul className="flex flex-col gap-3 text-sm">
               {exploreLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className={linkBaseClass}>
-                    {link.label}
+                    {tNav(`links.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -66,7 +77,7 @@ export function Footer() {
 
           {/* Contact column */}
           <div>
-            <h2 className={subheadingClass}>Contact</h2>
+            <h2 className={subheadingClass}>{t("contactHeading")}</h2>
             <ul className="flex flex-col gap-3 text-sm">
               <li>
                 <a href={`tel:${PHONE_HREF}`} className={linkBaseClass}>
@@ -83,24 +94,40 @@ export function Footer() {
 
           {/* Language column */}
           <div>
-            <h2 className={subheadingClass}>Language</h2>
-            {/* TODO: replace with next-intl locale links once i18n routing exists.
-                Rendered as static text today to avoid fake interactivity. */}
+            <h2 className={subheadingClass}>{t("languageHeading")}</h2>
             <ul className="flex flex-col gap-3 text-sm">
-              <li>
-                <span className="text-accent">English</span>
-              </li>
-              <li>
-                <span className="text-text-muted">Myanmar</span>
-              </li>
+              {routing.locales.map((candidate) => {
+                const isActive = candidate === activeLocale;
+                const label = tNav(`languages.${candidate}`);
+                if (isActive) {
+                  return (
+                    <li key={candidate}>
+                      <span aria-current="true" className="text-accent">
+                        {label}
+                      </span>
+                    </li>
+                  );
+                }
+                return (
+                  <li key={candidate}>
+                    <Link
+                      href={pathname}
+                      locale={candidate}
+                      className={linkBaseClass}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col justify-between gap-4 border-t border-border/40 pt-8 text-xs text-text-muted md:flex-row">
-          <p>&copy; {year} Sein Wut Hmon Group. All rights reserved.</p>
-          <p>Built in Yangon.</p>
+          <p>{t("copyright", { year })}</p>
+          <p>{t("builtIn")}</p>
         </div>
       </div>
     </footer>
