@@ -1,4 +1,5 @@
 # Legacy images from seinwuthmon.com
+
 Downloaded 2026-04-16.
 
 - `01-3.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/01-3.jpg
@@ -15,8 +16,6 @@ Downloaded 2026-04-16.
 - `distribution-map.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/distribution-map.jpg
 - `donation-basic-school-ayeyarwady-thumb.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/donation-basic-school-ayeyarwady-thumb.jpg
 - `donations-disaster-flood-ayeyarwadi-2015-08-08-thumb.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/donations-disaster-flood-ayeyarwadi-2015-08-08-thumb.jpg
-- `feed-mill-intro-i.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/feed-mill-intro-i.jpg
-- `feed-mill-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/feed-mill-intro.jpg
 - `fertilizer-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/fertilizer-intro.jpg
 - `fishery-i.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/fishery-i.jpg
 - `fishery-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/fishery-intro.jpg
@@ -24,11 +23,8 @@ Downloaded 2026-04-16.
 - `hisense-refirgerator-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/hisense-refirgerator-intro.jpg
 - `hisense-tv-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/hisense-tv-intro.jpg
 - `hisense-washing-machine-into.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/hisense-washing-machine-into.jpg
-- `livestock-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/livestock-intro.jpg
 - `logo.png` - https://seinwuthmon.com/wp-content/uploads/2022/11/logo.png
 - `nasa-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/nasa-intro.jpg
-- `poultry-i.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/poultry-i.jpg
-- `poultry-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/poultry-intro.jpg
 - `quicksilver-roxy-dc-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/quicksilver-roxy-dc-intro.jpg
 - `school-donation-north-shanstate-lasho-20150717-full.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/school-donation-north-shanstate-lasho-20150717-full.jpg
 - `skechers-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/skechers-intro.jpg
@@ -41,5 +37,3 @@ Downloaded 2026-04-16.
 - `swh-news03-thumb.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/swh-news03-thumb.jpg
 - `swm-4islands-aungsatkyar-pagoda-thumb.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/swm-4islands-aungsatkyar-pagoda-thumb.jpg
 - `urban-color-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/urban-color-intro.jpg
-- `veterinary-product-i.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/veterinary-product-i.jpg
-- `veterinary-product-intro.jpg` - https://seinwuthmon.com/wp-content/uploads/2025/06/veterinary-product-intro.jpg

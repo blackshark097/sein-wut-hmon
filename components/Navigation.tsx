@@ -14,7 +14,6 @@ type NavLink = {
 const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Food & Agriculture", href: "/food-agriculture" },
   { label: "Fisheries", href: "/fisheries" },
   { label: "Industrial Inputs", href: "/industrial-inputs" },
   { label: "Distribution", href: "/distribution" },

@@ -20,12 +20,6 @@ type Pillar = {
 
 const PILLARS: Pillar[] = [
   {
-    name: "Food & Agriculture",
-    blurb: "Livestock feed, poultry, and veterinary products.",
-    href: "/food-agriculture",
-    image: "/images/legacy/feed-mill-intro.jpg",
-  },
-  {
     name: "Fisheries",
     blurb: "Marine harvest from a twenty vessel fleet across Myanmar waters.",
     href: "/fisheries",
@@ -95,7 +89,7 @@ export function BusinessPillars() {
       // in the viewport on load still progress to opacity 1.
       requestAnimationFrame(() => ScrollTrigger.refresh());
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
@@ -111,14 +105,14 @@ export function BusinessPillars() {
             Our Portfolio
           </h2>
           <p className="text-body max-w-2xl mt-4">
-            Five integrated divisions operating across Myanmar&apos;s essential
-            industries, from farm to distribution.
+            Four integrated divisions operating across Myanmar&apos;s essential
+            industries, from marine harvest to nationwide distribution.
           </p>
         </div>
 
         <div
           ref={containerRef}
-          className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
         >
           {PILLARS.map((pillar) => (
             <Link

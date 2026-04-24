@@ -7,7 +7,7 @@ import { Stats } from "@/components/home/Stats";
 export const metadata: Metadata = {
   title: "Sein Wut Hmon Group, Building Myanmar's Essential Industries",
   description:
-    "A diversified Myanmar conglomerate operating across food production, marine resources, industrial supply, and nationwide distribution.",
+    "A diversified Myanmar conglomerate operating across marine resources, industrial supply, and nationwide distribution.",
 };
 
 export default function HomePage() {

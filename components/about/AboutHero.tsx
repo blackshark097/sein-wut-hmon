@@ -48,10 +48,7 @@ export function AboutHero() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-40 pb-24 text-center sm:px-10 md:pt-48 md:pb-32">
-        <motion.span
-          {...fadeUp(0.1)}
-          className="text-subheading text-gold"
-        >
+        <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
           The Group
         </motion.span>
 
@@ -71,8 +68,8 @@ export function AboutHero() {
           className="mt-6 max-w-2xl text-body text-text-muted"
         >
           From a single distribution line in Yangon to an integrated group
-          operating across food systems, marine resources, industrial supply,
-          and hospitality.
+          operating across marine resources, industrial supply, and nationwide
+          distribution.
         </motion.p>
       </div>
     </section>

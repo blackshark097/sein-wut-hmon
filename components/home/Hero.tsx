@@ -49,10 +49,7 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 text-center sm:px-10">
-        <motion.span
-          {...fadeUp(0.1)}
-          className="text-subheading text-gold"
-        >
+        <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
           Sein Wut Hmon Group
         </motion.span>
 
@@ -71,8 +68,8 @@ export function Hero() {
           {...fadeUp(0.55)}
           className="text-body mt-8 max-w-2xl text-text-muted"
         >
-          A diversified conglomerate powering food systems, industrial supply
-          chains, and distribution networks.
+          A diversified conglomerate powering marine resources, industrial
+          supply chains, and distribution networks.
         </motion.p>
       </div>
 

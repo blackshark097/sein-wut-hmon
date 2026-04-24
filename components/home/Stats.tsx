@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const STATS = [
-  { value: 350, suffix: "+", label: "Employees" },
+  { value: 250, suffix: "+", label: "Employees across SWH entities" },
   { value: 20, suffix: "", label: "Fishing Vessels" },
   { value: 14, suffix: "", label: "Branch Offices" },
   { value: 145, suffix: "+", label: "Distribution Vehicles" },

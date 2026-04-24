@@ -8,7 +8,7 @@ import { Leadership } from "@/components/about/Leadership";
 export const metadata: Metadata = {
   title: "About, Sein Wut Hmon Group",
   description:
-    "Sein Wut Hmon Group, a Myanmar conglomerate building essential industries in food, fisheries, industrial supply, and nationwide distribution.",
+    "Sein Wut Hmon Group, a Myanmar conglomerate building essential industries in fisheries, industrial supply, and nationwide distribution.",
 };
 
 export default function AboutPage() {

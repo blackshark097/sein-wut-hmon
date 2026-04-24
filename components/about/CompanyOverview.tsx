@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 const STATS = [
-  { value: "350+", label: "Employees" },
+  { value: "250+", label: "Employees across SWH entities" },
   { value: "14", label: "Branch offices" },
   { value: "20", label: "Fishing vessels" },
   { value: "145+", label: "Distribution vehicles" },
@@ -21,10 +21,16 @@ export function CompanyOverview() {
         An integrated operator
       </h2>
       <p className="mt-6 text-body text-text-muted">
-        Sein Wut Hmon Group is one of Myanmar&apos;s leading conglomerates, operating across food production, marine resources, industrial supply, and nationwide distribution. The businesses feed each other: feed mills and poultry supply the food market, the fishery fleet extends the marine line, and the distribution network moves every product to 14 branch offices across Lower and Upper Myanmar.
+        Sein Wut Hmon Group is one of Myanmar&apos;s leading conglomerates,
+        operating across marine resources, industrial supply, and nationwide
+        distribution. The businesses reinforce each other: the fishery fleet
+        anchors the marine line, industrial inputs serve agriculture and
+        manufacturing, and the distribution network moves every product to 14
+        branch offices across Lower and Upper Myanmar.
       </p>
       <p className="mt-6 text-body text-text-muted">
-        Today the group counts 350+ employees, 145+ distribution vehicles, 80 motorcycles, 20 fishing vessels, and an ongoing hospitality build under the Vista Heights name.
+        Today the group counts 250+ employees, 145+ distribution vehicles, 80
+        motorcycles, and 20 fishing vessels.
       </p>
 
       <dl className="mt-10 grid grid-cols-2 gap-y-8 gap-x-6 md:grid-cols-4">

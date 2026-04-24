@@ -16,7 +16,9 @@ export function CompanyIntro() {
         About Sein Wut Hmon
       </h2>
       <p className="mt-6 text-body text-text-muted max-w-3xl mx-auto md:mx-0">
-        Sein Wut Hmon Group is one of Myanmar&apos;s leading conglomerates, operating integrated businesses across food production, marine resources, industrial supply, and nationwide distribution.
+        Sein Wut Hmon Group is one of Myanmar&apos;s leading conglomerates,
+        operating integrated businesses across marine resources, industrial
+        supply, and nationwide distribution.
       </p>
       <Link
         href="/about"

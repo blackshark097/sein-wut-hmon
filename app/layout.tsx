@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Sein Wut Hmon Group",
   description:
-    "Myanmar conglomerate in distribution, livestock, fisheries, and industrial inputs.",
+    "Myanmar conglomerate in distribution, fisheries, and industrial inputs.",
 };
 
 export default function RootLayout({

@@ -13,7 +13,6 @@ const EMAIL = "nwa@swh.com.mm";
 
 const exploreLinks = [
   { href: "/about", label: "About" },
-  { href: "/food-agriculture", label: "Food & Agriculture" },
   { href: "/fisheries", label: "Fisheries" },
   { href: "/industrial-inputs", label: "Industrial Inputs" },
   { href: "/distribution", label: "Distribution" },
@@ -21,8 +20,7 @@ const exploreLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const subheadingClass =
-  "mb-4 text-xs uppercase tracking-wider text-text-muted";
+const subheadingClass = "mb-4 text-xs uppercase tracking-wider text-text-muted";
 
 const linkBaseClass =
   "text-text-muted transition hover:text-text focus-visible:outline focus-visible:outline-gold";
@@ -101,9 +99,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col justify-between gap-4 border-t border-border/40 pt-8 text-xs text-text-muted md:flex-row">
-          <p>
-            &copy; {year} Sein Wut Hmon Group. All rights reserved.
-          </p>
+          <p>&copy; {year} Sein Wut Hmon Group. All rights reserved.</p>
           <p>Built in Yangon.</p>
         </div>
       </div>
