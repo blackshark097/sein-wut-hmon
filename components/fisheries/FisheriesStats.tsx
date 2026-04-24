@@ -91,18 +91,18 @@ export function FisheriesStats() {
       />
       <div
         ref={containerRef}
-        className="relative mx-auto grid max-w-[1280px] grid-cols-2 gap-y-14 gap-x-8 px-6 py-24 md:grid-cols-4 md:gap-10 md:px-10 md:py-32"
+        className="relative mx-auto grid max-w-[1280px] grid-cols-2 gap-y-14 gap-x-8 px-6 py-24 md:gap-x-10 md:gap-y-16 md:px-10 md:py-32 lg:grid-cols-4"
       >
         {STATS.map((stat, i) => (
-          <div key={stat.key} className="group text-left">
+          <div key={stat.key} className="group min-w-0 text-left">
             <div
-              className="flex items-baseline gap-1 font-display font-medium text-gold tabular-nums tracking-[-0.03em]"
-              style={{ fontSize: "clamp(3.25rem, 6vw, 5.5rem)", lineHeight: 1 }}
+              className="flex min-w-0 items-baseline gap-1 font-display font-medium text-gold tabular-nums tracking-[-0.03em]"
+              style={{ fontSize: "clamp(2.25rem, 5vw, 4.25rem)", lineHeight: 1 }}
             >
               {stat.hasPreLabel ? (
                 <span
                   className="font-display font-normal italic opacity-85"
-                  style={{ fontSize: "0.65em", marginRight: 8 }}
+                  style={{ fontSize: "0.6em", marginRight: 6 }}
                 >
                   {t(`items.${stat.key}.preLabel`)}
                 </span>

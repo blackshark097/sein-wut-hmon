@@ -79,13 +79,13 @@ export function DistributionStats() {
       />
       <div
         ref={containerRef}
-        className="relative mx-auto grid max-w-[1280px] grid-cols-2 gap-y-14 gap-x-8 px-6 py-24 md:grid-cols-4 md:gap-10 md:px-10 md:py-32"
+        className="relative mx-auto grid max-w-[1280px] grid-cols-2 gap-y-14 gap-x-8 px-6 py-24 md:gap-x-10 md:gap-y-16 md:px-10 md:py-32 lg:grid-cols-4"
       >
         {STATS.map((stat, i) => (
-          <div key={stat.key} className="group text-left">
+          <div key={stat.key} className="group min-w-0 text-left">
             <div
-              className="flex items-baseline font-display font-medium text-accent tabular-nums tracking-[-0.03em]"
-              style={{ fontSize: "clamp(3.25rem, 6vw, 5.5rem)", lineHeight: 1 }}
+              className="flex min-w-0 items-baseline font-display font-medium text-accent tabular-nums tracking-[-0.03em]"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)", lineHeight: 1 }}
             >
               <span
                 ref={(el) => {

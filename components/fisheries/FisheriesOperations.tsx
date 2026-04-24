@@ -81,7 +81,7 @@ export function FisheriesOperations() {
           {OPS.map((op) => (
             <article
               key={op.num}
-              className="swh-fish-card group relative flex min-h-[380px] flex-col overflow-hidden border border-border/70 bg-bg-elev px-10 pt-12 pb-11 transition duration-500 hover:-translate-y-1 hover:border-gold/55 hover:bg-[#131c2f] hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_30px_60px_-20px_rgba(0,173,238,0.18)]"
+              className="swh-fish-card group relative flex min-h-[340px] flex-col overflow-hidden border border-border/70 bg-bg-elev px-6 pt-10 pb-9 transition duration-500 hover:-translate-y-1 hover:border-gold/55 hover:bg-[#131c2f] hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_30px_60px_-20px_rgba(0,173,238,0.18)] sm:px-8 md:min-h-[380px] md:px-10 md:pt-12 md:pb-11"
             >
               <div
                 aria-hidden="true"
@@ -94,9 +94,9 @@ export function FisheriesOperations() {
 
               <span
                 aria-hidden="true"
-                className="absolute right-8 top-9 font-display italic text-gold/25 transition-all duration-500 group-hover:text-gold"
+                className="absolute right-6 top-8 font-display italic text-gold/25 transition-all duration-500 group-hover:text-gold md:right-8 md:top-9"
                 style={{
-                  fontSize: 48,
+                  fontSize: "clamp(2.25rem, 4vw, 3rem)",
                   lineHeight: 1,
                   letterSpacing: "-0.02em",
                 }}
