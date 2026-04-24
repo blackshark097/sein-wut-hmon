@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -25,27 +26,20 @@ export function FisheriesHero() {
       className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-bg"
       style={{ minHeight: "90vh" }}
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage: [
-            "radial-gradient(ellipse 90% 60% at 20% 100%, rgba(96,165,250,0.18), transparent 55%)",
-            "radial-gradient(ellipse 70% 50% at 80% 10%, rgba(0,173,238,0.10), transparent 60%)",
-            "radial-gradient(ellipse 120% 80% at 50% 120%, rgba(10,30,56,0.9), transparent 70%)",
-            "linear-gradient(180deg, #050914 0%, #0A1628 35%, #0A0F1C 70%, #04070E 100%)",
-          ].join(","),
-        }}
-      />
+      <div aria-hidden="true" className="absolute inset-0">
+        <Image
+          src="/images/fisheries/vessel-port.jpg"
+          alt={t("imageAlt")}
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover"
+        />
+      </div>
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 mix-blend-screen"
-        style={{
-          backgroundImage:
-            "linear-gradient(105deg, transparent 40%, rgba(96,165,250,0.04) 50%, transparent 60%), linear-gradient(95deg, transparent 55%, rgba(0,173,238,0.03) 62%, transparent 68%)",
-          opacity: 0.9,
-        }}
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-bg/60 via-bg/70 to-bg"
       />
 
       <div

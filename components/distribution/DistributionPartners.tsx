@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -8,6 +9,12 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 type PartnerKey = "ok" | "hisense" | "nasa";
 
 const PARTNER_KEYS: PartnerKey[] = ["ok", "hisense", "nasa"];
+
+const PARTNER_LOGOS: Record<PartnerKey, string> = {
+  ok: "/images/partners/ok.jpg",
+  hisense: "/images/partners/hisense.jpg",
+  nasa: "/images/partners/nasa.png",
+};
 
 export function DistributionPartners() {
   const reduce = useReducedMotion();
@@ -50,16 +57,16 @@ export function DistributionPartners() {
               className="group relative flex min-h-[320px] flex-col border border-border/70 bg-bg-elev p-9 transition duration-500 hover:-translate-y-1 hover:border-accent/55 hover:bg-[#131c2f]"
             >
               <div
-                aria-hidden="true"
-                className="mb-8 flex w-full items-center justify-center border border-dashed border-accent/25 font-display font-semibold tracking-[-0.02em] text-accent transition-colors duration-500 group-hover:border-accent/55"
-                style={{
-                  aspectRatio: "16 / 7",
-                  fontSize: "clamp(2rem, 3vw, 2.5rem)",
-                  backgroundImage:
-                    "repeating-linear-gradient(135deg, rgba(0,173,238,0.04) 0 8px, transparent 8px 16px)",
-                }}
+                className="relative mb-8 w-full overflow-hidden bg-bg-elev"
+                style={{ aspectRatio: "16 / 7" }}
               >
-                {t(`items.${key}.name`)}
+                <Image
+                  src={PARTNER_LOGOS[key]}
+                  alt={t(`items.${key}.name`)}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-contain p-5"
+                />
               </div>
 
               <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">

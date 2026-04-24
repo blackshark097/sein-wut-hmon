@@ -52,3 +52,6 @@ next-env.d.ts
 # Evolve Lite session captures (local telemetry)
 .evolve/
 
+
+# playwright mcp screenshots
+.playwright-mcp/
