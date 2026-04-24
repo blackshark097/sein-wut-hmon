@@ -1,22 +1,26 @@
 import type { Metadata } from "next";
+import { DistributionHero } from "@/components/distribution/DistributionHero";
+import { DistributionOverview } from "@/components/distribution/DistributionOverview";
+import { DistributionStats } from "@/components/distribution/DistributionStats";
+import { DistributionOperations } from "@/components/distribution/DistributionOperations";
+import { DistributionPartners } from "@/components/distribution/DistributionPartners";
+import { DistributionCta } from "@/components/distribution/DistributionCta";
 
 export const metadata: Metadata = {
   title: "Trading & Distribution, Sein Wut Hmon Group",
-  description: "Nationwide trading and distribution across Myanmar's 14 branch offices.",
+  description:
+    "Fourteen branches, one hundred forty-five vehicles, two hundred fifty employees. One of Myanmar's most comprehensive distribution networks, carrying international brands to every region of the country.",
 };
 
 export default function DistributionPage() {
   return (
-    <section aria-labelledby="page-heading" className="relative min-h-[70vh] bg-bg">
-      <div className="mx-auto max-w-5xl px-6 md:px-10 pt-40 pb-24 md:pt-48 md:pb-32">
-        <p className="text-subheading text-gold">SEIN WUT HMON GROUP</p>
-        <h1 id="page-heading" className="mt-4 text-display text-text">
-          Trading & Distribution
-        </h1>
-        <p className="mt-8 text-body max-w-2xl">
-          Coming soon. This section is under construction as we rebuild the Sein Wut Hmon website.
-        </p>
-      </div>
-    </section>
+    <>
+      <DistributionHero />
+      <DistributionOverview />
+      <DistributionStats />
+      <DistributionOperations />
+      <DistributionPartners />
+      <DistributionCta />
+    </>
   );
 }
