@@ -82,29 +82,33 @@
       "body": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating integrated businesses across marine resources, industrial supply, and nationwide distribution.",
       "cta": "About the group"
     },
-    "pillars": {
-      "eyebrow": "Portfolio",
-      "heading": "Our Portfolio",
-      "intro": "Four integrated divisions operating across Myanmar's essential industries, from marine harvest to nationwide distribution.",
+    "portfolio": {
+      "eyebrow": "Portfolio — 03 / 04",
+      "headline": "Three <em>integrated</em> divisions",
+      "subhead": "Operating across Myanmar's essential industries, from marine harvest to nationwide distribution.",
       "exploreLabel": "Explore",
-      "items": {
-        "fisheries": {
-          "name": "Fisheries",
-          "blurb": "Marine harvest from a twenty vessel fleet across Myanmar waters."
-        },
+      "banners": {
         "distribution": {
-          "name": "Trading & Distribution",
-          "blurb": "Nationwide reach through 14 branch offices and 145+ vehicles."
+          "eyebrow": "Nationwide network",
+          "name": "Trading <em>&</em><br></br>Distribution",
+          "blurb": "Fourteen branches. One hundred forty-five vehicles. Two hundred fifty employees. The country's most comprehensive distribution network."
         },
-        "industrialInputs": {
-          "name": "Industrial Inputs",
-          "blurb": "Fertilizer, feed ingredients, and industrial raw materials."
+        "fisheries": {
+          "eyebrow": "Marine harvest · Est. 2000",
+          "name": "Fisheries",
+          "blurb": "Twenty vessels operating across 2,832 kilometers of coastline. Marine harvest at export grade since 2000."
         },
-        "csr": {
-          "name": "CSR",
-          "blurb": "Schools, disaster relief, and community investment."
+        "fertilizer": {
+          "eyebrow": "Marubeni JV",
+          "name": "Fertilizer",
+          "blurb": "Industrial agriculture inputs through a Marubeni joint venture. Manufacturing fertilizer for Myanmar's farmers at scale."
         }
-      }
+      },
+      "partnerBrands": {
+        "eyebrow": "Partner brands",
+        "caption": "International brands distributed by Sein Wut Hmon across Myanmar"
+      },
+      "continue": "Continue ↓ Stats"
     },
     "stats": {
       "ariaLabel": "Key statistics",

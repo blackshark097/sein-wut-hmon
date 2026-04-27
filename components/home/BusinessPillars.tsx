@@ -1,56 +1,23 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type PillarKey = "fisheries" | "distribution" | "industrialInputs" | "csr";
-
-type PillarConfig = {
-  key: PillarKey;
-  href: string;
-  image: string | null;
-  placeholder?: { gradient: string; initial: string };
-};
-
-const PILLARS: PillarConfig[] = [
-  {
-    key: "fisheries",
-    href: "/fisheries",
-    image: null,
-    placeholder: {
-      gradient: "from-[#071a2e] via-[#0b2a47] to-[#020814]",
-      initial: "F",
-    },
-  },
-  {
-    key: "distribution",
-    href: "/distribution",
-    image: "/images/legacy/distribution-map.jpg",
-  },
-  {
-    key: "industrialInputs",
-    href: "/industrial-inputs",
-    image: "/images/legacy/fertilizer-intro.jpg",
-  },
-  {
-    key: "csr",
-    href: "/csr",
-    image:
-      "/images/legacy/school-donation-north-shanstate-lasho-20150717-full.jpg",
-  },
-];
+const BANNERS = [
+  { key: "distribution", href: "/distribution" },
+  { key: "fisheries", href: "/fisheries" },
+  { key: "fertilizer", href: "/industrial-inputs" },
+] as const;
 
 export function BusinessPillars() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const t = useTranslations("home.pillars");
+  const containerRef = useRef<HTMLElement | null>(null);
+  const t = useTranslations("home.portfolio");
 
   useGSAP(
     () => {
@@ -64,20 +31,18 @@ export function BusinessPillars() {
       const root = containerRef.current;
       if (!root) return;
 
-      const cards = gsap.utils.toArray<HTMLElement>(
-        root.querySelectorAll(".swh-pillar-card"),
+      const banners = gsap.utils.toArray<HTMLElement>(
+        root.querySelectorAll(".swh-pf-banner"),
       );
-      if (!cards.length) return;
-
-      cards.forEach((card, index) => {
-        gsap.from(card, {
+      banners.forEach((banner, index) => {
+        gsap.from(banner, {
           y: 40,
           opacity: 0,
           duration: 0.9,
           ease: "power3.out",
           delay: index * 0.08,
           scrollTrigger: {
-            trigger: card,
+            trigger: banner,
             start: "top 92%",
             once: true,
           },
@@ -91,80 +56,129 @@ export function BusinessPillars() {
 
   return (
     <section
+      ref={containerRef}
       id="portfolio"
       aria-labelledby="portfolio-heading"
-      className="relative bg-bg py-24 md:py-32 lg:py-40"
+      className="relative bg-bg"
     >
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      {/* Intro */}
+      <div className="mx-auto grid max-w-7xl gap-10 border-b border-border px-6 py-24 md:px-10 md:py-32 lg:grid-cols-2 lg:items-end lg:gap-16">
         <div>
-          <p className="text-subheading text-gold">{t("eyebrow")}</p>
-          <h2 id="portfolio-heading" className="text-heading mt-3">
-            {t("heading")}
+          <p className="inline-flex items-center gap-3.5 font-sans text-xs font-medium uppercase tracking-[0.32em] text-accent before:block before:h-px before:w-7 before:bg-accent">
+            {t("eyebrow")}
+          </p>
+          <h2
+            id="portfolio-heading"
+            className="mt-9 font-display font-normal leading-[0.98] tracking-[-0.035em] text-text"
+            style={{ fontSize: "clamp(3rem, 7.5vw, 6rem)", maxWidth: "14ch" }}
+          >
+            {t.rich("headline", {
+              em: (chunks) => (
+                <em className="font-normal italic text-text-muted">{chunks}</em>
+              ),
+            })}
           </h2>
-          <p className="text-body max-w-2xl mt-4">{t("intro")}</p>
         </div>
+        <p className="relative max-w-[44ch] text-lg leading-relaxed text-text-muted before:mb-6 before:block before:h-px before:w-10 before:bg-[#2a3548] lg:self-end lg:pb-3">
+          {t("subhead")}
+        </p>
+      </div>
 
-        <div
-          ref={containerRef}
-          className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
-        >
-          {PILLARS.map((pillar) => {
-            const name = t(`items.${pillar.key}.name`);
-            const blurb = t(`items.${pillar.key}.blurb`);
-            return (
-              <Link
-                key={pillar.key}
-                href={pillar.href}
-                className="swh-pillar-card group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_24px_60px_-20px_rgba(0,173,238,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-              >
-                <div className="relative block w-full aspect-[4/3]">
-                  {pillar.image ? (
-                    <Image
-                      src={pillar.image}
-                      alt={name}
-                      fill
-                      sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
-                      className="object-cover transition duration-700 group-hover:scale-105"
-                    />
-                  ) : (
-                    <>
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-br ${pillar.placeholder?.gradient ?? "from-surface via-bg-elev to-bg"}`}
-                        aria-hidden="true"
-                      />
-                      <span
-                        className="absolute inset-0 flex items-center justify-center font-display text-gold/40 text-6xl"
-                        aria-hidden="true"
-                      >
-                        {pillar.placeholder?.initial ?? name.charAt(0)}
-                      </span>
-                    </>
-                  )}
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent"
-                    aria-hidden="true"
-                  />
-                </div>
-
-                <div className="p-6 md:p-7">
-                  <h3 className="font-display text-2xl md:text-3xl text-text tracking-tight leading-tight">
-                    {name}
+      {/* Banners */}
+      <div className="flex flex-col">
+        {BANNERS.map((banner, index) => {
+          const idx = String(index + 1).padStart(2, "0");
+          return (
+            <Link
+              key={banner.key}
+              href={banner.href}
+              className="swh-pf-banner group relative grid grid-cols-1 items-center gap-10 overflow-hidden border-b border-border px-6 pb-16 pt-14 md:px-10 lg:h-[50vh] lg:min-h-[460px] lg:grid-cols-[minmax(0,1fr)_minmax(0,0.66fr)] lg:gap-16 lg:px-20"
+            >
+              <span className="absolute left-6 top-10 inline-flex items-center gap-3.5 font-sans text-xs font-medium uppercase tracking-[0.32em] text-accent before:block before:h-px before:w-6 before:bg-accent md:left-10 lg:left-20">
+                {idx}
+              </span>
+              <div>
+                <span className="inline-block transition-transform duration-[350ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-3">
+                  <h3
+                    className="relative inline-block font-display font-normal leading-[0.96] tracking-[-0.035em] text-text after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-[450ms] after:ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:after:scale-x-100"
+                    style={{ fontSize: "clamp(2.75rem, 7vw, 5.75rem)" }}
+                  >
+                    {t.rich(`banners.${banner.key}.name`, {
+                      em: (chunks) => (
+                        <em className="font-normal italic text-text-muted transition-colors duration-[350ms] group-hover:text-text">
+                          {chunks}
+                        </em>
+                      ),
+                      br: () => <br />,
+                    })}
                   </h3>
-                  <p className="mt-2 text-sm text-text-muted leading-relaxed">
-                    {blurb}
-                  </p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm text-gold">
-                    {t("exploreLabel")}
-                    <ArrowUpRight
-                      className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      aria-hidden
-                    />
+                </span>
+              </div>
+              <div className="flex max-w-[44ch] flex-col items-start gap-7">
+                <span className="inline-flex items-center gap-2.5 font-sans text-[10px] uppercase tracking-[0.24em] text-text-muted/70 before:block before:h-1 before:w-1 before:rounded-full before:bg-text-muted/70">
+                  {t(`banners.${banner.key}.eyebrow`)}
+                </span>
+                <p className="text-[17px] font-light leading-relaxed text-text-muted">
+                  {t(`banners.${banner.key}.blurb`)}
+                </p>
+                <span className="inline-flex items-center gap-3.5 font-sans text-xs font-medium uppercase tracking-[0.24em] text-accent">
+                  {t("exploreLabel")}
+                  <span
+                    aria-hidden="true"
+                    className="relative block h-px w-7 bg-accent transition-[width] duration-300 ease-out group-hover:w-11"
+                  >
+                    <span className="absolute -top-[3px] right-0 block h-[7px] w-[7px] origin-right rotate-45 border-r border-t border-accent" />
                   </span>
-                </div>
-              </Link>
-            );
-          })}
+                </span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Brand strip */}
+      <div className="flex flex-col items-center gap-12 border-b border-border px-6 py-24 md:px-10 lg:gap-16 lg:px-20 lg:py-32">
+        <span className="inline-flex items-center gap-3.5 font-sans text-xs font-medium uppercase tracking-[0.32em] text-accent before:block before:h-px before:w-7 before:bg-accent after:block after:h-px after:w-7 after:bg-accent">
+          {t("partnerBrands.eyebrow")}
+        </span>
+        <div className="flex w-full max-w-[1100px] flex-wrap items-center justify-center gap-x-8 gap-y-6 lg:justify-between lg:gap-12">
+          <span className="font-display text-5xl font-medium italic leading-none tracking-[-0.03em] text-text-muted/70 transition-all duration-300 hover:scale-105 hover:text-text lg:text-[56px]">
+            OK
+          </span>
+          <span
+            aria-hidden="true"
+            className="hidden h-1 w-1 rounded-full bg-[#2a3548] lg:block"
+          />
+          <span className="font-sans text-3xl font-semibold lowercase leading-none tracking-[-0.02em] text-text-muted/70 transition-all duration-300 hover:scale-105 hover:text-text">
+            Hisense
+          </span>
+          <span
+            aria-hidden="true"
+            className="hidden h-1 w-1 rounded-full bg-[#2a3548] lg:block"
+          />
+          <span className="font-sans text-[32px] font-bold leading-none tracking-[0.04em] text-text-muted/70 transition-all duration-300 hover:scale-105 hover:text-text">
+            NASA
+          </span>
+          <span
+            aria-hidden="true"
+            className="hidden h-1 w-1 rounded-full bg-[#2a3548] lg:block"
+          />
+          <span className="font-display text-3xl italic leading-none tracking-[-0.015em] text-text-muted/70 transition-all duration-300 hover:scale-105 hover:text-text">
+            Shwe Myay Thee
+          </span>
         </div>
+        <p className="max-w-[60ch] text-center font-sans text-[13px] tracking-[0.04em] text-text-muted/70">
+          {t("partnerBrands.caption")}
+        </p>
+      </div>
+
+      {/* Foot marker */}
+      <div className="flex justify-between px-6 py-7 font-sans text-[11px] uppercase tracking-[0.16em] text-text-muted/70 md:px-10 lg:px-20">
+        <span>
+          <b className="font-medium text-text-muted">§ 03</b>
+          {" · Portfolio"}
+        </span>
+        <span>{t("continue")}</span>
       </div>
     </section>
   );
