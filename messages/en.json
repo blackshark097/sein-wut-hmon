@@ -63,13 +63,8 @@
   "Footer": {
     "brand": "Sein Wut Hmon Group",
     "logoAlt": "Sein Wut Hmon Group",
-    "address": "No-24, Phan Chat Won U Shwe Ohh St., Industrial Zone (2), Hlaing Thar Yar Township, Yangon",
-    "exploreHeading": "Explore",
-    "contactHeading": "Contact",
-    "languageHeading": "Language",
-    "navigationLabel": "Footer navigation",
-    "copyright": "© {year} Sein Wut Hmon Group. All rights reserved.",
-    "builtIn": "Built in Yangon."
+    "address": "No-24, Phan Chat Won U Shwe Ohh St. · Industrial Zone (2) · Hlaing Thar Yar Township, Yangon",
+    "copyright": "© {year} Sein Wut Hmon Group"
   },
   "Common": {
     "scroll": "Scroll"
