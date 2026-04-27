@@ -61,13 +61,9 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 text-center sm:px-10">
-        <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
-          {t("eyebrow")}
-        </motion.span>
-
         <motion.h1
           {...headingMotion}
-          className="text-display mt-6 font-display tracking-tight text-text"
+          className="text-display font-display tracking-tight text-text"
           style={{
             fontSize: "clamp(3rem, 8vw, 7.5rem)",
             lineHeight: 1.02,

@@ -49,13 +49,9 @@ export function ContactHero() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-36 pb-20 text-center sm:px-10 md:pt-40 md:pb-24">
-        <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
-          {t("eyebrow")}
-        </motion.span>
-
         <motion.h1
           {...fadeUp(0.2)}
-          className="mt-6 font-display tracking-tight text-text"
+          className="font-display tracking-tight text-text"
           style={{
             fontSize: "clamp(2.25rem, 5vw, 4rem)",
             lineHeight: 1.05,

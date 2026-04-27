@@ -57,13 +57,9 @@ export function IndustrialHero() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-32 text-center sm:px-10 md:py-40">
-        <motion.span {...fadeUp(0.1)} className="text-subheading text-gold">
-          {t("eyebrow")}
-        </motion.span>
-
         <motion.h1
           {...fadeUp(0.25)}
-          className="mt-6 font-display tracking-tight text-text"
+          className="font-display tracking-tight text-text"
           style={{
             fontSize: "clamp(2.5rem, 6vw, 5rem)",
             lineHeight: 1.05,

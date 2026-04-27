@@ -136,16 +136,9 @@ export function DistributionHero() {
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col px-6 pt-40 pb-32 md:px-10 md:pt-44 md:pb-36">
-        <motion.span
-          {...fadeUp(0.1)}
-          className="inline-flex items-center gap-3.5 text-subheading text-accent before:block before:h-px before:w-9 before:bg-accent"
-        >
-          {t("eyebrow")}
-        </motion.span>
-
         <motion.h1
           {...fadeUp(0.3)}
-          className="mt-7 font-display font-medium tracking-[-0.04em] text-text"
+          className="font-display font-medium tracking-[-0.04em] text-text"
           style={{
             fontSize: "clamp(2.75rem, 8vw, 7.5rem)",
             lineHeight: 1.0,

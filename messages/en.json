@@ -36,6 +36,8 @@
     "logoLinkLabel": "Sein Wut Hmon Group, home",
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
+    "sidebarMenuOpen": "MENU",
+    "sidebarMenuClose": "CLOSE",
     "dialogLabel": "Site navigation",
     "primaryLabel": "Primary",
     "languageCurrent": "Current language, {language}",
@@ -52,10 +54,19 @@
       "home": "Home",
       "about": "About",
       "fisheries": "Fisheries",
-      "distribution": "Distribution",
-      "industrialInputs": "Industrial Inputs",
+      "distribution": "Trading & Distribution",
+      "industrialInputs": "Fertilizer",
       "csr": "CSR",
       "contact": "Contact"
+    },
+    "captions": {
+      "home": "Group homepage",
+      "about": "Heritage and leadership",
+      "fisheries": "Marine harvest",
+      "distribution": "Imports and nationwide reach",
+      "industrialInputs": "Industrial agriculture",
+      "csr": "Community investment",
+      "contact": "Get in touch"
     }
   },
   "Footer": {

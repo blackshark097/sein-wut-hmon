@@ -36,6 +36,8 @@
     "logoLinkLabel": "စိန်ဝုတ်မွန် အုပ်စု၊ ပင်မစာမျက်နှာ",
     "menuOpen": "မီနူးဖွင့်ရန်",
     "menuClose": "မီနူးပိတ်ရန်",
+    "sidebarMenuOpen": "မီနူး",
+    "sidebarMenuClose": "ပိတ်",
     "dialogLabel": "ဝက်ဘ်ဆိုက် လမ်းညွှန်",
     "primaryLabel": "ပင်မ",
     "languageCurrent": "လက်ရှိဘာသာစကား၊ {language}",
@@ -52,9 +54,18 @@
       "home": "ပင်မ",
       "about": "ကျွန်ုပ်တို့အကြောင်း",
       "fisheries": "ရေလုပ်ငန်း",
-      "distribution": "ဖြန့်ဖြူးရေး",
-      "industrialInputs": "စက်မှုပစ္စည်းများ",
+      "distribution": "ကုန်သွယ်ရေးနှင့် ဖြန့်ဖြူးရေး",
+      "industrialInputs": "ဓါတ်မြေသြဇာ",
       "csr": "CSR",
+      "contact": "ဆက်သွယ်ရန်"
+    },
+    "captions": {
+      "home": "အုပ်စုပင်မစာမျက်နှာ",
+      "about": "အမွေအနှစ်နှင့် ခေါင်းဆောင်မှု",
+      "fisheries": "ပင်လယ်ထွက်ကုန်",
+      "distribution": "သွင်းကုန်နှင့် ပြည်တွင်းဖြန့်ဖြူးမှု",
+      "industrialInputs": "စိုက်ပျိုးရေးသွင်းအား",
+      "csr": "လူမှုရင်းနှီးမြှုပ်နှံမှု",
       "contact": "ဆက်သွယ်ရန်"
     }
   },

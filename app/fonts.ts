@@ -1,4 +1,4 @@
-import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 
 export const fontDisplay = Fraunces({
   variable: "--font-display",
@@ -8,9 +8,9 @@ export const fontDisplay = Fraunces({
   display: "swap",
 });
 
-export const fontSans = Plus_Jakarta_Sans({
+export const fontSans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
