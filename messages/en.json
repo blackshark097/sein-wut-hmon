@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "siteName": "Sein Wut Hmon Group",
-    "defaultDescription": "Myanmar conglomerate in distribution, fisheries, and industrial inputs.",
+    "defaultDescription": "Myanmar conglomerate in distribution, fisheries, and fertilizer.",
     "home": {
       "title": "Sein Wut Hmon Group, Building Myanmar's Essential Industries",
       "description": "A diversified Myanmar conglomerate operating across marine resources, industrial supply, and nationwide distribution."
@@ -18,9 +18,9 @@
       "title": "Trading & Distribution, Sein Wut Hmon Group",
       "description": "Fourteen branches, one hundred forty-five vehicles, two hundred fifty employees. One of Myanmar's most comprehensive distribution networks, carrying international brands to every region of the country."
     },
-    "industrialInputs": {
-      "title": "Industrial Inputs, Sein Wut Hmon Group",
-      "description": "Fertilizer and lubricants for Myanmar, anchored by the MMF joint venture with Marubeni at Thilawa and the Nasa and Sunoco lubricant lines."
+    "fertilizer": {
+      "title": "Fertilizer, Sein Wut Hmon Group",
+      "description": "Fertilizer manufactured for Myanmar's farmers through a Marubeni joint venture at Thilawa Industrial Zone."
     },
     "csr": {
       "title": "Corporate Social Responsibility, Sein Wut Hmon Group",
@@ -55,7 +55,7 @@
       "about": "About",
       "fisheries": "Fisheries",
       "distribution": "Trading & Distribution",
-      "industrialInputs": "Fertilizer",
+      "fertilizer": "Fertilizer",
       "csr": "CSR",
       "contact": "Contact"
     }
@@ -130,7 +130,7 @@
     "overview": {
       "eyebrow": "The Business",
       "heading": "An integrated operator",
-      "paragraph1": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating across marine resources, industrial supply, and nationwide distribution. The businesses reinforce each other: the fishery fleet anchors the marine line, industrial inputs serve agriculture and manufacturing, and the distribution network moves every product to 14 branch offices across Lower and Upper Myanmar.",
+      "paragraph1": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating across marine resources, fertilizer manufacturing, and nationwide distribution. The businesses reinforce each other: the fishery fleet anchors the marine line, the Marubeni fertilizer joint venture supports Myanmar's farmers, and the distribution network moves every product to 14 branch offices across Lower and Upper Myanmar.",
       "paragraph2": "Today the group counts 250+ employees, 145+ distribution vehicles, 80 motorcycles, and 20 fishing vessels.",
       "stats": {
         "employees": "Employees across SWH entities",
@@ -159,38 +159,6 @@
           "year": "YYYY",
           "title": "Marine fleet launch",
           "description": "Sein Wut Hmon expands into marine harvest, building toward a twenty vessel fleet."
-        }
-      }
-    },
-    "entities": {
-      "eyebrow": "Structure",
-      "heading": "Companies in the group",
-      "intro": "Four operating companies, one shared brand and leadership.",
-      "roles": {
-        "distribution": "Distribution",
-        "manufacturing": "Manufacturing",
-        "trading": "Trading"
-      },
-      "items": {
-        "swhCoLtd": {
-          "name": "Sein Wut Hmon Co., Ltd.",
-          "roleKey": "distribution",
-          "description": "The distribution parent, running the branch network and consumer reach across Myanmar."
-        },
-        "imu": {
-          "name": "IMU Enterprise Ltd.",
-          "roleKey": "manufacturing",
-          "description": "Manufacturing arm covering industrial inputs, feed processing, and related production."
-        },
-        "seinMyoDaw": {
-          "name": "Sein Myo Daw Co., Ltd.",
-          "roleKey": "trading",
-          "description": "The trading house for imports, raw materials, and cross-sector commercial partnerships."
-        },
-        "starWay": {
-          "name": "Star Way Co., Ltd.",
-          "roleKey": "distribution",
-          "description": "A specialist distributor within the group, complementing the Sein Wut Hmon network."
         }
       }
     },
@@ -367,6 +335,18 @@
         }
       }
     },
+    "lubricants": {
+      "ariaLabel": "Lubricants",
+      "eyebrow": "Lubricants",
+      "heading": "Industrial and automotive lubricants",
+      "body": "As the sole agent of NASA Total Lubricating Solution from AC Lubricants Sdn Bhd in Malaysia, Sein Wut Hmon distributes industrial and automotive lubricants nationwide for transportation, machinery, and manufacturing customers across Myanmar.",
+      "bullets": {
+        "item1": "Sole agent of Nasa lubricants in Myanmar",
+        "item2": "Industrial and automotive grades",
+        "item3": "Nationwide distribution through the group network"
+      },
+      "imageAlt": "Nasa lubricants product line"
+    },
     "cta": {
       "eyebrow": "Partnership",
       "heading": "Partner with <em>Sein Wut Hmon</em>.",
@@ -374,40 +354,24 @@
       "button": "Get in touch"
     }
   },
-  "industrialInputs": {
+  "fertilizer": {
     "hero": {
-      "ariaLabel": "Industrial Inputs hero",
+      "ariaLabel": "Fertilizer hero",
       "imageAlt": "Sein Wut Hmon and Marubeni Myanmar Fertilizer cooperation at Thilawa",
       "eyebrow": "Division",
-      "heading": "Industrial Inputs",
-      "intro": "Fertilizer, lubricants, and raw materials supporting Myanmar's agriculture and transportation sectors."
+      "heading": "Fertilizer, at scale",
+      "intro": "Industrial agriculture inputs through a Marubeni joint venture, manufactured for Myanmar's farmers."
     },
-    "products": {
-      "eyebrow": "Portfolio",
-      "heading": "The product lines",
-      "intro": "Two core lines anchor the division, each built on long standing distribution partnerships.",
-      "items": {
-        "fertilizer": {
-          "name": "Fertilizer",
-          "partner": "MMF",
-          "blurb": "Distribution of fertilizer products across Myanmar, backed by the group's joint venture with Marubeni Corporation and a plant at Thilawa Industrial Zone.",
-          "bullets": {
-            "item1": "Nationwide fertilizer distribution",
-            "item2": "Support for smallholder and commercial farms",
-            "item3": "Integrated with the group's trading and logistics arms"
-          }
-        },
-        "lubricants": {
-          "name": "Lubricants",
-          "partner": "Nasa and Sunoco",
-          "blurb": "Industrial and automotive lubricants for transportation, machinery, and manufacturing customers across Myanmar. Sole agent of NASA Total Lubricating Solution from AC Lubricants Sdn Bhd, Malaysia.",
-          "bullets": {
-            "item1": "Automotive and industrial grades",
-            "item2": "Nationwide distribution through the group network",
-            "item3": "Trusted Nasa and Sunoco product lines"
-          }
-        }
-      }
+    "overview": {
+      "eyebrow": "Joint Venture",
+      "heading": "Manufactured at Thilawa, distributed nationwide",
+      "body": "Through a long-standing joint venture with Marubeni Corporation, Sein Wut Hmon manufactures and distributes fertilizer products from a plant at Thilawa Industrial Zone, supporting Myanmar's smallholder and commercial farms.",
+      "bullets": {
+        "item1": "Marubeni Corporation joint venture (MMF)",
+        "item2": "Manufactured at Thilawa Industrial Zone",
+        "item3": "Nationwide distribution to smallholder and commercial farms"
+      },
+      "imageAlt": "Fertilizer production at Thilawa Industrial Zone"
     }
   },
   "csr": {

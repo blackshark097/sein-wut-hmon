@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const BANNERS = [
   { key: "distribution", href: "/distribution" },
   { key: "fisheries", href: "/fisheries" },
-  { key: "fertilizer", href: "/industrial-inputs" },
+  { key: "fertilizer", href: "/fertilizer" },
 ] as const;
 
 export function BusinessPillars() {

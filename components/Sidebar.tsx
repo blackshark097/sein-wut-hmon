@@ -13,7 +13,7 @@ type NavKey =
   | "about"
   | "fisheries"
   | "distribution"
-  | "industrialInputs"
+  | "fertilizer"
   | "csr"
   | "contact";
 
@@ -22,7 +22,7 @@ const NAV_LINKS: { key: NavKey; href: string }[] = [
   { key: "about", href: "/about" },
   { key: "fisheries", href: "/fisheries" },
   { key: "distribution", href: "/distribution" },
-  { key: "industrialInputs", href: "/industrial-inputs" },
+  { key: "fertilizer", href: "/fertilizer" },
   { key: "csr", href: "/csr" },
   { key: "contact", href: "/contact" },
 ];

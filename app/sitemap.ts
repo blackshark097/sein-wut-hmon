@@ -7,7 +7,7 @@ const PATHS = [
   "/about",
   "/fisheries",
   "/distribution",
-  "/industrial-inputs",
+  "/fertilizer",
   "/csr",
   "/contact",
 ] as const;
@@ -17,7 +17,7 @@ const PRIORITY: Record<(typeof PATHS)[number], number> = {
   "/about": 0.9,
   "/fisheries": 0.9,
   "/distribution": 0.9,
-  "/industrial-inputs": 0.8,
+  "/fertilizer": 0.8,
   "/csr": 0.7,
   "/contact": 0.7,
 };

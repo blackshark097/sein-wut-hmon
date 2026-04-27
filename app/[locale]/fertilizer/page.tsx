@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
-import IndustrialHero from "@/components/industrial-inputs/IndustrialHero";
-import Products from "@/components/industrial-inputs/Products";
+import FertilizerHero from "@/components/fertilizer/FertilizerHero";
+import FertilizerOverview from "@/components/fertilizer/FertilizerOverview";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 
@@ -13,17 +13,17 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = await params;
-  return buildPageMetadata(locale as Locale, "industrialInputs");
+  return buildPageMetadata(locale as Locale, "fertilizer");
 }
 
-export default async function IndustrialInputsPage({ params }: PageProps) {
+export default async function FertilizerPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   return (
     <>
-      <IndustrialHero />
-      <Products />
+      <FertilizerHero />
+      <FertilizerOverview />
     </>
   );
 }

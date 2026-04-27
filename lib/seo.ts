@@ -9,7 +9,7 @@ export type PageKey =
   | "about"
   | "fisheries"
   | "distribution"
-  | "industrialInputs"
+  | "fertilizer"
   | "csr"
   | "contact";
 
@@ -18,7 +18,7 @@ const PAGE_PATHS: Record<PageKey, string> = {
   about: "/about",
   fisheries: "/fisheries",
   distribution: "/distribution",
-  industrialInputs: "/industrial-inputs",
+  fertilizer: "/fertilizer",
   csr: "/csr",
   contact: "/contact",
 };

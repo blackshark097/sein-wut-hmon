@@ -2,7 +2,20 @@ import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/:locale(en|my)/industrial-inputs",
+        destination: "/:locale/fertilizer",
+        permanent: true,
+      },
+      {
+        source: "/industrial-inputs",
+        destination: "/fertilizer",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 // Points next-intl at our request-scoped config. The default path is
