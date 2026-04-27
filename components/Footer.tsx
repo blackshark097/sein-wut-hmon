@@ -13,22 +13,24 @@ export function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="w-full border-t border-border bg-bg py-12 md:py-16"
+      className="w-full border-t border-border bg-bg py-8 md:py-10"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="flex flex-col items-start gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+          <div className="flex items-center gap-6">
             <Image
               src="/images/legacy/logo.png"
               alt={t("logoAlt")}
               width={157}
               height={105}
-              className="h-12 w-auto object-contain"
+              className="h-10 w-auto shrink-0 object-contain"
             />
-            <p className="font-display text-base text-text">{t("brand")}</p>
-            <p className="max-w-prose text-sm leading-relaxed text-text-muted">
-              {t("address")}
-            </p>
+            <div className="flex flex-col gap-1">
+              <p className="font-display text-base leading-tight text-text">
+                {t("brand")}
+              </p>
+              <p className="text-caption">{t("address")}</p>
+            </div>
           </div>
 
           <div
@@ -73,7 +75,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border/40 pt-6">
+        <div className="mt-6 border-t border-border/40 pt-4">
           <p className="text-caption">{t("copyright", { year })}</p>
         </div>
       </div>
