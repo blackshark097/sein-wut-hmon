@@ -13,6 +13,8 @@ export const config = {
   // Match every path except:
   //  - Next.js internals (_next, _vercel)
   //  - API and tRPC routes (none today, but preempt the shape)
+  //  - Next.js metadata routes (icon, apple-icon, opengraph-image, twitter-image, sitemap, robots, manifest)
   //  - anything with a dot (favicon.ico, static assets, sitemap.xml, etc.)
-  matcher: "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
+  matcher:
+    "/((?!api|trpc|_next|_vercel|icon|apple-icon|opengraph-image|twitter-image|sitemap|robots|manifest|.*\\..*).*)",
 };

@@ -137,7 +137,7 @@ export function Navigation() {
                     type="button"
                     onClick={() => switchLocale(candidate)}
                     aria-current={isActive ? "true" : undefined}
-                    aria-label={
+                    title={
                       isActive
                         ? t("languageCurrent", {
                             language: t(`languages.${candidate}`),

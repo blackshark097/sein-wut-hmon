@@ -1,0 +1,13 @@
+{
+  "name": "Sein Wut Hmon Group",
+  "short_name": "SWH",
+  "description": "Myanmar conglomerate in distribution, fisheries, and industrial inputs.",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#0A0F1C",
+  "theme_color": "#0A0F1C",
+  "icons": [
+    { "src": "/icon", "sizes": "192x192", "type": "image/png" },
+    { "src": "/apple-icon", "sizes": "180x180", "type": "image/png" }
+  ]
+}

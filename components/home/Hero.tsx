@@ -19,11 +19,20 @@ export function Hero() {
     initial: { opacity: 0, y: reduce ? 0 : 24 },
     animate: { opacity: 1, y: 0 },
     transition: {
-      duration: reduce ? 0.6 : 1.1,
+      duration: reduce ? 0.4 : 0.7,
       ease: EASE,
       delay,
     },
   });
+
+  // LCP element: render the H1 visible immediately, skip fade-in entirely.
+  // Reading the heading is the user's first job; the entrance flourish was
+  // costing ~1.5s of LCP render delay against no measurable design gain.
+  const headingMotion = {
+    initial: { opacity: 1, y: 0 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0 },
+  };
 
   return (
     <section
@@ -57,7 +66,7 @@ export function Hero() {
         </motion.span>
 
         <motion.h1
-          {...fadeUp(0.3)}
+          {...headingMotion}
           className="text-display mt-6 font-display tracking-tight text-text"
           style={{
             fontSize: "clamp(3rem, 8vw, 7.5rem)",
@@ -68,7 +77,7 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
-          {...fadeUp(0.55)}
+          {...fadeUp(0.2)}
           className="text-body mt-8 max-w-2xl text-text-muted"
         >
           {t("intro")}

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import CsrHero from "@/components/csr/CsrHero";
 import CsrOverview from "@/components/csr/CsrOverview";
 import Initiatives from "@/components/csr/Initiatives";
+import { buildPageMetadata } from "@/lib/seo";
+import type { Locale } from "@/i18n/routing";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -12,11 +14,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Metadata.csr" });
-  return {
-    title: t("title"),
-    description: t("description"),
-  };
+  return buildPageMetadata(locale as Locale, "csr");
 }
 
 export default async function CsrPage({ params }: PageProps) {
