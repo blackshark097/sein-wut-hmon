@@ -58,15 +58,6 @@
       "industrialInputs": "Fertilizer",
       "csr": "CSR",
       "contact": "Contact"
-    },
-    "captions": {
-      "home": "Group homepage",
-      "about": "Heritage and leadership",
-      "fisheries": "Marine harvest",
-      "distribution": "Imports and nationwide reach",
-      "industrialInputs": "Industrial agriculture",
-      "csr": "Community investment",
-      "contact": "Get in touch"
     }
   },
   "Footer": {

@@ -119,10 +119,10 @@ export function Sidebar() {
           <Image
             src="/images/legacy/logo.png"
             alt={t("logoAlt")}
-            width={140}
-            height={40}
+            width={157}
+            height={105}
             priority
-            className="h-8 w-auto object-contain"
+            className="h-[52px] w-auto object-contain"
           />
         </Link>
 
@@ -210,10 +210,10 @@ export function Sidebar() {
           <Image
             src="/images/legacy/logo.png"
             alt={t("logoAlt")}
-            width={140}
-            height={40}
+            width={157}
+            height={105}
             priority
-            className="h-7 w-auto object-contain"
+            className="h-11 w-auto object-contain"
           />
         </Link>
 
@@ -310,16 +310,13 @@ export function Sidebar() {
                       <Link
                         href={link.href}
                         onClick={closeMenu}
-                        className="group grid grid-cols-[40px_1fr] items-baseline gap-x-4 border-b border-white/5 py-4 transition-transform duration-300 hover:translate-x-1 focus-visible:translate-x-1 focus-visible:outline-none md:grid-cols-[56px_1fr_auto] md:gap-x-6 md:py-5"
+                        className="group grid grid-cols-[40px_1fr] items-baseline gap-x-4 border-b border-white/5 py-4 transition-transform duration-300 hover:translate-x-1 focus-visible:translate-x-1 focus-visible:outline-none md:grid-cols-[56px_1fr] md:gap-x-6 md:py-5"
                       >
                         <span className="font-sans text-[11px] font-medium uppercase tracking-[0.14em] text-text-muted/70 md:pt-3">
                           {idx}
                         </span>
                         <span className="relative inline-block font-display text-3xl font-normal leading-[1.05] tracking-[-0.025em] text-text after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all after:duration-500 group-hover:after:w-full group-focus-visible:after:w-full md:text-5xl lg:text-[56px]">
                           {t(`links.${link.key}`)}
-                        </span>
-                        <span className="col-start-2 mt-1 font-sans text-xs leading-relaxed tracking-[0.04em] text-text-muted/70 transition-colors duration-300 group-hover:text-text group-focus-visible:text-text md:col-start-3 md:mt-0 md:max-w-[30ch] md:pt-3 md:text-right md:text-[13px]">
-                          {t(`captions.${link.key}`)}
                         </span>
                       </Link>
                     </motion.li>
