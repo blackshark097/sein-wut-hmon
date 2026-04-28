@@ -74,7 +74,7 @@ export function BusinessPillars() {
           >
             {t.rich("headline", {
               em: (chunks) => (
-                <em className="font-normal italic text-text-muted">{chunks}</em>
+                <span className="text-text-muted">{chunks}</span>
               ),
             })}
           </h2>
@@ -96,11 +96,11 @@ export function BusinessPillars() {
             >
               <span
                 aria-hidden="true"
-                className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 select-none font-display font-bold leading-none text-transparent md:right-8 lg:right-12"
+                className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 select-none font-sans font-black leading-none text-transparent md:right-8 lg:right-12"
                 style={{
                   fontSize: "clamp(180px, 28vw, 360px)",
                   WebkitTextStroke: "1.5px rgba(0,173,238,0.45)",
-                  letterSpacing: "-0.04em",
+                  letterSpacing: "-0.02em",
                   zIndex: 0,
                 }}
               >
@@ -114,9 +114,9 @@ export function BusinessPillars() {
                   >
                     {t.rich(`banners.${banner.key}.name`, {
                       em: (chunks) => (
-                        <em className="font-normal italic text-text-muted transition-colors duration-[350ms] group-hover:text-text">
+                        <span className="text-text-muted transition-colors duration-[350ms] group-hover:text-text">
                           {chunks}
-                        </em>
+                        </span>
                       ),
                       br: () => <br />,
                     })}

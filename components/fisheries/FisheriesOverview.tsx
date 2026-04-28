@@ -42,7 +42,7 @@ export function FisheriesOverview() {
           <p className="mb-7">
             {t.rich("paragraph1", {
               fig: (chunks) => (
-                <strong className="font-display font-normal italic text-text">
+                <strong className="font-normal text-text">
                   {chunks}
                 </strong>
               ),
@@ -50,7 +50,7 @@ export function FisheriesOverview() {
           </p>
           <p>{t("paragraph2")}</p>
           <blockquote
-            className="mt-12 border-l border-gold/50 pl-7 font-display italic text-text"
+            className="mt-12 border-l border-accent/50 pl-7 font-display text-text"
             style={{
               fontSize: "clamp(1.25rem, 1.8vw, 1.625rem)",
               lineHeight: 1.4,

@@ -73,7 +73,7 @@ export function FisheriesHero() {
         >
           {t.rich("heading", {
             em: (chunks) => (
-              <em className="font-normal italic text-gold">{chunks}</em>
+              <span className="text-accent">{chunks}</span>
             ),
           })}
         </motion.h1>

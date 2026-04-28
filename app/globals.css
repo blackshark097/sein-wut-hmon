@@ -38,8 +38,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Font families (wired from next/font CSS variables on <html>) */
-  --font-display: var(--font-display);
+  /* Font families (wired from next/font CSS variables on <html>). The
+     --font-display token now points at Inter so legacy `font-display`
+     classNames keep working without a codebase-wide rename. */
+  --font-display: var(--font-sans);
   --font-sans: var(--font-sans);
 }
 
@@ -51,22 +53,19 @@ body {
 /* === TYPOGRAPHY === */
 @layer utilities {
   .text-display {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
     font-weight: 600;
     font-size: clamp(2.5rem, 6vw, 5.5rem);
     line-height: 1.05;
     letter-spacing: -0.02em;
-    font-optical-sizing: auto;
-    font-variation-settings: "opsz" 144;
   }
 
   .text-heading {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
     font-weight: 600;
     font-size: clamp(1.875rem, 3.5vw, 3rem);
     line-height: 1.1;
     letter-spacing: -0.015em;
-    font-optical-sizing: auto;
   }
 
   .text-subheading {

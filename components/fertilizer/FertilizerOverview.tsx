@@ -68,7 +68,7 @@ export function FertilizerOverview() {
                 src="/images/partners/shwe-myay-thee.png"
                 alt={t("imageAlt")}
                 width={230}
-                height={398}
+                height={288}
                 sizes="(min-width: 1024px) 35vw, (min-width: 768px) 30vw, 60vw"
                 className="h-auto max-h-[55%] w-auto max-w-[55%] object-contain"
               />

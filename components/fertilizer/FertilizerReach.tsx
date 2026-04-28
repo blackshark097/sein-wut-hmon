@@ -41,37 +41,32 @@ export function FertilizerReach() {
           <p className="mt-6 text-body text-text-muted">{t("body")}</p>
         </motion.div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:mt-20 md:grid-cols-12 md:gap-10">
-          <motion.div
-            {...fadeUp(0.1)}
-            className="relative md:col-span-8"
-          >
-            <div className="relative aspect-[4/3] w-full overflow-hidden border border-border/70 bg-bg-elev">
-              <Image
-                src="/images/fertilizer/rice-paddy-farmer.jpg"
-                alt={t("featureImageAlt")}
-                fill
-                sizes="(min-width: 768px) 60vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </motion.div>
+        <motion.div {...fadeUp(0.1)} className="mt-12 md:mt-16">
+          <div className="relative aspect-video w-full overflow-hidden border border-border/70 bg-bg-elev">
+            <Image
+              src="/images/fertilizer/rice-paddy-farmer.jpg"
+              alt={t("featureImageAlt")}
+              fill
+              sizes="(min-width: 1280px) 1140px, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
 
-          <motion.div
-            {...fadeUp(0.25)}
-            className="relative md:col-span-4 md:-mt-20 md:self-end lg:-mt-28"
-          >
-            <div className="relative aspect-[3/4] w-full overflow-hidden border border-border/70 bg-bg-elev">
-              <Image
-                src="/images/fertilizer/farmers-field.jpg"
-                alt={t("insetImageAlt")}
-                fill
-                sizes="(min-width: 768px) 30vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </motion.div>
-        </div>
+        <motion.div
+          {...fadeUp(0.25)}
+          className="mx-auto mt-12 w-full max-w-[60%] sm:max-w-[55%] md:mt-16 md:max-w-[52%]"
+        >
+          <div className="relative aspect-[3/4] w-full overflow-hidden border border-border/70 bg-bg-elev">
+            <Image
+              src="/images/fertilizer/farmers-field.jpg"
+              alt={t("insetImageAlt")}
+              fill
+              sizes="(min-width: 768px) 50vw, 60vw"
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );

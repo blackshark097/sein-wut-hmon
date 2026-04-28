@@ -146,7 +146,7 @@ export function DistributionHero() {
         >
           {t.rich("heading", {
             em: (chunks) => (
-              <em className="font-normal italic text-accent">{chunks}</em>
+              <span className="text-accent">{chunks}</span>
             ),
           })}
         </motion.h1>

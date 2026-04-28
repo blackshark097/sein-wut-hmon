@@ -93,7 +93,7 @@ export function DistributionOperations() {
 
               <span
                 aria-hidden="true"
-                className="absolute right-6 top-8 font-display italic text-accent/30 transition-all duration-500 group-hover:text-accent md:right-8 md:top-9"
+                className="absolute right-6 top-8 font-display font-black text-accent/30 transition-all duration-500 group-hover:text-accent md:right-8 md:top-9"
                 style={{
                   fontSize: "clamp(2.25rem, 4vw, 3rem)",
                   lineHeight: 1,
