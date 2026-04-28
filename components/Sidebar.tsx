@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { Logo } from "@/components/Logo";
 
 type NavKey =
   | "home"
@@ -116,13 +116,9 @@ export function Sidebar() {
           aria-label={t("logoLinkLabel")}
           className="flex h-24 w-full items-center justify-center border-b border-border focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-accent"
         >
-          <Image
-            src="/images/legacy/logo.png"
-            alt={t("logoAlt")}
-            width={157}
-            height={105}
-            priority
-            className="h-[52px] w-auto object-contain"
+          <Logo
+            size={52}
+            className="h-[52px] w-auto"
           />
         </Link>
 
@@ -207,13 +203,9 @@ export function Sidebar() {
           aria-label={t("logoLinkLabel")}
           className="inline-flex items-center"
         >
-          <Image
-            src="/images/legacy/logo.png"
-            alt={t("logoAlt")}
-            width={157}
-            height={105}
-            priority
-            className="h-11 w-auto object-contain"
+          <Logo
+            size={44}
+            className="h-11 w-auto"
           />
         </Link>
 

@@ -1,8 +1,11 @@
 "use client";
 
+import { useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -15,27 +18,70 @@ export function Hero() {
   const t = useTranslations("home.hero");
   const tCommon = useTranslations("Common");
 
-  const fadeUp = (delay: number) => ({
-    initial: { opacity: 0, y: reduce ? 0 : 24 },
-    animate: { opacity: 1, y: 0 },
-    transition: {
-      duration: reduce ? 0.4 : 0.7,
-      ease: EASE,
-      delay,
-    },
-  });
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const introRef = useRef<HTMLParagraphElement | null>(null);
 
-  // LCP element: render the H1 visible immediately, skip fade-in entirely.
-  // Reading the heading is the user's first job; the entrance flourish was
-  // costing ~1.5s of LCP render delay against no measurable design gain.
-  const headingMotion = {
-    initial: { opacity: 1, y: 0 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0 },
-  };
+  // Word-by-word blur reveal. Runs after mount so the H1 paints in its
+  // final visible state for LCP (Phase 5.2 intent), then GSAP briefly
+  // hides the words and animates them back in. Reduced motion skips the
+  // timeline entirely.
+  useGSAP(
+    () => {
+      if (
+        typeof window !== "undefined" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ) {
+        return;
+      }
+
+      const heading = headingRef.current;
+      const intro = introRef.current;
+      if (!heading) return;
+
+      const text = (heading.textContent ?? "").trim();
+      if (!text) return;
+
+      const words = text.split(/\s+/);
+      heading.innerHTML = words
+        .map(
+          (w) =>
+            `<span class="swh-hero-word" style="display:inline-block;will-change:filter,opacity;">${w}</span>`,
+        )
+        .join(" ");
+
+      const wordEls = heading.querySelectorAll<HTMLSpanElement>(
+        ".swh-hero-word",
+      );
+
+      const tl = gsap.timeline();
+      tl.from(wordEls, {
+        opacity: 0,
+        filter: "blur(8px)",
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.08,
+      });
+
+      if (intro) {
+        tl.from(
+          intro,
+          {
+            opacity: 0,
+            y: 12,
+            duration: 0.5,
+            ease: "power2.out",
+          },
+          "-=0.2",
+        );
+      }
+    },
+    { scope: containerRef },
+  );
 
   return (
     <section
+      ref={containerRef}
       aria-label={t("ariaLabel")}
       className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-bg"
     >
@@ -61,8 +107,8 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 text-center sm:px-10">
-        <motion.h1
-          {...headingMotion}
+        <h1
+          ref={headingRef}
           className="text-display font-display tracking-tight text-text"
           style={{
             fontSize: "clamp(3rem, 8vw, 7.5rem)",
@@ -70,14 +116,14 @@ export function Hero() {
           }}
         >
           {t("heading")}
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          {...fadeUp(0.2)}
+        <p
+          ref={introRef}
           className="text-body mt-8 max-w-2xl text-text-muted"
         >
           {t("intro")}
-        </motion.p>
+        </p>
       </div>
 
       <motion.div

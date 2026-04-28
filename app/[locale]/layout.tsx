@@ -98,9 +98,9 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${fontDisplay.variable} ${fontSans.variable} h-full antialiased`}
+      className={`${fontDisplay.variable} ${fontSans.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-bg text-text font-sans">
+      <body className="bg-bg text-text font-sans">
         <NextIntlClientProvider locale={locale}>
           <Layout>{children}</Layout>
         </NextIntlClientProvider>

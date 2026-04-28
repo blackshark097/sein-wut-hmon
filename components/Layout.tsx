@@ -32,8 +32,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
     gsap.ticker.lagSmoothing(0);
     ScrollTrigger.refresh();
 
+    // Late-loading priority images (Hero <Image fill>) shift document height
+    // after Lenis init. Recompute ScrollTrigger end positions once everything
+    // has loaded, so triggers near the bottom still fire correctly.
+    const refreshAfterLoad = () => ScrollTrigger.refresh();
+    window.addEventListener("load", refreshAfterLoad);
+
     return () => {
       gsap.ticker.remove(rafCallback);
+      window.removeEventListener("load", refreshAfterLoad);
       lenis.destroy();
     };
   }, []);

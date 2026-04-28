@@ -16,7 +16,7 @@ type Op = { num: string; key: OpKey; image?: string };
 
 const OPS: Op[] = [
   { num: "01", key: "fleet" },
-  { num: "02", key: "capture", image: "/images/fisheries/harvest.jpg" },
+  { num: "02", key: "capture" },
   { num: "03", key: "coldChain" },
   { num: "04", key: "export" },
 ];
