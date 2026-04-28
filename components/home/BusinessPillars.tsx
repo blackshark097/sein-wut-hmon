@@ -115,7 +115,7 @@ export function BusinessPillars() {
                 </span>
               </div>
               <div className="flex max-w-[44ch] flex-col items-start gap-7">
-                <span className="inline-flex items-center gap-2.5 font-sans text-[10px] uppercase tracking-[0.24em] text-text-muted/70 before:block before:h-1 before:w-1 before:rounded-full before:bg-text-muted/70">
+                <span className="inline-flex items-center gap-2.5 font-sans text-[10px] uppercase tracking-[0.24em] text-[#CBD5E1] before:block before:h-1 before:w-1 before:rounded-full before:bg-[#CBD5E1]">
                   {t(`banners.${banner.key}.eyebrow`)}
                 </span>
                 <p className="text-[17px] font-light leading-relaxed text-text-muted">
@@ -167,15 +167,15 @@ export function BusinessPillars() {
             Shwe Myay Thee
           </span>
         </div>
-        <p className="max-w-[60ch] text-center font-sans text-[13px] tracking-[0.04em] text-text-muted/70">
+        <p className="max-w-[60ch] text-center font-sans text-[13px] tracking-[0.04em] text-[#CBD5E1]">
           {t("partnerBrands.caption")}
         </p>
       </div>
 
       {/* Foot marker */}
-      <div className="flex justify-between px-6 py-7 font-sans text-[11px] uppercase tracking-[0.16em] text-text-muted/70 md:px-10 lg:px-20">
+      <div className="flex justify-between px-6 py-7 font-sans text-[11px] uppercase tracking-[0.16em] text-[#CBD5E1] md:px-10 lg:px-20">
         <span>
-          <b className="font-medium text-text-muted">§ 03</b>
+          <b className="font-medium text-[#CBD5E1]">§ 03</b>
           {" · Portfolio"}
         </span>
         <span>{t("continue")}</span>
