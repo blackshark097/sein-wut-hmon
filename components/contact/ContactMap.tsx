@@ -5,9 +5,12 @@ import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-const ADDRESS_FOR_MAP =
-  "No-24, Phan Chat Won U Shwe Ohh St., Industrial Zone (2), Hlaing Thar Yar Township, Yangon";
-const MAP_URL = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS_FOR_MAP)}&output=embed`;
+const OFFICE_LAT = 16.881;
+const OFFICE_LNG = 96.067;
+const OFFICE_LABEL = "Sein Wut Hmon Group Head Office";
+const MAP_URL = `https://www.google.com/maps?q=${encodeURIComponent(
+  `${OFFICE_LAT},${OFFICE_LNG} (${OFFICE_LABEL})`,
+)}&z=15&output=embed`;
 
 export function ContactMap() {
   const reduce = useReducedMotion();

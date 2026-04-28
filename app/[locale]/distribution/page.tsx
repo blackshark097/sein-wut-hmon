@@ -4,8 +4,7 @@ import { DistributionHero } from "@/components/distribution/DistributionHero";
 import { DistributionOverview } from "@/components/distribution/DistributionOverview";
 import { DistributionStats } from "@/components/distribution/DistributionStats";
 import { DistributionOperations } from "@/components/distribution/DistributionOperations";
-import { DistributionPartners } from "@/components/distribution/DistributionPartners";
-import { DistributionLubricants } from "@/components/distribution/DistributionLubricants";
+import { DistributionBrand } from "@/components/distribution/DistributionBrand";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 
@@ -30,8 +29,27 @@ export default async function DistributionPage({ params }: PageProps) {
       <DistributionOverview />
       <DistributionStats />
       <DistributionOperations />
-      <DistributionPartners />
-      <DistributionLubricants />
+      <DistributionBrand
+        i18nNamespace="distribution.hisense"
+        logoSrc="/images/partners/hisense.png"
+        logoWidth={1780}
+        logoHeight={291}
+        headingId="distribution-hisense-heading"
+      />
+      <DistributionBrand
+        i18nNamespace="distribution.ok"
+        logoSrc="/images/partners/ok.png"
+        logoWidth={197}
+        logoHeight={220}
+        headingId="distribution-ok-heading"
+      />
+      <DistributionBrand
+        i18nNamespace="distribution.nasa"
+        logoSrc="/images/partners/nasa.png"
+        logoWidth={1024}
+        logoHeight={427}
+        headingId="distribution-nasa-heading"
+      />
     </>
   );
 }

@@ -7,7 +7,7 @@ export const contentType = OG_CONTENT_TYPE;
 export default async function Image() {
   return renderOgCard({
     eyebrow: "Fertilizer",
-    title: "Industrial agriculture inputs through a Marubeni joint venture.",
-    photoPath: "images/legacy/swh-mmfcl-cooperation-thilawa-thumb.jpg",
+    title: "From Thilawa to the field. Shwe Myay Thee, Sein Wut Hmon-owned.",
+    photoPath: "images/fertilizer/fertilizer-hero.jpg",
   });
 }

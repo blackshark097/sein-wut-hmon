@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import FertilizerHero from "@/components/fertilizer/FertilizerHero";
 import FertilizerOverview from "@/components/fertilizer/FertilizerOverview";
+import FertilizerReach from "@/components/fertilizer/FertilizerReach";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 
@@ -24,6 +25,7 @@ export default async function FertilizerPage({ params }: PageProps) {
     <>
       <FertilizerHero />
       <FertilizerOverview />
+      <FertilizerReach />
     </>
   );
 }

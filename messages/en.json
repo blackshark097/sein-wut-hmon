@@ -20,7 +20,7 @@
     },
     "fertilizer": {
       "title": "Fertilizer, Sein Wut Hmon Group",
-      "description": "Fertilizer manufactured for Myanmar's farmers through a Marubeni joint venture at Thilawa Industrial Zone."
+      "description": "Shwe Myay Thee calcium silica fertilizer, manufactured at the Sein Wut Hmon plant in Thilawa Industrial Zone for Myanmar's smallholder and commercial farms."
     },
     "csr": {
       "title": "Corporate Social Responsibility, Sein Wut Hmon Group",
@@ -99,9 +99,9 @@
           "blurb": "Twenty vessels operating across 2,832 kilometers of coastline. Marine harvest at export grade since 2000."
         },
         "fertilizer": {
-          "eyebrow": "Marubeni JV",
+          "eyebrow": "Owned brand · Thilawa",
           "name": "Fertilizer",
-          "blurb": "Industrial agriculture inputs through a Marubeni joint venture. Manufacturing fertilizer for Myanmar's farmers at scale."
+          "blurb": "Shwe Myay Thee calcium silica fertilizer, manufactured at the Sein Wut Hmon plant in Thilawa for Myanmar's farmers."
         }
       },
       "partnerBrands": {
@@ -130,7 +130,7 @@
     "overview": {
       "eyebrow": "The Business",
       "heading": "An integrated operator",
-      "paragraph1": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating across marine resources, fertilizer manufacturing, and nationwide distribution. The businesses reinforce each other: the fishery fleet anchors the marine line, the Marubeni fertilizer joint venture supports Myanmar's farmers, and the distribution network moves every product to 14 branch offices across Lower and Upper Myanmar.",
+      "paragraph1": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating across marine resources, fertilizer manufacturing, and nationwide distribution. The businesses reinforce each other: the fishery fleet anchors the marine line, the Shwe Myay Thee fertilizer plant supports Myanmar's farmers, and the distribution network moves every product to 14 branch offices across Lower and Upper Myanmar.",
       "paragraph2": "Today the group counts 250+ employees, 145+ distribution vehicles, 80 motorcycles, and 20 fishing vessels.",
       "stats": {
         "employees": "Employees across SWH entities",
@@ -311,39 +311,41 @@
         }
       }
     },
-    "partners": {
-      "eyebrow": "Partner Brands",
-      "heading": "International brands, locally delivered.",
-      "importedFromLabel": "Imported from",
-      "items": {
-        "ok": {
-          "name": "OK",
-          "category": "Condensed Milk & Evaporated Creamer",
-          "origin": "Singapore & Malaysia"
-        },
-        "hisense": {
-          "name": "Hisense",
-          "category": "Consumer Electronics",
-          "origin": "China"
-        },
-        "nasa": {
-          "name": "Nasa",
-          "category": "Oil & Lubricants",
-          "origin": "Malaysia, AC Lubricants Sdn Bhd"
-        }
-      }
+    "hisense": {
+      "ariaLabel": "Hisense electronics",
+      "eyebrow": "Electronics",
+      "heading": "Consumer electronics across Myanmar",
+      "body": "As authorized distributor for Hisense in Myanmar, Sein Wut Hmon brings the brand's televisions, refrigeration, and display products from China to retail and commercial channels nationwide.",
+      "bullets": {
+        "item1": "Authorized Hisense distributor in Myanmar",
+        "item2": "Televisions, refrigeration, displays",
+        "item3": "Retail and commercial channel distribution"
+      },
+      "imageAlt": "Hisense brand logo"
     },
-    "lubricants": {
-      "ariaLabel": "Lubricants",
+    "ok": {
+      "ariaLabel": "OK condensed milk",
+      "eyebrow": "Condensed Milk",
+      "heading": "Daily-use dairy across Myanmar",
+      "body": "Sein Wut Hmon distributes OK brand condensed milk and evaporated creamer from Singapore and Malaysia, supplying tea shops, kitchens, and grocery channels across the country.",
+      "bullets": {
+        "item1": "OK brand from Singapore and Malaysia",
+        "item2": "Condensed milk and evaporated creamer",
+        "item3": "Tea shops, food service, and retail distribution"
+      },
+      "imageAlt": "OK brand logo"
+    },
+    "nasa": {
+      "ariaLabel": "NASA lubricants",
       "eyebrow": "Lubricants",
       "heading": "Industrial and automotive lubricants",
-      "body": "As the sole agent of NASA Total Lubricating Solution from AC Lubricants Sdn Bhd in Malaysia, Sein Wut Hmon distributes industrial and automotive lubricants nationwide for transportation, machinery, and manufacturing customers across Myanmar.",
+      "body": "As the sole agent of NASA Total Lubricating Solutions from AC Lubricants Sdn Bhd in Malaysia, Sein Wut Hmon distributes industrial and automotive lubricants nationwide for transportation, machinery, and manufacturing customers across Myanmar.",
       "bullets": {
-        "item1": "Sole agent of Nasa lubricants in Myanmar",
+        "item1": "Sole agent of NASA lubricants in Myanmar",
         "item2": "Industrial and automotive grades",
         "item3": "Nationwide distribution through the group network"
       },
-      "imageAlt": "Nasa lubricants product line"
+      "imageAlt": "NASA lubricants product line"
     },
     "cta": {
       "eyebrow": "Partnership",
@@ -355,21 +357,28 @@
   "fertilizer": {
     "hero": {
       "ariaLabel": "Fertilizer hero",
-      "imageAlt": "Sein Wut Hmon and Marubeni Myanmar Fertilizer cooperation at Thilawa",
-      "eyebrow": "Division",
-      "heading": "Fertilizer",
-      "intro": "Industrial agriculture inputs through a Marubeni joint venture, manufactured for Myanmar's farmers."
+      "imageAlt": "Shwe Myay Thee fertilizer warehouse with forklifts at the Thilawa plant",
+      "heading": "From Thilawa to the <em>field</em>.",
+      "intro": "Shwe Myay Thee, manufactured at our Thilawa plant. Calcium silica fertilizer for Myanmar's smallholder and commercial farms, with the green owl mark on every fifty-kilogram bag."
     },
     "overview": {
-      "eyebrow": "Joint Venture",
-      "heading": "Manufactured at Thilawa, distributed nationwide",
-      "body": "Through a long-standing joint venture with Marubeni Corporation, Sein Wut Hmon manufactures and distributes fertilizer products from a plant at Thilawa Industrial Zone, supporting Myanmar's smallholder and commercial farms.",
+      "eyebrow": "Owned Brand",
+      "heading": "Built for Myanmar's soil.",
+      "body": "Sein Wut Hmon owns and operates Shwe Myay Thee, a calcium silica fertilizer manufactured at our plant in Thilawa Industrial Zone. Each fifty-kilogram bag is blended to a registered formula of calcium oxide, silica, manganese, and phosphate. The product reaches farmers nationwide through Sein Wut Hmon's distribution network. Smallholder rice paddies in the south, dryland cultivation in the central plains, and commercial vegetable farms in between use Shwe Myay Thee as part of their soil management.",
       "bullets": {
-        "item1": "Marubeni Corporation joint venture (MMF)",
-        "item2": "Manufactured at Thilawa Industrial Zone",
+        "item1": "Sein Wut Hmon-owned brand",
+        "item2": "Manufactured at Thilawa Industrial Zone, Yangon",
         "item3": "Nationwide distribution to smallholder and commercial farms"
       },
-      "imageAlt": "Fertilizer production at Thilawa Industrial Zone"
+      "imageAlt": "Shwe Myay Thee brand logo with green owl mark"
+    },
+    "reach": {
+      "ariaLabel": "Shwe Myay Thee reach",
+      "eyebrow": "Reach",
+      "heading": "In the hands of farmers.",
+      "body": "From the rice paddies of the lower Ayeyarwady to the dry zones of central Myanmar, Shwe Myay Thee reaches the hands of farmers at planting season. The owl on the bag, visible on a fence post or a riverbank or a field path, is a familiar sight at the edge of cultivated land.",
+      "featureImageAlt": "Farmer carrying a Shwe Myay Thee bag in a rice paddy",
+      "insetImageAlt": "Farmers working in a field at planting season"
     }
   },
   "csr": {

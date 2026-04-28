@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -26,14 +27,23 @@ export function FertilizerHero() {
     <section
       aria-label={t("ariaLabel")}
       className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-bg"
-      style={{ minHeight: "60vh" }}
+      style={{ minHeight: "70vh" }}
     >
+      <Image
+        src="/images/fertilizer/fertilizer-hero.jpg"
+        alt={t("imageAlt")}
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-bg"
+        className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 80% 60% at 30% 0%, rgba(0,173,238,0.12), transparent 60%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(96,165,250,0.05), transparent 65%), linear-gradient(180deg, #0A0F1C 0%, #070B15 100%)",
+            "radial-gradient(ellipse 80% 60% at 30% 0%, rgba(0,173,238,0.10), transparent 60%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(96,165,250,0.05), transparent 65%), linear-gradient(180deg, rgba(7,11,21,0.78) 0%, rgba(7,11,21,0.55) 45%, rgba(7,11,21,0.85) 100%)",
         }}
       />
 
@@ -57,7 +67,11 @@ export function FertilizerHero() {
             lineHeight: 1.05,
           }}
         >
-          {t("heading")}
+          {t.rich("heading", {
+            em: (chunks) => (
+              <em className="font-normal italic text-accent">{chunks}</em>
+            ),
+          })}
         </motion.h1>
 
         <motion.p

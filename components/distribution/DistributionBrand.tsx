@@ -8,9 +8,23 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 const BULLET_KEYS = ["item1", "item2", "item3"] as const;
 
-export function DistributionLubricants() {
+type DistributionBrandProps = {
+  i18nNamespace: string;
+  logoSrc: string;
+  logoWidth: number;
+  logoHeight: number;
+  headingId: string;
+};
+
+export function DistributionBrand({
+  i18nNamespace,
+  logoSrc,
+  logoWidth,
+  logoHeight,
+  headingId,
+}: DistributionBrandProps) {
   const reduce = useReducedMotion();
-  const t = useTranslations("distribution.lubricants");
+  const t = useTranslations(i18nNamespace);
 
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 24 },
@@ -21,21 +35,18 @@ export function DistributionLubricants() {
 
   return (
     <section
-      aria-labelledby="distribution-lubricants-heading"
+      aria-labelledby={headingId}
       aria-label={t("ariaLabel")}
       className="relative bg-bg pb-32 md:pb-44"
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16 lg:gap-20">
-          <motion.div
-            {...fadeUp(0)}
-            className="md:col-span-6 lg:col-span-5"
-          >
+          <motion.div {...fadeUp(0)} className="md:col-span-6 lg:col-span-5">
             <span className="inline-flex items-center gap-3.5 text-subheading text-accent before:block before:h-px before:w-7 before:bg-accent">
               {t("eyebrow")}
             </span>
             <h2
-              id="distribution-lubricants-heading"
+              id={headingId}
               className="mt-5 font-display font-medium tracking-[-0.02em] text-text"
               style={{
                 fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
@@ -69,11 +80,12 @@ export function DistributionLubricants() {
           >
             <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden border border-border/70 bg-bg-elev md:aspect-[5/4] lg:aspect-[4/3]">
               <Image
-                src="/images/partners/nasa.png"
+                src={logoSrc}
                 alt={t("imageAlt")}
-                fill
-                sizes="(min-width: 1024px) 58vw, (min-width: 768px) 50vw, 100vw"
-                className="object-contain p-12 md:p-16 lg:p-20"
+                width={logoWidth}
+                height={logoHeight}
+                sizes="(min-width: 1024px) 35vw, (min-width: 768px) 30vw, 60vw"
+                className="h-auto max-h-[55%] w-auto max-w-[55%] object-contain"
               />
             </div>
           </motion.div>
@@ -83,4 +95,4 @@ export function DistributionLubricants() {
   );
 }
 
-export default DistributionLubricants;
+export default DistributionBrand;
