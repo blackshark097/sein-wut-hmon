@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
-import { Logo } from "@/components/Logo";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -18,9 +18,12 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <div className="flex items-center gap-6">
-            <Logo
-              size={40}
-              className="h-10 w-auto shrink-0"
+            <Image
+              src="/images/legacy/logo.png"
+              alt={t("logoAlt")}
+              width={157}
+              height={105}
+              className="h-10 w-auto shrink-0 object-contain"
             />
             <div className="flex flex-col gap-1">
               <p className="font-display text-base leading-tight text-text">
