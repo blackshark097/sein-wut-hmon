@@ -414,6 +414,12 @@
       "heading": "Contact",
       "intro": "Get in touch with Sein Wut Hmon Group."
     },
+    "cta": {
+      "eyebrow": "Partnership",
+      "heading": "Partner with <em>Sein Wut Hmon</em>.",
+      "intro": "For partnership inquiries, capacity discussions, and direct contact with the group.",
+      "button": "Get in touch"
+    },
     "form": {
       "eyebrow": "Send a note",
       "heading": "Write to the head office",

@@ -70,8 +70,9 @@ export function ContactInfo() {
 
   return (
     <section
+      id="contact-info"
       aria-labelledby="contact-info-heading"
-      className="relative bg-bg py-20 md:py-24"
+      className="relative bg-bg py-20 md:py-24 scroll-mt-16 lg:scroll-mt-0"
     >
       {reduce ? (
         <div className="mx-auto max-w-5xl px-6 md:px-10">{content}</div>
