@@ -6,7 +6,6 @@ import { DistributionStats } from "@/components/distribution/DistributionStats";
 import { DistributionOperations } from "@/components/distribution/DistributionOperations";
 import { DistributionPartners } from "@/components/distribution/DistributionPartners";
 import { DistributionLubricants } from "@/components/distribution/DistributionLubricants";
-import { DistributionCta } from "@/components/distribution/DistributionCta";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 
@@ -33,7 +32,6 @@ export default async function DistributionPage({ params }: PageProps) {
       <DistributionOperations />
       <DistributionPartners />
       <DistributionLubricants />
-      <DistributionCta />
     </>
   );
 }

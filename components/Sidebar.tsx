@@ -20,8 +20,8 @@ type NavKey =
 const NAV_LINKS: { key: NavKey; href: string }[] = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
-  { key: "fisheries", href: "/fisheries" },
   { key: "distribution", href: "/distribution" },
+  { key: "fisheries", href: "/fisheries" },
   { key: "fertilizer", href: "/fertilizer" },
   { key: "csr", href: "/csr" },
   { key: "contact", href: "/contact" },

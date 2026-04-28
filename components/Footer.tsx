@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="w-full border-t border-border bg-bg py-8 md:py-10"
+      className="w-full bg-bg py-8 md:py-10"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">

@@ -16,7 +16,6 @@ const GRAIN_URL =
 export function Hero() {
   const reduce = useReducedMotion();
   const t = useTranslations("home.hero");
-  const tCommon = useTranslations("Common");
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
@@ -130,13 +129,10 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: EASE, delay: 1.0 }}
-        className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2"
+        className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center"
+        aria-hidden="true"
       >
-        <span className="text-caption uppercase tracking-[0.18em] text-text-muted">
-          {tCommon("scroll")}
-        </span>
         <motion.span
-          aria-hidden="true"
           animate={reduce ? undefined : { y: [0, 6, 0] }}
           transition={
             reduce

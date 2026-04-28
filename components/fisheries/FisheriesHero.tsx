@@ -12,7 +12,6 @@ const GRAIN_URL =
 export function FisheriesHero() {
   const reduce = useReducedMotion();
   const t = useTranslations("fisheries.hero");
-  const tCommon = useTranslations("Common");
 
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: reduce ? 0 : 24 },
@@ -91,12 +90,9 @@ export function FisheriesHero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: EASE, delay: 1.0 }}
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2.5"
+        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center"
         aria-hidden="true"
       >
-        <span className="text-caption uppercase tracking-[0.22em] text-text-muted">
-          {tCommon("scroll")}
-        </span>
         <span
           className="block h-12 w-px"
           style={{

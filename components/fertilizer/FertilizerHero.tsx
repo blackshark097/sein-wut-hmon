@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -29,20 +28,13 @@ export function FertilizerHero() {
       className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-bg"
       style={{ minHeight: "60vh" }}
     >
-      <div aria-hidden="true" className="absolute inset-0">
-        <Image
-          src="/images/legacy/swh-mmfcl-cooperation-thilawa-thumb.jpg"
-          alt={t("imageAlt")}
-          fill
-          sizes="100vw"
-          priority
-          className="object-cover"
-        />
-      </div>
-
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-bg/60 via-bg/70 to-bg"
+        className="pointer-events-none absolute inset-0 bg-bg"
+        style={{
+          backgroundImage:
+            "radial-gradient(ellipse 80% 60% at 30% 0%, rgba(0,173,238,0.12), transparent 60%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(96,165,250,0.05), transparent 65%), linear-gradient(180deg, #0A0F1C 0%, #070B15 100%)",
+        }}
       />
 
       <div

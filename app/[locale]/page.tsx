@@ -4,6 +4,7 @@ import { Hero } from "@/components/home/Hero";
 import { CompanyIntro } from "@/components/home/CompanyIntro";
 import { BusinessPillars } from "@/components/home/BusinessPillars";
 import { Stats } from "@/components/home/Stats";
+import { Brands } from "@/components/home/Brands";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 
@@ -29,6 +30,7 @@ export default async function HomePage({ params }: PageProps) {
       <CompanyIntro />
       <BusinessPillars />
       <Stats />
+      <Brands />
     </>
   );
 }

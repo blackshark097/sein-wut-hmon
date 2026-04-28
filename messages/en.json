@@ -105,7 +105,7 @@
         }
       },
       "partnerBrands": {
-        "eyebrow": "Partner brands",
+        "eyebrow": "Brands",
         "caption": "International brands distributed by Sein Wut Hmon across Myanmar"
       },
       "continue": "Continue ↓ Stats"
@@ -220,7 +220,6 @@
       "eyebrow": "Operations",
       "heading": "An end-to-end marine chain.",
       "intro": "From vessel to port to buyer. Four connected capabilities, one operator.",
-      "detailLabel": "Detail",
       "items": {
         "fleet": {
           "eyebrow": "Fleet",
@@ -285,7 +284,6 @@
       "eyebrow": "Operations",
       "heading": "A network built for the whole country.",
       "intro": "Four connected capabilities that turn international product into nationwide availability.",
-      "detailLabel": "Detail",
       "items": {
         "network": {
           "eyebrow": "Network",
@@ -359,7 +357,7 @@
       "ariaLabel": "Fertilizer hero",
       "imageAlt": "Sein Wut Hmon and Marubeni Myanmar Fertilizer cooperation at Thilawa",
       "eyebrow": "Division",
-      "heading": "Fertilizer, at scale",
+      "heading": "Fertilizer",
       "intro": "Industrial agriculture inputs through a Marubeni joint venture, manufactured for Myanmar's farmers."
     },
     "overview": {

@@ -4,7 +4,6 @@ import { FisheriesHero } from "@/components/fisheries/FisheriesHero";
 import { FisheriesOverview } from "@/components/fisheries/FisheriesOverview";
 import { FisheriesStats } from "@/components/fisheries/FisheriesStats";
 import { FisheriesOperations } from "@/components/fisheries/FisheriesOperations";
-import { FisheriesCta } from "@/components/fisheries/FisheriesCta";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 
@@ -29,7 +28,6 @@ export default async function FisheriesPage({ params }: PageProps) {
       <FisheriesOverview />
       <FisheriesStats />
       <FisheriesOperations />
-      <FisheriesCta />
     </>
   );
 }

@@ -94,10 +94,19 @@ export function BusinessPillars() {
               href={banner.href}
               className="swh-pf-banner group relative grid grid-cols-1 items-center gap-10 overflow-hidden border-b border-border px-6 pb-16 pt-14 md:px-10 lg:h-[50vh] lg:min-h-[460px] lg:grid-cols-[minmax(0,1fr)_minmax(0,0.66fr)] lg:gap-16 lg:px-20"
             >
-              <span className="absolute left-6 top-10 inline-flex items-center gap-3.5 font-sans text-xs font-medium uppercase tracking-[0.32em] text-accent before:block before:h-px before:w-6 before:bg-accent md:left-10 lg:left-20">
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 select-none font-display font-bold leading-none text-transparent md:right-8 lg:right-12"
+                style={{
+                  fontSize: "clamp(180px, 28vw, 360px)",
+                  WebkitTextStroke: "1.5px rgba(0,173,238,0.45)",
+                  letterSpacing: "-0.04em",
+                  zIndex: 0,
+                }}
+              >
                 {idx}
               </span>
-              <div>
+              <div className="relative z-10">
                 <span className="inline-block transition-transform duration-[350ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-3">
                   <h3
                     className="relative inline-block font-display font-normal leading-[0.96] tracking-[-0.035em] text-text after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-[450ms] after:ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:after:scale-x-100"
@@ -114,7 +123,7 @@ export function BusinessPillars() {
                   </h3>
                 </span>
               </div>
-              <div className="flex max-w-[44ch] flex-col items-start gap-7">
+              <div className="relative z-10 flex max-w-[44ch] flex-col items-start gap-7">
                 <span className="inline-flex items-center gap-2.5 font-sans text-[10px] uppercase tracking-[0.24em] text-[#CBD5E1] before:block before:h-1 before:w-1 before:rounded-full before:bg-[#CBD5E1]">
                   {t(`banners.${banner.key}.eyebrow`)}
                 </span>
@@ -134,51 +143,6 @@ export function BusinessPillars() {
             </Link>
           );
         })}
-      </div>
-
-      {/* Brand strip */}
-      <div className="flex flex-col items-center gap-12 border-b border-border px-6 py-24 md:px-10 lg:gap-16 lg:px-20 lg:py-32">
-        <span className="inline-flex items-center gap-3.5 font-sans text-xs font-medium uppercase tracking-[0.32em] text-accent before:block before:h-px before:w-7 before:bg-accent after:block after:h-px after:w-7 after:bg-accent">
-          {t("partnerBrands.eyebrow")}
-        </span>
-        <div className="flex w-full max-w-[1100px] flex-wrap items-center justify-center gap-x-8 gap-y-6 lg:justify-between lg:gap-12">
-          <span className="font-display text-5xl font-medium italic leading-none tracking-[-0.03em] text-text-muted/70 transition-all duration-300 hover:scale-105 hover:text-text lg:text-[56px]">
-            OK
-          </span>
-          <span
-            aria-hidden="true"
-            className="hidden h-1 w-1 rounded-full bg-[#2a3548] lg:block"
-          />
-          <span className="font-sans text-3xl font-semibold lowercase leading-none tracking-[-0.02em] text-text-muted/70 transition-all duration-300 hover:scale-105 hover:text-text">
-            Hisense
-          </span>
-          <span
-            aria-hidden="true"
-            className="hidden h-1 w-1 rounded-full bg-[#2a3548] lg:block"
-          />
-          <span className="font-sans text-[32px] font-bold leading-none tracking-[0.04em] text-text-muted/70 transition-all duration-300 hover:scale-105 hover:text-text">
-            NASA
-          </span>
-          <span
-            aria-hidden="true"
-            className="hidden h-1 w-1 rounded-full bg-[#2a3548] lg:block"
-          />
-          <span className="font-display text-3xl italic leading-none tracking-[-0.015em] text-text-muted/70 transition-all duration-300 hover:scale-105 hover:text-text">
-            Shwe Myay Thee
-          </span>
-        </div>
-        <p className="max-w-[60ch] text-center font-sans text-[13px] tracking-[0.04em] text-[#CBD5E1]">
-          {t("partnerBrands.caption")}
-        </p>
-      </div>
-
-      {/* Foot marker */}
-      <div className="flex justify-between px-6 py-7 font-sans text-[11px] uppercase tracking-[0.16em] text-[#CBD5E1] md:px-10 lg:px-20">
-        <span>
-          <b className="font-medium text-[#CBD5E1]">§ 03</b>
-          {" · Portfolio"}
-        </span>
-        <span>{t("continue")}</span>
       </div>
     </section>
   );

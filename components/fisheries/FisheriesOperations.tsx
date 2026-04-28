@@ -5,7 +5,6 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -145,12 +144,8 @@ export function FisheriesOperations() {
                   {t(`items.${op.key}.body`)}
                 </p>
 
-                <div className="mt-auto flex items-center justify-between pt-9 text-[11px] uppercase tracking-[0.16em] text-text-muted">
+                <div className="mt-auto pt-9 text-[11px] uppercase tracking-[0.16em] text-text-muted">
                   <span>{t(`items.${op.key}.meta`)}</span>
-                  <span className="inline-flex items-center gap-2 transition-all duration-300 group-hover:translate-x-1 group-hover:text-gold">
-                    {t("detailLabel")}
-                    <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                  </span>
                 </div>
               </div>
             </article>
