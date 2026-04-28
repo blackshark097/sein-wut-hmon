@@ -101,7 +101,7 @@ export function FisheriesStats() {
             >
               {stat.hasPreLabel ? (
                 <span
-                  className="font-display font-normal opacity-85"
+                  className="font-display font-normal italic opacity-85"
                   style={{ fontSize: "0.6em", marginRight: 6 }}
                 >
                   {t(`items.${stat.key}.preLabel`)}
@@ -127,7 +127,7 @@ export function FisheriesStats() {
               </span>
               {stat.unit ? (
                 <span
-                  className="font-display font-normal text-accent opacity-80"
+                  className="font-display font-normal italic text-accent opacity-80"
                   style={{
                     fontSize: "0.45em",
                     marginLeft: 6,

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { fontSans } from "../fonts";
+import { fontDisplay, fontSans } from "../fonts";
 import { Layout } from "@/components/Layout";
 import { routing, type Locale } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/seo";
@@ -98,7 +98,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${fontSans.variable} antialiased`}
+      className={`${fontDisplay.variable} ${fontSans.variable} antialiased`}
     >
       <body className="bg-bg text-text font-sans">
         <NextIntlClientProvider locale={locale}>
