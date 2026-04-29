@@ -1,8 +1,38 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const WORDMARKS = ["OK", "HISENSE", "NASA", "SHWE MYAY THEE"] as const;
+const LOGOS = [
+  {
+    key: "hisense",
+    src: "/images/partners/hisense.png",
+    width: 1780,
+    height: 291,
+    alt: "Hisense",
+  },
+  {
+    key: "ok",
+    src: "/images/partners/ok.png",
+    width: 163,
+    height: 204,
+    alt: "OK",
+  },
+  {
+    key: "nasa",
+    src: "/images/partners/nasa.png",
+    width: 1024,
+    height: 427,
+    alt: "NASA",
+  },
+  {
+    key: "shwe-myay-thee",
+    src: "/images/partners/shwe-myay-thee.png",
+    width: 230,
+    height: 288,
+    alt: "Shwe Myay Thee",
+  },
+] as const;
 
 export function Brands() {
   const t = useTranslations("home.portfolio");
@@ -19,14 +49,20 @@ export function Brands() {
         {t("partnerBrands.eyebrow")}
       </span>
 
-      <div className="flex w-full max-w-[1100px] flex-wrap items-center justify-center gap-x-12 gap-y-6 lg:gap-x-16">
-        {WORDMARKS.map((word) => (
-          <span
-            key={word}
-            className="font-sans text-xl font-medium uppercase leading-none tracking-[0.18em] text-text-muted transition-colors duration-300 hover:text-text lg:text-2xl"
+      <div className="flex w-full max-w-[1100px] flex-wrap items-center justify-center gap-x-10 gap-y-6 lg:gap-x-12">
+        {LOGOS.map((logo) => (
+          <div
+            key={logo.key}
+            className="flex h-12 w-28 items-center justify-center lg:h-14 lg:w-36"
           >
-            {word}
-          </span>
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+              className="h-full w-full object-contain"
+            />
+          </div>
         ))}
       </div>
 

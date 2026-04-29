@@ -5,12 +5,12 @@ import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-const OFFICE_LAT = 16.881;
-const OFFICE_LNG = 96.067;
+const OFFICE_LAT = 16.855048;
+const OFFICE_LNG = 96.071592;
 const OFFICE_LABEL = "Sein Wut Hmon Group Head Office";
 const MAP_URL = `https://www.google.com/maps?q=${encodeURIComponent(
   `${OFFICE_LAT},${OFFICE_LNG} (${OFFICE_LABEL})`,
-)}&z=15&output=embed`;
+)}&z=16&output=embed`;
 
 export function ContactMap() {
   const reduce = useReducedMotion();
