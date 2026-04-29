@@ -28,8 +28,8 @@ const LOGOS = [
   {
     key: "shwe-myay-thee",
     src: "/images/partners/shwe-myay-thee.png",
-    width: 230,
-    height: 288,
+    width: 300,
+    height: 438,
     alt: "Shwe Myay Thee",
   },
 ] as const;

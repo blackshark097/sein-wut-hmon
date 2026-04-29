@@ -94,3 +94,25 @@ body {
     color: var(--swh-text-muted);
   }
 }
+
+/* === GRAIN PULSE === */
+@keyframes grain-pulse {
+  0%,
+  100% {
+    opacity: var(--grain-opacity-min);
+  }
+  50% {
+    opacity: var(--grain-opacity-max);
+  }
+}
+
+.grain-pulse {
+  animation: grain-pulse 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain-pulse {
+    animation: none;
+    opacity: var(--grain-opacity-max);
+  }
+}

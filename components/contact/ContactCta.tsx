@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -51,20 +50,6 @@ export function ContactCta() {
         >
           {t("intro")}
         </motion.p>
-
-        <motion.div {...anim(0.22)} className="mt-12">
-          <a
-            href="#contact-form"
-            className="group relative inline-flex items-center gap-3.5 overflow-hidden border border-accent/50 px-10 py-5 text-[13px] font-semibold uppercase tracking-[0.18em] text-accent transition-all duration-300 hover:gap-5 hover:text-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
-          >
-            <span
-              aria-hidden="true"
-              className="absolute inset-0 -z-10 -translate-x-full bg-accent transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0"
-            />
-            {t("button")}
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );

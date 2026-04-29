@@ -146,8 +146,8 @@
       "foundingLabel": "Founding year"
     },
     "leadership": {
-      "eyebrow": "Board of directors",
-      "heading": "Stewardship at the top.",
+      "eyebrow": "Leadership",
+      "heading": "Board of directors",
       "items": {
         "chairman": {
           "title": "Chairman",
@@ -368,7 +368,9 @@
       "image5Alt": "Distribution truck loading at the Thilawa plant",
       "image6Alt": "Community training session for farmers",
       "galleryDotsLabel": "Gallery navigation",
-      "galleryDotLabel": "Go to image {index} of {total}"
+      "galleryDotLabel": "Go to image {index} of {total}",
+      "galleryPrevLabel": "Previous image",
+      "galleryNextLabel": "Next image"
     }
   },
   "csr": {
@@ -415,8 +417,7 @@
     },
     "cta": {
       "heading": "Connect with <em>Sein Wut Hmon</em>.",
-      "intro": "For partnership inquiries and direct contact with the group.",
-      "button": "Get in touch"
+      "intro": "For partnership inquiries and direct contact with the group."
     },
     "form": {
       "nameLabel": "Name",

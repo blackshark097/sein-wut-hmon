@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const IMAGES = [
   {
@@ -44,31 +45,57 @@ const IMAGES = [
   },
 ] as const;
 
-const INTERVAL_MS = 5000;
+const INTERVAL_MS = 2500;
 
 export function FertilizerGallery() {
   const t = useTranslations("fertilizer.reach");
   const reduce = useReducedMotion();
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const intervalRef = useRef<number | null>(null);
 
-  useEffect(() => {
-    if (reduce || paused) {
+  const clearTimer = useCallback(() => {
+    if (intervalRef.current !== null) {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, []);
+
+  const startTimer = useCallback(() => {
+    clearTimer();
+    if (reduce) {
       return;
     }
-    const id = window.setInterval(() => {
+    intervalRef.current = window.setInterval(() => {
       setIndex((current) => (current + 1) % IMAGES.length);
     }, INTERVAL_MS);
-    return () => window.clearInterval(id);
-  }, [reduce, paused]);
+  }, [clearTimer, reduce]);
+
+  useEffect(() => {
+    startTimer();
+    return clearTimer;
+  }, [startTimer, clearTimer]);
+
+  const goPrev = useCallback(() => {
+    setIndex((current) => (current - 1 + IMAGES.length) % IMAGES.length);
+    startTimer();
+  }, [startTimer]);
+
+  const goNext = useCallback(() => {
+    setIndex((current) => (current + 1) % IMAGES.length);
+    startTimer();
+  }, [startTimer]);
+
+  const goTo = useCallback(
+    (i: number) => {
+      setIndex(i);
+      startTimer();
+    },
+    [startTimer],
+  );
 
   return (
     <div className="mt-12 md:mt-16">
-      <div
-        className="relative aspect-[3/2] w-full overflow-hidden border border-border/70 bg-bg-elev"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-      >
+      <div className="relative aspect-[3/2] w-full overflow-hidden border border-border/70 bg-bg-elev">
         {IMAGES.map((image, i) => (
           <Image
             key={image.src}
@@ -83,6 +110,23 @@ export function FertilizerGallery() {
             }`}
           />
         ))}
+
+        <button
+          type="button"
+          onClick={goPrev}
+          aria-label={t("galleryPrevLabel")}
+          className="absolute left-3 top-1/2 -translate-y-1/2 p-2 text-white/60 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:left-4"
+        >
+          <ChevronLeft size={24} aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          onClick={goNext}
+          aria-label={t("galleryNextLabel")}
+          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-white/60 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:right-4"
+        >
+          <ChevronRight size={24} aria-hidden="true" />
+        </button>
       </div>
 
       <div
@@ -102,7 +146,7 @@ export function FertilizerGallery() {
                 index: i + 1,
                 total: IMAGES.length,
               })}
-              onClick={() => setIndex(i)}
+              onClick={() => goTo(i)}
               className={`h-2 w-2 rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${
                 isActive ? "bg-accent" : "bg-border hover:bg-text-muted"
               }`}

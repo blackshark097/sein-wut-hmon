@@ -40,8 +40,15 @@ export function AboutHero() {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-overlay"
-        style={{ backgroundImage: GRAIN_URL, backgroundSize: "160px 160px" }}
+        className="grain-pulse pointer-events-none absolute inset-0 mix-blend-overlay"
+        style={
+          {
+            backgroundImage: GRAIN_URL,
+            backgroundSize: "160px 160px",
+            "--grain-opacity-min": "0.035",
+            "--grain-opacity-max": "0.05",
+          } as React.CSSProperties
+        }
       />
 
       <div

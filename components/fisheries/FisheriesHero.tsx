@@ -43,8 +43,15 @@ export function FisheriesHero() {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay"
-        style={{ backgroundImage: GRAIN_URL, backgroundSize: "160px 160px" }}
+        className="grain-pulse pointer-events-none absolute inset-0 mix-blend-overlay"
+        style={
+          {
+            backgroundImage: GRAIN_URL,
+            backgroundSize: "160px 160px",
+            "--grain-opacity-min": "0.049",
+            "--grain-opacity-max": "0.07",
+          } as React.CSSProperties
+        }
       />
 
       <div

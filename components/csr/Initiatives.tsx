@@ -59,7 +59,7 @@ export function Initiatives() {
                   ease: EASE,
                   delay: index * 0.07,
                 }}
-                className="group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev transition duration-500 hover:-translate-y-1 hover:border-gold/50 hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_24px_60px_-20px_rgba(0,173,238,0.2)]"
+                className="group relative overflow-hidden rounded-lg border border-border/60 bg-bg-elev transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_60px_-20px_rgba(0,173,238,0.2)]"
               >
                 <div className="relative block w-full aspect-[4/3]">
                   {initiative.image ? (
