@@ -130,8 +130,8 @@
     "overview": {
       "eyebrow": "The Business",
       "heading": "An integrated operator",
-      "paragraph1": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating across marine resources, fertilizer manufacturing, and nationwide distribution. The businesses reinforce each other: the fishery fleet anchors the marine line, the Shwe Myay Thee fertilizer plant supports Myanmar's farmers, and the distribution network moves every product to 14 branch offices across Lower and Upper Myanmar.",
-      "paragraph2": "Today the group counts 250+ employees, 145+ distribution vehicles, 80 motorcycles, and 20 fishing vessels.",
+      "paragraph1": "Sein Wut Hmon Group operates across marine resources, fertilizer manufacturing, and nationwide distribution. The businesses reinforce each other across 14 branch offices in Lower and Upper Myanmar.",
+      "paragraph2": "250+ employees, 145+ distribution vehicles, 80 motorcycles, and 20 fishing vessels.",
       "stats": {
         "employees": "Employees across SWH entities",
         "branches": "Branch offices",
@@ -141,44 +141,28 @@
     },
     "timeline": {
       "eyebrow": "Heritage",
-      "heading": "Milestones",
-      "intro": "Decades of building in Myanmar, one industry at a time. Dates shown with a TBD marker are being confirmed.",
-      "tbdBadge": "TBD",
-      "items": {
-        "founding": {
-          "year": "YYYY",
-          "title": "Founding of Sein Wut Hmon",
-          "description": "The group is founded in Yangon with a focus on essential consumer distribution."
-        },
-        "distribution": {
-          "year": "YYYY",
-          "title": "First distribution operations",
-          "description": "The logistics arm launches, seeding the branch network that reaches every state and region today."
-        },
-        "fleet": {
-          "year": "YYYY",
-          "title": "Marine fleet launch",
-          "description": "Sein Wut Hmon expands into marine harvest, building toward a twenty vessel fleet."
-        }
-      }
+      "heading": "Established in Yangon.",
+      "foundingYear": "1995",
+      "foundingLabel": "Founding year"
     },
     "leadership": {
-      "eyebrow": "Leadership",
-      "heading": "The people in charge",
-      "intro": "Names and portraits are being confirmed. This section will be completed as part of the next content pass.",
-      "nameToBeConfirmed": "Name to be confirmed",
+      "eyebrow": "Board of directors",
+      "heading": "Stewardship at the top.",
       "items": {
         "chairman": {
           "title": "Chairman",
-          "brief": "Sets the long term direction for the group and anchors founding family stewardship."
+          "name": "Maung Maung Kyaw",
+          "monogram": "M"
         },
-        "managingDirector": {
-          "title": "Managing Director",
-          "brief": "Runs the holding structure day to day, linking operating companies and the boardroom."
+        "viceChairman": {
+          "title": "Vice-Chairman",
+          "name": "Nay Win Aung",
+          "monogram": "N"
         },
-        "coo": {
-          "title": "Chief Operating Officer",
-          "brief": "Owns cross group operations, from distribution to marine harvest."
+        "treasurer": {
+          "title": "Treasurer",
+          "name": "Nyi Nyi Lwin",
+          "monogram": "N"
         }
       }
     }
@@ -224,25 +208,25 @@
         "fleet": {
           "eyebrow": "Fleet",
           "title": "Fleet & Vessels",
-          "body": "Twenty modernized commercial fishing vessels, operated year-round across Myanmar's territorial waters and exclusive economic zone.",
+          "body": "Twenty modernized commercial vessels, operated year-round across Myanmar's territorial waters and EEZ.",
           "meta": "20 Vessels · Est. 2000"
         },
         "capture": {
           "eyebrow": "Capture",
           "title": "Wild Capture Operations",
-          "body": "A commercial trawling operation focused on high-value marine species. Catch profiles are managed to international export standards.",
+          "body": "Commercial trawling for high-value marine species, managed to international export standards.",
           "meta": "EEZ · Export-grade"
         },
         "coldChain": {
           "eyebrow": "Cold Chain",
           "title": "Cold Chain & Processing",
-          "body": "Onboard handling and shoreside cold storage preserve product integrity from harvest to port, enabling both domestic distribution and export.",
+          "body": "Onboard handling and shoreside cold storage, from harvest to port.",
           "meta": "Harvest → Port"
         },
         "export": {
           "eyebrow": "Export",
           "title": "Export & Distribution",
-          "body": "Integration with SWH's broader logistics network connects catch to regional and international buyers, with documented traceability from vessel to market.",
+          "body": "Documented traceability from vessel to market, integrated with SWH's logistics network.",
           "meta": "Regional · International"
         }
       }
@@ -288,25 +272,25 @@
         "network": {
           "eyebrow": "Network",
           "title": "Branch Network",
-          "body": "Fourteen offices across Lower and Upper Myanmar, positioned to reach population centers from Yangon to Mandalay, with last-mile coverage into secondary cities and townships.",
+          "body": "Fourteen offices across Lower and Upper Myanmar, with last-mile coverage into secondary cities and townships.",
           "meta": "14 Offices · Nationwide"
         },
         "fleet": {
           "eyebrow": "Fleet",
           "title": "Fleet Capacity",
-          "body": "A combined fleet of one hundred forty-five vehicles and eighty motorcycles, scaled for the realities of Myanmar's road network and sized to handle cold chain, dry goods, and industrial distribution in parallel.",
+          "body": "145 vehicles and 80 motorcycles, sized for cold chain, dry goods, and industrial distribution.",
           "meta": "145 Vehicles · 80 Motorcycles"
         },
         "categories": {
           "eyebrow": "Categories",
           "title": "Category Breadth",
-          "body": "Consumer electronics, food and beverage imports, industrial lubricants, and specialty retail. Each category supported by dedicated trade teams with product expertise.",
+          "body": "Consumer electronics, food and beverage, industrial lubricants, specialty retail.",
           "meta": "4 Trade Categories"
         },
         "partnerships": {
           "eyebrow": "Partnerships",
           "title": "Partner Relationships",
-          "body": "Long-term partnerships with international brands seeking reliable, compliant, nationwide distribution in Myanmar, backed by documented performance and regulatory coverage.",
+          "body": "Long-term partnerships with international brands seeking nationwide distribution in Myanmar.",
           "meta": "International · Long-term"
         }
       }
@@ -315,7 +299,7 @@
       "ariaLabel": "Hisense electronics",
       "eyebrow": "Electronics",
       "heading": "Consumer electronics across Myanmar",
-      "body": "As authorized distributor for Hisense in Myanmar, Sein Wut Hmon brings the brand's televisions, refrigeration, and display products from China to retail and commercial channels nationwide.",
+      "body": "Authorized distributor of Hisense televisions, refrigeration, and display products across Myanmar.",
       "bullets": {
         "item1": "Authorized Hisense distributor in Myanmar",
         "item2": "Televisions, refrigeration, displays",
@@ -327,7 +311,7 @@
       "ariaLabel": "OK condensed milk",
       "eyebrow": "Condensed Milk",
       "heading": "Daily-use dairy across Myanmar",
-      "body": "Sein Wut Hmon distributes OK brand condensed milk and evaporated creamer from Singapore and Malaysia, supplying tea shops, kitchens, and grocery channels across the country.",
+      "body": "OK condensed milk and evaporated creamer from Singapore and Malaysia, supplied to tea shops, kitchens, and grocery channels nationwide.",
       "bullets": {
         "item1": "OK brand from Singapore and Malaysia",
         "item2": "Condensed milk and evaporated creamer",
@@ -339,7 +323,7 @@
       "ariaLabel": "NASA lubricants",
       "eyebrow": "Lubricants",
       "heading": "Industrial and automotive lubricants",
-      "body": "As the sole agent of NASA Total Lubricating Solutions from AC Lubricants Sdn Bhd in Malaysia, Sein Wut Hmon distributes industrial and automotive lubricants nationwide for transportation, machinery, and manufacturing customers across Myanmar.",
+      "body": "Sole agent of NASA Total Lubricating Solutions from AC Lubricants Sdn Bhd, Malaysia. Industrial and automotive lubricants nationwide.",
       "bullets": {
         "item1": "Sole agent of NASA lubricants in Myanmar",
         "item2": "Industrial and automotive grades",
@@ -364,7 +348,7 @@
     "overview": {
       "eyebrow": "Owned Brand",
       "heading": "Built for Myanmar's soil.",
-      "body": "Sein Wut Hmon owns and operates Shwe Myay Thee, a calcium silica fertilizer manufactured at our plant in Thilawa Industrial Zone. Each fifty-kilogram bag is blended to a registered formula of calcium oxide, silica, manganese, and phosphate. The product reaches farmers nationwide through Sein Wut Hmon's distribution network. Smallholder rice paddies in the south, dryland cultivation in the central plains, and commercial vegetable farms in between use Shwe Myay Thee as part of their soil management.",
+      "body": "Sein Wut Hmon owns and operates Shwe Myay Thee, a calcium silica fertilizer manufactured at Thilawa Industrial Zone. Each 50kg bag is blended to a registered formula of calcium oxide, silica, manganese, and phosphate.",
       "bullets": {
         "item1": "Sein Wut Hmon-owned brand",
         "item2": "Manufactured at Thilawa Industrial Zone, Yangon",
@@ -376,9 +360,15 @@
       "ariaLabel": "Shwe Myay Thee reach",
       "eyebrow": "Reach",
       "heading": "In the hands of farmers.",
-      "body": "From the rice paddies of the lower Ayeyarwady to the dry zones of central Myanmar, Shwe Myay Thee reaches the hands of farmers at planting season. The owl on the bag, visible on a fence post or a riverbank or a field path, is a familiar sight at the edge of cultivated land.",
-      "featureImageAlt": "Farmer carrying a Shwe Myay Thee bag in a rice paddy",
-      "insetImageAlt": "Farmers working in a field at planting season"
+      "body": "From the lower Ayeyarwady to the central dry zone, Shwe Myay Thee reaches farmers at planting season.",
+      "image1Alt": "Farmer carrying a Shwe Myay Thee bag in a rice paddy",
+      "image2Alt": "Farmers applying fertilizer in a field at planting season",
+      "image3Alt": "Raw material at the Thilawa fertilizer plant",
+      "image4Alt": "Workers stacking 50kg bags inside the Thilawa warehouse",
+      "image5Alt": "Distribution truck loading at the Thilawa plant",
+      "image6Alt": "Community training session for farmers",
+      "galleryDotsLabel": "Gallery navigation",
+      "galleryDotLabel": "Go to image {index} of {total}"
     }
   },
   "csr": {
@@ -401,17 +391,17 @@
         "education": {
           "name": "Education",
           "eyebrow": "Schools and learning",
-          "blurb": "Supporting basic schools and learning facilities in the regions where the group operates."
+          "blurb": "Schools and learning facilities in the regions where the group operates."
         },
         "disaster": {
           "name": "Disaster Relief",
           "eyebrow": "Emergency response",
-          "blurb": "Practical relief during floods, storms, and other community emergencies in Myanmar."
+          "blurb": "Practical relief during floods, storms, and community emergencies."
         },
         "community": {
           "name": "Community Development",
           "eyebrow": "Long term investment",
-          "blurb": "Infrastructure, local partnerships, and quiet, ongoing contributions where our branches operate."
+          "blurb": "Infrastructure and local partnerships, where our branches operate."
         }
       }
     }
@@ -424,14 +414,11 @@
       "intro": "Get in touch with Sein Wut Hmon Group."
     },
     "cta": {
-      "eyebrow": "Partnership",
-      "heading": "Partner with <em>Sein Wut Hmon</em>.",
-      "intro": "For partnership inquiries, capacity discussions, and direct contact with the group.",
+      "heading": "Connect with <em>Sein Wut Hmon</em>.",
+      "intro": "For partnership inquiries and direct contact with the group.",
       "button": "Get in touch"
     },
     "form": {
-      "eyebrow": "Send a note",
-      "heading": "Write to the head office",
       "nameLabel": "Name",
       "namePlaceholder": "Your full name",
       "emailLabel": "Email",

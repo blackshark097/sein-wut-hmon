@@ -30,15 +30,10 @@ export function ContactForm() {
 
   const formBlock = (
     <>
-      <span className="text-subheading text-gold">{t("eyebrow")}</span>
-      <h2 id="contact-form-heading" className="mt-4 text-heading text-text">
-        {t("heading")}
-      </h2>
-
       {sent ? (
         <div
           aria-live="polite"
-          className="mt-10 rounded-md border border-border/60 bg-bg p-8"
+          className="rounded-md border border-border/60 bg-bg p-8"
         >
           <div className="flex items-center gap-3">
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gold/60 text-gold">
@@ -61,7 +56,7 @@ export function ContactForm() {
         <>
           <form
             onSubmit={handleSubmit}
-            className="mt-10 flex flex-col gap-8"
+            className="flex flex-col gap-8"
             noValidate={false}
           >
             <div>
@@ -133,8 +128,9 @@ export function ContactForm() {
 
   return (
     <section
-      aria-labelledby="contact-form-heading"
-      className="relative bg-bg-elev py-20 md:py-28"
+      id="contact-form"
+      aria-label="Contact form"
+      className="relative bg-bg-elev py-20 md:py-28 scroll-mt-24"
     >
       {reduce ? (
         <div className="mx-auto max-w-3xl px-6 md:px-10">{formBlock}</div>

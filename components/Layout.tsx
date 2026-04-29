@@ -19,7 +19,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    const lenis = new Lenis({});
+    const lenis = new Lenis({ lerp: 0.08 });
 
     // Lenis drives scroll, so ScrollTrigger must read its position to stay in sync.
     lenis.on("scroll", ScrollTrigger.update);

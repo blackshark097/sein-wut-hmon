@@ -200,7 +200,7 @@ export function Sidebar() {
       </aside>
 
       {/* Mobile top bar (<lg). 64px tall, fixed across the top. */}
-      <header className="fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between border-b border-border bg-bg/70 px-5 backdrop-blur-md lg:hidden">
+      <header className="fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between border-b border-border bg-bg/95 px-5 lg:hidden">
         <Link
           href="/"
           onClick={closeMenu}

@@ -32,17 +32,10 @@ export function ContactCta() {
       />
 
       <div className="relative mx-auto max-w-3xl px-6 text-center md:px-10">
-        <motion.span
-          {...anim(0)}
-          className="inline-flex items-center justify-center gap-3.5 text-subheading text-accent"
-        >
-          {t("eyebrow")}
-        </motion.span>
-
         <motion.h2
-          {...anim(0.12)}
+          {...anim(0)}
           id="contact-cta-heading"
-          className="mt-6 font-display font-medium tracking-[-0.028em] text-text"
+          className="font-display font-medium tracking-[-0.028em] text-text"
           style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", lineHeight: 1.04 }}
         >
           {t.rich("heading", {
@@ -53,15 +46,15 @@ export function ContactCta() {
         </motion.h2>
 
         <motion.p
-          {...anim(0.22)}
+          {...anim(0.12)}
           className="mx-auto mt-8 max-w-xl text-body text-text-muted"
         >
           {t("intro")}
         </motion.p>
 
-        <motion.div {...anim(0.32)} className="mt-12">
+        <motion.div {...anim(0.22)} className="mt-12">
           <a
-            href="#contact-info"
+            href="#contact-form"
             className="group relative inline-flex items-center gap-3.5 overflow-hidden border border-accent/50 px-10 py-5 text-[13px] font-semibold uppercase tracking-[0.18em] text-accent transition-all duration-300 hover:gap-5 hover:text-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           >
             <span

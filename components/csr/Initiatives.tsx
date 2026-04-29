@@ -26,11 +26,7 @@ const INITIATIVES: InitiativeConfig[] = [
   },
   {
     key: "community",
-    image: null,
-    placeholder: {
-      gradient: "from-[#16251a] via-[#1A2332] to-[#050a0d]",
-      initial: "C",
-    },
+    image: "/images/csr/community-development.jpg",
   },
 ];
 

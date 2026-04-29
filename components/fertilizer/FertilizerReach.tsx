@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import FertilizerGallery from "@/components/fertilizer/FertilizerGallery";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -41,31 +41,8 @@ export function FertilizerReach() {
           <p className="mt-6 text-body text-text-muted">{t("body")}</p>
         </motion.div>
 
-        <motion.div {...fadeUp(0.1)} className="mt-12 md:mt-16">
-          <div className="relative aspect-video w-full overflow-hidden border border-border/70 bg-bg-elev">
-            <Image
-              src="/images/fertilizer/rice-paddy-farmer.jpg"
-              alt={t("featureImageAlt")}
-              fill
-              sizes="(min-width: 1280px) 1140px, 100vw"
-              className="object-cover"
-            />
-          </div>
-        </motion.div>
-
-        <motion.div
-          {...fadeUp(0.25)}
-          className="mx-auto mt-12 w-full max-w-[60%] sm:max-w-[55%] md:mt-16 md:max-w-[52%]"
-        >
-          <div className="relative aspect-[3/4] w-full overflow-hidden border border-border/70 bg-bg-elev">
-            <Image
-              src="/images/fertilizer/farmers-field.jpg"
-              alt={t("insetImageAlt")}
-              fill
-              sizes="(min-width: 768px) 50vw, 60vw"
-              className="object-cover"
-            />
-          </div>
+        <motion.div {...fadeUp(0.1)}>
+          <FertilizerGallery />
         </motion.div>
       </div>
     </section>
