@@ -42,12 +42,6 @@ export default async function DistributionPage({ params }: PageProps) {
         logoWidth={1399}
         logoHeight={520}
         headingId="distribution-skechers-heading"
-        heroImage={{
-          src: "/images/partners/skechers-storefront.jpg",
-          width: 800,
-          height: 381,
-        }}
-        reverse
       />
       <DistributionBrand
         i18nNamespace="distribution.ok"
