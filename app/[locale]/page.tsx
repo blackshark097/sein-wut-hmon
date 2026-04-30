@@ -28,9 +28,9 @@ export default async function HomePage({ params }: PageProps) {
     <>
       <Hero />
       <CompanyIntro />
+      <Brands />
       <BusinessPillars />
       <Stats />
-      <Brands />
     </>
   );
 }

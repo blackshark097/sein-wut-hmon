@@ -26,8 +26,8 @@ export default async function AboutPage({ params }: PageProps) {
     <>
       <AboutHero />
       <CompanyOverview />
-      <Timeline />
       <Leadership />
+      <Timeline />
     </>
   );
 }

@@ -14,12 +14,6 @@ const IMAGES = [
     altKey: "image1Alt",
   },
   {
-    src: "/images/fertilizer/farmers-field.jpg",
-    width: 1200,
-    height: 1600,
-    altKey: "image2Alt",
-  },
-  {
     src: "/images/fertilizer/03-warehouse-material.jpg",
     width: 1600,
     height: 1200,

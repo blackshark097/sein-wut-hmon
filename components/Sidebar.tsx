@@ -119,8 +119,8 @@ export function Sidebar() {
           <Image
             src="/images/swh-logo.png"
             alt={t("logoAlt")}
-            width={1536}
-            height={1024}
+            width={157}
+            height={105}
             priority
             className="h-auto w-20 object-contain"
           />
@@ -218,8 +218,8 @@ export function Sidebar() {
           <Image
             src="/images/swh-logo.png"
             alt={t("logoAlt")}
-            width={1536}
-            height={1024}
+            width={157}
+            height={105}
             priority
             className="h-auto w-14 object-contain"
           />
