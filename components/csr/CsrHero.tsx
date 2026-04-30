@@ -77,7 +77,7 @@ export function CsrHero() {
 
         <motion.p
           {...fadeUp(0.45)}
-          className="mt-8 max-w-2xl text-body text-text-muted"
+          className="mt-8 max-w-2xl text-base font-normal leading-relaxed text-text-muted md:text-lg md:font-medium"
         >
           {t("intro")}
         </motion.p>

@@ -10,7 +10,7 @@
 
 ### Typography
 - Display/headings: Fraunces (serif, italic accents allowed).
-- Body: Inter.
+- Body: DM Sans.
 - Italic cyan accents on hero headlines are intentional design language. Do NOT remove.
 - Banner watermark numbers: Fraunces Bold, outlined cyan.
 

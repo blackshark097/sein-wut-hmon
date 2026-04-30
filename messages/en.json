@@ -12,7 +12,7 @@
     },
     "fisheries": {
       "title": "Fisheries, Sein Wut Hmon Group",
-      "description": "One of Myanmar's most established commercial fishing fleets. Twenty vessels, ten million in assets, export-capable operations across a 2,832 km coastline."
+      "description": "One of Myanmar's most established commercial fishing fleets. Twenty vessels, export-capable operations across a 2,832 km coastline."
     },
     "distribution": {
       "title": "Trading & Distribution, Sein Wut Hmon Group",
@@ -112,6 +112,8 @@
     },
     "stats": {
       "ariaLabel": "Key statistics",
+      "eyebrow": "Efficiency",
+      "heading": "<em>Lean</em> by design.",
       "items": {
         "employees": "Employees across SWH entities",
         "vessels": "Fishing Vessels",
@@ -172,7 +174,7 @@
       "ariaLabel": "Fisheries hero",
       "eyebrow": "Fisheries",
       "heading": "A coastline of <em>2,832</em> kilometers. A fleet built to work it.",
-      "intro": "Since 2000, Sein Wut Hmon has operated one of Myanmar's most established commercial fishing fleets. Twenty vessels. Ten million dollars in assets. A proven export capability rooted in one of Southeast Asia's richest marine environments.",
+      "intro": "Since 2000, Sein Wut Hmon has operated one of Myanmar's most established commercial fishing fleets. Twenty vessels. A proven export capability rooted in one of Southeast Asia's richest marine environments.",
       "imageAlt": "Fresh wild-caught harvest from Sein Wut Hmon's commercial fishing operations"
     },
     "overview": {
@@ -306,6 +308,18 @@
         "item3": "Retail and commercial channel distribution"
       },
       "imageAlt": "Hisense brand logo"
+    },
+    "skechers": {
+      "ariaLabel": "Skechers footwear",
+      "eyebrow": "Footwear",
+      "heading": "Skechers, since <em>2012.</em>",
+      "body": "The exclusive distributor in Myanmar since 2012, covering marketing, distribution, and retail of Skechers footwear. Flagship store on Inya Road. Retail presence across major malls and shopping centers nationwide.",
+      "bullets": {
+        "item1": "Exclusive Skechers distributor in Myanmar since 2012",
+        "item2": "Marketing, distribution, and retail",
+        "item3": "Flagship on Inya Road; nationwide retail footprint"
+      },
+      "imageAlt": "Skechers flagship storefront on Inya Road"
     },
     "ok": {
       "ariaLabel": "OK condensed milk",

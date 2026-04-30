@@ -8,12 +8,20 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 const BULLET_KEYS = ["item1", "item2", "item3"] as const;
 
+type HeroImage = {
+  src: string;
+  width: number;
+  height: number;
+};
+
 type DistributionBrandProps = {
   i18nNamespace: string;
   logoSrc: string;
   logoWidth: number;
   logoHeight: number;
   headingId: string;
+  heroImage?: HeroImage;
+  reverse?: boolean;
 };
 
 export function DistributionBrand({
@@ -22,6 +30,8 @@ export function DistributionBrand({
   logoWidth,
   logoHeight,
   headingId,
+  heroImage,
+  reverse = false,
 }: DistributionBrandProps) {
   const reduce = useReducedMotion();
   const t = useTranslations(i18nNamespace);
@@ -33,6 +43,13 @@ export function DistributionBrand({
     transition: { duration: reduce ? 0.6 : 0.9, ease: EASE, delay },
   });
 
+  const textColumnClass = reverse
+    ? "md:col-span-6 md:col-start-7 lg:col-span-5 lg:col-start-8"
+    : "md:col-span-6 lg:col-span-5";
+  const mediaColumnClass = reverse
+    ? "relative md:col-span-6 md:col-start-1 md:row-start-1 lg:col-span-7"
+    : "relative md:col-span-6 lg:col-span-7";
+
   return (
     <section
       aria-labelledby={headingId}
@@ -41,7 +58,17 @@ export function DistributionBrand({
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16 lg:gap-20">
-          <motion.div {...fadeUp(0)} className="md:col-span-6 lg:col-span-5">
+          <motion.div {...fadeUp(0)} className={textColumnClass}>
+            {heroImage ? (
+              <Image
+                src={logoSrc}
+                alt={t("imageAlt")}
+                width={logoWidth}
+                height={logoHeight}
+                sizes="160px"
+                className="mb-8 h-7 w-auto object-contain md:h-8 lg:h-9"
+              />
+            ) : null}
             <span className="inline-flex items-center gap-3.5 text-subheading text-accent before:block before:h-px before:w-7 before:bg-accent">
               {t("eyebrow")}
             </span>
@@ -53,7 +80,11 @@ export function DistributionBrand({
                 lineHeight: 1.1,
               }}
             >
-              {t("heading")}
+              {t.rich("heading", {
+                em: (chunks) => (
+                  <em className="font-normal italic text-accent">{chunks}</em>
+                ),
+              })}
             </h2>
             <p className="mt-6 max-w-xl text-body text-text-muted">
               {t("body")}
@@ -74,20 +105,30 @@ export function DistributionBrand({
             </ul>
           </motion.div>
 
-          <motion.div
-            {...fadeUp(0.15)}
-            className="relative md:col-span-6 lg:col-span-7"
-          >
-            <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden border border-border/70 bg-bg-elev md:aspect-[5/4] lg:aspect-[4/3]">
-              <Image
-                src={logoSrc}
-                alt={t("imageAlt")}
-                width={logoWidth}
-                height={logoHeight}
-                sizes="(min-width: 1024px) 35vw, (min-width: 768px) 30vw, 60vw"
-                className="h-auto max-h-[55%] w-auto max-w-[55%] object-contain"
-              />
-            </div>
+          <motion.div {...fadeUp(0.15)} className={mediaColumnClass}>
+            {heroImage ? (
+              <div className="relative aspect-[4/5] w-full overflow-hidden md:aspect-[3/4] lg:aspect-[4/5]">
+                <Image
+                  src={heroImage.src}
+                  alt={t("imageAlt")}
+                  width={heroImage.width}
+                  height={heroImage.height}
+                  sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ) : (
+              <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden border border-border/70 bg-bg-elev md:aspect-[5/4] lg:aspect-[4/3]">
+                <Image
+                  src={logoSrc}
+                  alt={t("imageAlt")}
+                  width={logoWidth}
+                  height={logoHeight}
+                  sizes="(min-width: 1024px) 35vw, (min-width: 768px) 30vw, 60vw"
+                  className="h-auto max-h-[55%] w-auto max-w-[55%] object-contain"
+                />
+              </div>
+            )}
           </motion.div>
         </div>
       </div>

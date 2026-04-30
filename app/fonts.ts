@@ -1,4 +1,4 @@
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, DM_Sans } from "next/font/google";
 
 export const fontDisplay = Fraunces({
   variable: "--font-display",
@@ -8,9 +8,9 @@ export const fontDisplay = Fraunces({
   display: "swap",
 });
 
-export const fontSans = Inter({
+export const fontSans = DM_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "900"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });

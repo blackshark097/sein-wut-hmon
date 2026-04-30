@@ -12,6 +12,13 @@ const LOGOS = [
     alt: "Hisense",
   },
   {
+    key: "skechers",
+    src: "/images/partners/skechers.png",
+    width: 1399,
+    height: 520,
+    alt: "Skechers",
+  },
+  {
     key: "ok",
     src: "/images/partners/ok.png",
     width: 163,

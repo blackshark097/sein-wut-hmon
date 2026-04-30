@@ -69,7 +69,7 @@ export function ContactHero() {
 
         <motion.p
           {...fadeUp(0.35)}
-          className="mt-6 max-w-2xl text-body text-text-muted"
+          className="mt-6 max-w-2xl text-base font-normal leading-relaxed text-text-muted md:text-lg md:font-medium"
         >
           {t("intro")}
         </motion.p>

@@ -87,7 +87,7 @@ export function FisheriesHero() {
 
         <motion.p
           {...fadeUp(0.55)}
-          className="mt-10 max-w-2xl text-body text-text-muted"
+          className="mt-10 max-w-2xl text-base font-normal leading-relaxed text-text-muted md:text-lg md:font-medium"
         >
           {t("intro")}
         </motion.p>

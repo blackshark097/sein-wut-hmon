@@ -114,17 +114,21 @@ export function Sidebar() {
           href="/"
           onClick={closeMenu}
           aria-label={t("logoLinkLabel")}
-          className="flex h-24 w-full items-center justify-center border-b border-border focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-accent"
+          className="flex h-24 w-full items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-accent"
         >
           <Image
-            src="/images/legacy/logo.png"
+            src="/images/swh-logo.png"
             alt={t("logoAlt")}
-            width={157}
-            height={105}
+            width={1536}
+            height={1024}
             priority
-            className="h-[52px] w-auto object-contain"
+            className="h-auto w-16 object-contain"
           />
         </Link>
+        <span
+          aria-hidden="true"
+          className="block h-px w-full bg-gradient-to-r from-transparent via-border to-transparent"
+        />
 
         <button
           ref={desktopToggleRef}
@@ -155,12 +159,16 @@ export function Sidebar() {
           </span>
         </button>
 
+        <span
+          aria-hidden="true"
+          className="block h-px w-full bg-gradient-to-r from-transparent via-border to-transparent"
+        />
         <div
           role="group"
           aria-label={t("languageCurrent", {
             language: t(`languages.${locale}`),
           })}
-          className="flex w-full flex-col items-center gap-1 border-t border-border py-5"
+          className="flex w-full flex-col items-center gap-1 py-5"
         >
           {routing.locales.map((candidate, index) => {
             const isActive = candidate === locale;
@@ -208,12 +216,12 @@ export function Sidebar() {
           className="inline-flex items-center"
         >
           <Image
-            src="/images/legacy/logo.png"
+            src="/images/swh-logo.png"
             alt={t("logoAlt")}
-            width={157}
-            height={105}
+            width={1536}
+            height={1024}
             priority
-            className="h-11 w-auto object-contain"
+            className="h-auto w-12 object-contain"
           />
         </Link>
 

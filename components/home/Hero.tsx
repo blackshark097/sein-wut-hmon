@@ -126,7 +126,7 @@ export function Hero() {
 
         <p
           ref={introRef}
-          className="text-body mt-8 max-w-2xl text-text-muted"
+          className="mt-8 max-w-2xl text-base font-normal leading-relaxed text-text-muted md:text-lg md:font-medium"
         >
           {t("intro")}
         </p>

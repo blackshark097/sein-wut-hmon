@@ -83,6 +83,18 @@ export function Stats() {
         ref={containerRef}
         className="mx-auto max-w-7xl px-6 md:px-10 py-20 md:py-24"
       >
+        <div className="mb-16 max-w-3xl md:mb-20">
+          <span className="inline-flex items-center gap-3.5 font-sans text-xs font-medium uppercase tracking-[0.32em] text-accent before:block before:h-px before:w-7 before:bg-accent">
+            {t("eyebrow")}
+          </span>
+          <h2 className="mt-5 font-display text-4xl font-medium tracking-[-0.02em] text-text md:text-5xl lg:text-6xl">
+            {t.rich("heading", {
+              em: (chunks) => (
+                <em className="font-normal italic text-accent">{chunks}</em>
+              ),
+            })}
+          </h2>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-12">
           {STATS.map((stat, index) => {
             const label = t(`items.${stat.key}`);

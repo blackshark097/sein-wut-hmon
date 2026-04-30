@@ -37,6 +37,19 @@ export default async function DistributionPage({ params }: PageProps) {
         headingId="distribution-hisense-heading"
       />
       <DistributionBrand
+        i18nNamespace="distribution.skechers"
+        logoSrc="/images/partners/skechers.png"
+        logoWidth={1399}
+        logoHeight={520}
+        headingId="distribution-skechers-heading"
+        heroImage={{
+          src: "/images/partners/skechers-storefront.jpg",
+          width: 800,
+          height: 381,
+        }}
+        reverse
+      />
+      <DistributionBrand
         i18nNamespace="distribution.ok"
         logoSrc="/images/partners/ok.png"
         logoWidth={163}
