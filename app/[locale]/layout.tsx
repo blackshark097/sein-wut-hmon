@@ -67,7 +67,7 @@ const ORG_JSON_LD = {
   "@type": "Organization",
   name: "Sein Wut Hmon Group",
   url: SITE_URL,
-  logo: `${SITE_URL}/images/legacy/logo.png`,
+  logo: `${SITE_URL}/images/swh-logo.png`,
   email: "nwa@swh.com.mm",
   telephone: "+95-9-73126116",
   address: {

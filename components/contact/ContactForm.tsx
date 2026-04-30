@@ -54,6 +54,26 @@ export function ContactForm() {
         </div>
       ) : (
         <>
+          <p className="mb-8 text-sm leading-relaxed text-white/60">
+            {t.rich("illustrativeNote", {
+              email: (chunks) => (
+                <a
+                  href="mailto:nwa@swh.com.mm"
+                  className="text-accent transition-colors hover:text-text"
+                >
+                  {chunks}
+                </a>
+              ),
+              phone: (chunks) => (
+                <a
+                  href="tel:+95973126116"
+                  className="text-accent transition-colors hover:text-text"
+                >
+                  {chunks}
+                </a>
+              ),
+            })}
+          </p>
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-8"
