@@ -108,8 +108,8 @@ export function Sidebar() {
 
   return (
     <>
-      {/* Desktop sidebar (>=lg). 80px wide, full viewport height, 1px right border. */}
-      <aside className="fixed inset-y-0 left-0 z-50 hidden w-20 flex-col items-center border-r border-border bg-bg lg:flex">
+      {/* Desktop sidebar (>=lg). 110px wide, full viewport height, 1px right border. */}
+      <aside className="fixed inset-y-0 left-0 z-50 hidden w-[110px] flex-col items-center border-r border-border bg-bg lg:flex">
         <Link
           href="/"
           onClick={closeMenu}
@@ -122,7 +122,7 @@ export function Sidebar() {
             width={1536}
             height={1024}
             priority
-            className="h-auto w-16 object-contain"
+            className="h-auto w-20 object-contain"
           />
         </Link>
         <span
@@ -221,7 +221,7 @@ export function Sidebar() {
             width={1536}
             height={1024}
             priority
-            className="h-auto w-12 object-contain"
+            className="h-auto w-14 object-contain"
           />
         </Link>
 
@@ -291,7 +291,7 @@ export function Sidebar() {
               duration: prefersReducedMotion ? 0 : 0.35,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="fixed inset-x-0 bottom-0 top-16 z-40 bg-bg/95 backdrop-blur-xl lg:left-20 lg:top-0"
+            className="fixed inset-x-0 bottom-0 top-16 z-40 bg-bg/95 backdrop-blur-xl lg:left-[110px] lg:top-0"
             role="dialog"
             aria-modal="true"
             aria-label={t("dialogLabel")}

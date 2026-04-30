@@ -28,7 +28,6 @@ export default async function DistributionPage({ params }: PageProps) {
       <DistributionHero />
       <DistributionOverview />
       <DistributionStats />
-      <DistributionOperations />
       <DistributionBrand
         i18nNamespace="distribution.hisense"
         logoSrc="/images/partners/hisense.png"
@@ -57,6 +56,7 @@ export default async function DistributionPage({ params }: PageProps) {
         logoHeight={427}
         headingId="distribution-nasa-heading"
       />
+      <DistributionOperations />
     </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -14,6 +15,12 @@ const BANNERS = [
   { key: "fisheries", href: "/fisheries" },
   { key: "fertilizer", href: "/fertilizer" },
 ] as const;
+
+const BANNER_BG: Record<(typeof BANNERS)[number]["key"], string> = {
+  distribution: "/images/portfolio/distribution-bg.jpg",
+  fisheries: "/images/portfolio/fisheries-bg.jpg",
+  fertilizer: "/images/portfolio/fertilizer-bg.jpg",
+};
 
 export function BusinessPillars() {
   const containerRef = useRef<HTMLElement | null>(null);
@@ -94,6 +101,26 @@ export function BusinessPillars() {
               href={banner.href}
               className="swh-pf-banner group relative grid grid-cols-1 items-center gap-10 overflow-hidden border-b border-border px-6 pb-16 pt-14 md:px-10 lg:h-[50vh] lg:min-h-[460px] lg:grid-cols-[minmax(0,1fr)_minmax(0,0.66fr)] lg:gap-16 lg:px-20"
             >
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-y-0 left-0 w-full md:w-1/2"
+                style={{
+                  zIndex: 0,
+                  maskImage:
+                    "linear-gradient(to right, black 0%, black 30%, transparent 80%)",
+                  WebkitMaskImage:
+                    "linear-gradient(to right, black 0%, black 30%, transparent 80%)",
+                }}
+              >
+                <Image
+                  src={BANNER_BG[banner.key]}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover opacity-25"
+                />
+                <div className="absolute inset-0 bg-[rgba(10,15,28,0.4)]" />
+              </div>
               <span
                 aria-hidden="true"
                 className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 select-none font-display font-bold leading-none text-transparent md:right-8 lg:right-12"

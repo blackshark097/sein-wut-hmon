@@ -39,7 +39,7 @@ export function ContactMap() {
           </motion.div>
         )}
 
-        <div className="mt-8 overflow-hidden rounded-lg border border-border/60 bg-bg-elev aspect-[16/9]">
+        <div className="mt-8 overflow-hidden rounded-lg border border-border/60 bg-bg-elev aspect-[16/9] min-h-[320px] md:min-h-[400px] lg:min-h-[480px]">
           <iframe
             src={MAP_URL}
             title={t("mapTitle")}

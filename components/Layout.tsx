@@ -46,7 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className="relative flex min-h-screen flex-col bg-bg text-text lg:pl-20">
+    <div className="relative flex min-h-screen flex-col bg-bg text-text lg:pl-[110px]">
       <Sidebar />
       <main className="flex-1 pt-16 lg:pt-0">{children}</main>
       <Footer />
