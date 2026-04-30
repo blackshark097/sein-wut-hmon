@@ -39,6 +39,7 @@ export async function buildPageMetadata(
   const t = await getTranslations({ locale, namespace: `Metadata.${page}` });
   const tSite = await getTranslations({ locale, namespace: "Metadata" });
   const title = t("title");
+  const ogTitle = t("ogTitle");
   const description = t("description");
   const url = pageUrl(locale, page);
   const path = `/${locale}${PAGE_PATHS[page]}`;
@@ -60,7 +61,7 @@ export async function buildPageMetadata(
       type: "website",
       url,
       siteName: tSite("siteName"),
-      title,
+      title: ogTitle,
       description,
       locale: OG_LOCALE[locale],
       alternateLocale: routing.locales
@@ -69,7 +70,7 @@ export async function buildPageMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: ogTitle,
       description,
     },
   };

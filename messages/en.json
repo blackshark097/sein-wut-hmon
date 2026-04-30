@@ -3,31 +3,38 @@
     "siteName": "Sein Wut Hmon Group",
     "defaultDescription": "Myanmar conglomerate in distribution, fisheries, and fertilizer.",
     "home": {
-      "title": "Sein Wut Hmon Group, Building Myanmar's Essential Industries",
+      "title": "SWH | Building Myanmar's Essential Industries",
+      "ogTitle": "Sein Wut Hmon Group, Building Myanmar's Essential Industries",
       "description": "A diversified Myanmar conglomerate operating across marine resources, industrial supply, and nationwide distribution."
     },
     "about": {
-      "title": "About, Sein Wut Hmon Group",
+      "title": "About | SWH",
+      "ogTitle": "About, Sein Wut Hmon Group",
       "description": "Sein Wut Hmon Group, a Myanmar conglomerate building essential industries in fisheries, industrial supply, and nationwide distribution."
     },
     "fisheries": {
-      "title": "Fisheries, Sein Wut Hmon Group",
+      "title": "Fisheries | SWH",
+      "ogTitle": "Fisheries, Sein Wut Hmon Group",
       "description": "One of Myanmar's most established commercial fishing fleets. Twenty vessels, export-capable operations across a 2,832 km coastline."
     },
     "distribution": {
-      "title": "Trading & Distribution, Sein Wut Hmon Group",
+      "title": "Trading & Distribution | SWH",
+      "ogTitle": "Trading & Distribution, Sein Wut Hmon Group",
       "description": "Fourteen branches, one hundred forty-five vehicles, two hundred fifty employees. One of Myanmar's most comprehensive distribution networks, carrying international brands to every region of the country."
     },
     "fertilizer": {
-      "title": "Fertilizer, Sein Wut Hmon Group",
+      "title": "Fertilizer | SWH",
+      "ogTitle": "Fertilizer, Sein Wut Hmon Group",
       "description": "Shwe Myay Thee calcium silica fertilizer, manufactured at the Sein Wut Hmon plant in Thilawa Industrial Zone for Myanmar's smallholder and commercial farms."
     },
     "csr": {
-      "title": "Corporate Social Responsibility, Sein Wut Hmon Group",
+      "title": "CSR | SWH",
+      "ogTitle": "Corporate Social Responsibility, Sein Wut Hmon Group",
       "description": "How Sein Wut Hmon invests in the communities where it operates, through school support, disaster relief, and long term community development."
     },
     "contact": {
-      "title": "Contact, Sein Wut Hmon Group",
+      "title": "Contact | SWH",
+      "ogTitle": "Contact, Sein Wut Hmon Group",
       "description": "Reach the Sein Wut Hmon Group head office in Yangon."
     }
   },
