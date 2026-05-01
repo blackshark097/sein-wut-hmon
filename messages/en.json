@@ -182,7 +182,7 @@
       "eyebrow": "Fisheries",
       "heading": "A coastline of <em>2,832</em> kilometers. A fleet built to work it.",
       "intro": "Since 2000, Sein Wut Hmon has operated one of Myanmar's most established commercial fishing fleets. Twenty vessels. A proven export capability rooted in one of Southeast Asia's richest marine environments.",
-      "imageAlt": "Fresh wild-caught harvest from Sein Wut Hmon's commercial fishing operations"
+      "imageAlt": "SWH fishing vessel MYA WUT HMOAN Y 1102 docked under bridge in Yangon"
     },
     "overview": {
       "eyebrow": "The Geography",
@@ -197,9 +197,6 @@
         "vessels": {
           "label": "Vessels in fleet"
         },
-        "assetBase": {
-          "label": "Asset base"
-        },
         "coastline": {
           "label": "Coastline worked"
         },
@@ -208,6 +205,20 @@
           "label": "Operating since"
         }
       }
+    },
+    "gallery": {
+      "ariaLabel": "Fisheries fleet gallery",
+      "eyebrow": "Fleet",
+      "heading": "Twenty vessels, <em>one coastline</em>.",
+      "body": "The SWH fleet works the full length of Myanmar's 2,832-kilometer coastline year-round. Every vessel is registered, tracked, and operated to international export standard. The photographs below are from a single port call in Yangon.",
+      "image1Alt": "SWH fishing vessel MYA WUT HMOAN Y 1102, bow view, moored under bridge in Yangon",
+      "image2Alt": "SWH fishing fleet rafted side-by-side at port",
+      "image3Alt": "SWH fishing vessel side profile against the waterline",
+      "image4Alt": "SWH fishing vessel stern view at port",
+      "galleryDotsLabel": "Gallery navigation",
+      "galleryDotLabel": "Go to image {index} of {total}",
+      "galleryPrevLabel": "Previous image",
+      "galleryNextLabel": "Next image"
     },
     "operations": {
       "eyebrow": "Operations",

@@ -38,8 +38,8 @@ export default async function DistributionPage({ params }: PageProps) {
       <DistributionBrand
         i18nNamespace="distribution.skechers"
         logoSrc="/images/partners/skechers.png"
-        logoWidth={1399}
-        logoHeight={520}
+        logoWidth={800}
+        logoHeight={404}
         headingId="distribution-skechers-heading"
       />
       <DistributionBrand

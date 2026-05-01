@@ -27,7 +27,7 @@ export function FisheriesHero() {
     >
       <div aria-hidden="true" className="absolute inset-0">
         <Image
-          src="/images/fisheries/harvest.jpg"
+          src="/images/fisheries/fisheries-hero.jpg"
           alt={t("imageAlt")}
           fill
           sizes="100vw"

@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-type StatKey = "vessels" | "assetBase" | "coastline" | "since";
+type StatKey = "vessels" | "coastline" | "since";
 
 type StatConfig = {
   key: StatKey;
@@ -21,7 +21,6 @@ type StatConfig = {
 
 const STATS: StatConfig[] = [
   { key: "vessels", value: 20 },
-  { key: "assetBase", value: 10, prefix: "$", unit: "M" },
   { key: "coastline", value: 2832, unit: "km" },
   { key: "since", value: 2000, hasPreLabel: true, noGroup: true },
 ];
@@ -91,7 +90,7 @@ export function FisheriesStats() {
       />
       <div
         ref={containerRef}
-        className="relative mx-auto grid max-w-[1280px] grid-cols-2 gap-y-14 gap-x-8 px-6 py-24 md:gap-x-10 md:gap-y-16 md:px-10 md:py-32 lg:grid-cols-4"
+        className="relative mx-auto grid max-w-[1280px] grid-cols-1 gap-y-14 gap-x-8 px-6 py-24 sm:grid-cols-3 md:gap-x-10 md:gap-y-16 md:px-10 md:py-32 lg:grid-cols-3"
       >
         {STATS.map((stat, i) => (
           <div key={stat.key} className="group min-w-0 text-left">

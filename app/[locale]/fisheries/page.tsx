@@ -3,6 +3,7 @@ import { setRequestLocale } from "next-intl/server";
 import { FisheriesHero } from "@/components/fisheries/FisheriesHero";
 import { FisheriesOverview } from "@/components/fisheries/FisheriesOverview";
 import { FisheriesStats } from "@/components/fisheries/FisheriesStats";
+import { FisheriesGallery } from "@/components/fisheries/FisheriesGallery";
 import { FisheriesOperations } from "@/components/fisheries/FisheriesOperations";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
@@ -27,6 +28,7 @@ export default async function FisheriesPage({ params }: PageProps) {
       <FisheriesHero />
       <FisheriesOverview />
       <FisheriesStats />
+      <FisheriesGallery />
       <FisheriesOperations />
     </>
   );
