@@ -94,7 +94,7 @@ export function FisheriesGallery() {
     <section
       aria-labelledby="fisheries-gallery-heading"
       aria-label={t("ariaLabel")}
-      className="relative bg-bg pb-32 md:pb-44"
+      className="relative bg-bg pt-32 pb-16 md:pt-40 md:pb-24"
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <motion.div {...fadeUp(0)} className="max-w-2xl">
