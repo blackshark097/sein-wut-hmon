@@ -9,15 +9,14 @@ import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type OpKey = "fleet" | "capture" | "coldChain" | "export";
+type OpKey = "fleet" | "capture" | "export";
 
 type Op = { num: string; key: OpKey; image?: string };
 
 const OPS: Op[] = [
   { num: "01", key: "fleet" },
   { num: "02", key: "capture" },
-  { num: "03", key: "coldChain" },
-  { num: "04", key: "export" },
+  { num: "03", key: "export" },
 ];
 
 export function FisheriesOperations() {
@@ -78,7 +77,7 @@ export function FisheriesOperations() {
 
         <div
           ref={containerRef}
-          className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6"
+          className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
         >
           {OPS.map((op) => (
             <article

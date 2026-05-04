@@ -55,7 +55,7 @@
     },
     "languageShort": {
       "en": "EN",
-      "my": "MM"
+      "my": "မြန်မာ"
     },
     "links": {
       "home": "Home",
@@ -237,12 +237,6 @@
           "body": "Commercial trawling for high-value marine species, managed to international export standards.",
           "meta": "EEZ · Export-grade"
         },
-        "coldChain": {
-          "eyebrow": "Cold Chain",
-          "title": "Cold Chain & Processing",
-          "body": "Onboard handling and shoreside cold storage, from harvest to port.",
-          "meta": "Harvest → Port"
-        },
         "export": {
           "eyebrow": "Export",
           "title": "Export & Distribution",
@@ -325,7 +319,7 @@
         "item2": "Televisions, refrigeration, displays",
         "item3": "Retail and commercial channel distribution"
       },
-      "imageAlt": "Hisense brand logo"
+      "imageAlt": "SWH Hisense delivery truck with Sein Wut Hmon Co., Ltd attribution and Hisense branding."
     },
     "skechers": {
       "ariaLabel": "Skechers footwear",
@@ -340,16 +334,16 @@
       "imageAlt": "Skechers brand logo"
     },
     "ok": {
-      "ariaLabel": "OK condensed milk",
-      "eyebrow": "Condensed Milk",
+      "ariaLabel": "OK Sweetened Beverage Creamer and Evaporated Creamer",
+      "eyebrow": "Sweetened Beverage Creamer",
       "heading": "Daily-use dairy across Myanmar",
-      "body": "OK condensed milk and evaporated creamer from Singapore and Malaysia, supplied to tea shops, kitchens, and grocery channels nationwide.",
+      "body": "OK Sweetened Beverage Creamer and Evaporated Creamer from Singapore and Malaysia, supplied to tea shops, kitchens, and grocery channels nationwide.",
       "bullets": {
         "item1": "OK brand from Singapore and Malaysia",
-        "item2": "Condensed milk and evaporated creamer",
+        "item2": "Sweetened Beverage Creamer, Evaporated Creamer",
         "item3": "Tea shops, food service, and retail distribution"
       },
-      "imageAlt": "OK brand logo"
+      "imageAlt": "SWH OK delivery truck displaying Sweetened Beverage Creamer and Evaporated Creamer product imagery."
     },
     "nasa": {
       "ariaLabel": "NASA lubricants",
@@ -361,7 +355,7 @@
         "item2": "Industrial and automotive grades",
         "item3": "Nationwide distribution through the group network"
       },
-      "imageAlt": "NASA lubricants product line"
+      "imageAlt": "SWH NASA Total Lubricating Solutions delivery truck with HEAVY DUTY branding."
     },
     "cta": {
       "eyebrow": "Partnership",
@@ -383,8 +377,9 @@
       "body": "Sein Wut Hmon owns and operates Shwe Myay Thee, a calcium silica fertilizer manufactured at Thilawa Industrial Zone. Each 50kg bag is blended to a registered formula of calcium oxide, silica, manganese, and phosphate.",
       "bullets": {
         "item1": "Sein Wut Hmon-owned brand",
-        "item2": "Manufactured at Thilawa Industrial Zone, Yangon",
-        "item3": "Nationwide distribution to smallholder and commercial farms"
+        "item2": "Operated by Microlife Myanmar Fertilizer Co., Ltd",
+        "item3": "Manufactured at Thilawa Industrial Zone, Yangon",
+        "item4": "Nationwide distribution to smallholder and commercial farms"
       },
       "imageAlt": "Shwe Myay Thee brand logo with green owl mark"
     },
@@ -408,7 +403,7 @@
   "csr": {
     "hero": {
       "ariaLabel": "Community hero",
-      "imageAlt": "A Sein Wut Hmon community school donation in northern Shan State",
+      "imageAlt": "Hundreds of monks and nuns gathered in front of a gold-leaf temple at the Sein Wut Hmon family donation ceremony.",
       "eyebrow": "Community",
       "heading": "Community",
       "intro": "Investing in the communities where we operate."

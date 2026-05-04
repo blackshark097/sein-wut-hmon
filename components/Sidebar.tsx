@@ -187,7 +187,7 @@ export function Sidebar() {
                           language: t(`languages.${candidate}`),
                         })
                   }
-                  className={`px-1 py-1.5 font-sans text-xs font-medium tracking-[0.12em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+                  className={`px-2 py-1.5 font-sans text-[11px] font-medium leading-tight tracking-[0.06em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                     isActive
                       ? "text-accent"
                       : "text-text-muted/70 hover:text-text"
@@ -231,7 +231,7 @@ export function Sidebar() {
             aria-label={t("languageCurrent", {
               language: t(`languages.${locale}`),
             })}
-            className="inline-flex items-center rounded-full border border-border p-1 font-sans text-[11px] font-medium tracking-[0.1em]"
+            className="inline-flex items-center rounded-full border border-border p-1 font-sans text-[11px] font-medium tracking-[0.06em]"
           >
             {routing.locales.map((candidate) => {
               const isActive = candidate === locale;
@@ -250,7 +250,7 @@ export function Sidebar() {
                           language: t(`languages.${candidate}`),
                         })
                   }
-                  className={`rounded-full px-2 py-1 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+                  className={`rounded-full px-2.5 py-1 leading-tight transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                     isActive
                       ? "bg-bg-elev text-accent"
                       : "text-text-muted hover:text-text"

@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-const BULLET_KEYS = ["item1", "item2", "item3"] as const;
+const BULLET_KEYS = ["item1", "item2", "item3", "item4"] as const;
 
 export function FertilizerOverview() {
   const reduce = useReducedMotion();

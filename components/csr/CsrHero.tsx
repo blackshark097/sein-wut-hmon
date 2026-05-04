@@ -31,7 +31,7 @@ export function CsrHero() {
     >
       <div aria-hidden="true" className="absolute inset-0">
         <Image
-          src="/images/legacy/school-donation-north-shanstate-lasho-20150717-full.jpg"
+          src="/images/csr/csr-hero.jpg"
           alt={t("imageAlt")}
           fill
           sizes="100vw"
