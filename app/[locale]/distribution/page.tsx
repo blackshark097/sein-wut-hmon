@@ -30,10 +30,9 @@ export default async function DistributionPage({ params }: PageProps) {
       <DistributionStats />
       <DistributionBrand
         i18nNamespace="distribution.hisense"
-        logoSrc="/images/distribution/hisense-truck.jpg"
-        logoWidth={854}
-        logoHeight={641}
-        imageMode="photo"
+        logoSrc="/images/partners/hisense.png"
+        logoWidth={1780}
+        logoHeight={291}
         headingId="distribution-hisense-heading"
       />
       <DistributionBrand
@@ -45,18 +44,16 @@ export default async function DistributionPage({ params }: PageProps) {
       />
       <DistributionBrand
         i18nNamespace="distribution.ok"
-        logoSrc="/images/distribution/ok-truck.jpg"
-        logoWidth={640}
-        logoHeight={854}
-        imageMode="photo"
+        logoSrc="/images/partners/ok.png"
+        logoWidth={163}
+        logoHeight={204}
         headingId="distribution-ok-heading"
       />
       <DistributionBrand
         i18nNamespace="distribution.nasa"
-        logoSrc="/images/distribution/nasa-truck.jpg"
-        logoWidth={854}
-        logoHeight={643}
-        imageMode="photo"
+        logoSrc="/images/partners/nasa.png"
+        logoWidth={1024}
+        logoHeight={427}
         headingId="distribution-nasa-heading"
       />
       <DistributionOperations />

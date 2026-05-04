@@ -3,7 +3,6 @@ import { setRequestLocale } from "next-intl/server";
 import { AboutHero } from "@/components/about/AboutHero";
 import { CompanyOverview } from "@/components/about/CompanyOverview";
 import { Timeline } from "@/components/about/Timeline";
-import { Leadership } from "@/components/about/Leadership";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
 
@@ -26,7 +25,6 @@ export default async function AboutPage({ params }: PageProps) {
     <>
       <AboutHero />
       <CompanyOverview />
-      <Leadership />
       <Timeline />
     </>
   );

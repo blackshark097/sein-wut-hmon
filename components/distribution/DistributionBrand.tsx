@@ -14,7 +14,6 @@ type DistributionBrandProps = {
   logoWidth: number;
   logoHeight: number;
   headingId: string;
-  imageMode?: "logo" | "photo";
 };
 
 export function DistributionBrand({
@@ -23,7 +22,6 @@ export function DistributionBrand({
   logoWidth,
   logoHeight,
   headingId,
-  imageMode = "logo",
 }: DistributionBrandProps) {
   const reduce = useReducedMotion();
   const t = useTranslations(i18nNamespace);
@@ -84,28 +82,16 @@ export function DistributionBrand({
             {...fadeUp(0.15)}
             className="relative md:col-span-6 lg:col-span-7"
           >
-            {imageMode === "photo" ? (
-              <div className="relative aspect-[4/3] w-full overflow-hidden border border-border/70 bg-bg-elev md:aspect-[5/4] lg:aspect-[4/3]">
-                <Image
-                  src={logoSrc}
-                  alt={t("imageAlt")}
-                  fill
-                  sizes="(min-width: 1024px) 60vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            ) : (
-              <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden border border-border/70 bg-bg-elev md:aspect-[5/4] lg:aspect-[4/3]">
-                <Image
-                  src={logoSrc}
-                  alt={t("imageAlt")}
-                  width={logoWidth}
-                  height={logoHeight}
-                  sizes="(min-width: 1024px) 35vw, (min-width: 768px) 30vw, 60vw"
-                  className="h-auto max-h-[55%] w-auto max-w-[55%] object-contain"
-                />
-              </div>
-            )}
+            <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden border border-border/70 bg-bg-elev md:aspect-[5/4] lg:aspect-[4/3]">
+              <Image
+                src={logoSrc}
+                alt={t("imageAlt")}
+                width={logoWidth}
+                height={logoHeight}
+                sizes="(min-width: 1024px) 35vw, (min-width: 768px) 30vw, 60vw"
+                className="h-auto max-h-[55%] w-auto max-w-[55%] object-contain"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
