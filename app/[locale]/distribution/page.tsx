@@ -50,8 +50,8 @@ export default async function DistributionPage({ params }: PageProps) {
       <DistributionBrand
         i18nNamespace="distribution.ok"
         logoSrc={okLogoSrc}
-        logoWidth={686}
-        logoHeight={634}
+        logoWidth={856}
+        logoHeight={873}
         headingId="distribution-ok-heading"
       />
       <DistributionBrand
