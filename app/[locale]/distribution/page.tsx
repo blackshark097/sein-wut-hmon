@@ -23,6 +23,11 @@ export default async function DistributionPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const okLogoSrc =
+    locale === "my"
+      ? "/images/partners/ok-my.png"
+      : "/images/partners/ok-en.png";
+
   return (
     <>
       <DistributionHero />
@@ -44,9 +49,9 @@ export default async function DistributionPage({ params }: PageProps) {
       />
       <DistributionBrand
         i18nNamespace="distribution.ok"
-        logoSrc="/images/partners/ok.png"
-        logoWidth={163}
-        logoHeight={204}
+        logoSrc={okLogoSrc}
+        logoWidth={686}
+        logoHeight={641}
         headingId="distribution-ok-heading"
       />
       <DistributionBrand
