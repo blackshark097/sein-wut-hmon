@@ -60,7 +60,7 @@ export function FisheriesOperations() {
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="mb-16 max-w-xl md:mb-20">
-          <span className="inline-flex items-center gap-3.5 text-subheading text-gold before:block before:h-px before:w-7 before:bg-gold">
+          <span className="inline-flex items-center gap-3.5 text-subheading text-accent before:block before:h-px before:w-7 before:bg-accent">
             {t("eyebrow")}
           </span>
           <h2
@@ -82,7 +82,7 @@ export function FisheriesOperations() {
           {OPS.map((op) => (
             <article
               key={op.num}
-              className="swh-fish-card group relative isolate flex min-h-[340px] flex-col overflow-hidden border border-border/70 bg-bg-elev px-6 pt-10 pb-9 transition duration-500 hover:-translate-y-1 hover:border-gold/55 hover:bg-[#131c2f] hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_30px_60px_-20px_rgba(0,173,238,0.18)] sm:px-8 md:min-h-[380px] md:px-10 md:pt-12 md:pb-11"
+              className="swh-fish-card group relative isolate flex min-h-[340px] flex-col overflow-hidden border border-border/70 bg-bg-elev px-6 pt-10 pb-9 transition duration-500 hover:-translate-y-1 hover:border-accent/55 hover:bg-[#131c2f] hover:shadow-[0_0_0_1px_rgba(0,173,238,0.25),0_30px_60px_-20px_rgba(0,173,238,0.18)] sm:px-8 md:min-h-[380px] md:px-10 md:pt-12 md:pb-11"
             >
               {op.image ? (
                 <>
@@ -127,7 +127,7 @@ export function FisheriesOperations() {
               </span>
 
               <div className="relative z-10 flex flex-1 flex-col">
-                <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-gold before:block before:h-px before:w-6 before:bg-gold">
+                <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-accent before:block before:h-px before:w-6 before:bg-accent">
                   {t(`items.${op.key}.eyebrow`)}
                 </span>
                 <h3

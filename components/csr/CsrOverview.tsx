@@ -11,7 +11,7 @@ export function CsrOverview() {
 
   const content = (
     <>
-      <span className="text-subheading text-gold">{t("eyebrow")}</span>
+      <span className="text-subheading text-accent">{t("eyebrow")}</span>
       <h2 id="csr-overview-heading" className="mt-4 text-heading text-text">
         {t("heading")}
       </h2>

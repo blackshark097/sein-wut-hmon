@@ -8,8 +8,8 @@ import { useTranslations } from "next-intl";
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 const inputClass =
-  "mt-2 w-full rounded-md border border-border/70 bg-bg px-4 py-3 text-text placeholder-text-muted/60 focus:outline-none focus:ring-2 focus:ring-gold/60 focus:border-gold/60 transition";
-const labelClass = "text-subheading text-gold";
+  "mt-2 w-full rounded-md border border-border/70 bg-bg px-4 py-3 text-text placeholder-text-muted/60 focus:outline-none focus:ring-2 focus:ring-accent/60 focus:border-accent/60 transition";
+const labelClass = "text-subheading text-accent";
 
 export function ContactForm() {
   const reduce = useReducedMotion();
@@ -36,7 +36,7 @@ export function ContactForm() {
           className="rounded-md border border-border/60 bg-bg p-8"
         >
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gold/60 text-gold">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-accent/60 text-accent">
               <Check className="h-5 w-5" aria-hidden />
             </span>
             <h3 className="font-display text-2xl text-text">
@@ -47,7 +47,7 @@ export function ContactForm() {
           <button
             type="button"
             onClick={() => setSent(false)}
-            className="mt-6 text-sm uppercase tracking-[0.12em] text-gold transition hover:text-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            className="mt-6 text-sm uppercase tracking-[0.12em] text-accent transition hover:text-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             {t("sendAnother")}
           </button>
@@ -132,7 +132,7 @@ export function ContactForm() {
             <div>
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#0A0F1C] transition hover:bg-[#33C3F2] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#0A0F1C] transition hover:bg-[#33C3F2] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-60"
               >
                 {t("submit")}
                 <ArrowRight className="h-4 w-4" aria-hidden />

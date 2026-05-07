@@ -13,7 +13,7 @@ export function CompanyIntro() {
 
   const content = (
     <>
-      <span className="text-subheading text-gold">{t("eyebrow")}</span>
+      <span className="text-subheading text-accent">{t("eyebrow")}</span>
       <h2 id="intro-heading" className="mt-4 text-heading text-text">
         {t("heading")}
       </h2>
@@ -22,7 +22,7 @@ export function CompanyIntro() {
       </p>
       <Link
         href="/about"
-        className="mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-[0.12em] text-gold transition hover:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+        className="mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-[0.12em] text-accent transition hover:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
       >
         {t("cta")} <ArrowRight className="h-4 w-4" aria-hidden />
       </Link>

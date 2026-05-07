@@ -23,7 +23,7 @@ export function FisheriesOverview() {
     >
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 md:grid-cols-[1fr_1.4fr] md:gap-20 md:px-10">
         <motion.div {...anim(0)}>
-          <span className="inline-flex items-center gap-3.5 text-subheading text-gold before:block before:h-px before:w-7 before:bg-gold">
+          <span className="inline-flex items-center gap-3.5 text-subheading text-accent before:block before:h-px before:w-7 before:bg-accent">
             {t("eyebrow")}
           </span>
           <h2

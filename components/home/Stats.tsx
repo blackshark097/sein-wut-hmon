@@ -104,7 +104,7 @@ export function Stats() {
                 aria-label={`${stat.value}${stat.suffix} ${label}`}
                 className="group flex flex-col gap-2 text-center md:text-left"
               >
-                <div className="font-display text-gold text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight tabular-nums">
+                <div className="font-display text-accent text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight tabular-nums">
                   <span
                     ref={(el) => {
                       numberRefs.current[index] = el;
@@ -113,7 +113,7 @@ export function Stats() {
                     0
                   </span>
                   {stat.suffix ? (
-                    <span className="font-display text-gold">
+                    <span className="font-display text-accent">
                       {stat.suffix}
                     </span>
                   ) : null}

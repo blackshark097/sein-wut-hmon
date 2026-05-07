@@ -95,7 +95,7 @@ export function FisheriesStats() {
         {STATS.map((stat, i) => (
           <div key={stat.key} className="group min-w-0 text-left">
             <div
-              className="flex min-w-0 items-baseline gap-1 font-display font-medium text-gold tabular-nums tracking-[-0.03em]"
+              className="flex min-w-0 items-baseline gap-1 font-display font-medium text-accent tabular-nums tracking-[-0.03em]"
               style={{ fontSize: "clamp(2.25rem, 5vw, 4.25rem)", lineHeight: 1 }}
             >
               {stat.hasPreLabel ? (

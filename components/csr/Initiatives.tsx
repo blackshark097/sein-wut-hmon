@@ -40,7 +40,7 @@ export function Initiatives() {
       className="relative bg-bg py-24 md:py-32 lg:py-36"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <p className="text-subheading text-gold">{t("eyebrow")}</p>
+        <p className="text-subheading text-accent">{t("eyebrow")}</p>
         <h2 id="initiatives-heading" className="mt-4 text-heading text-text">
           {t("heading")}
         </h2>
@@ -77,7 +77,7 @@ export function Initiatives() {
                         aria-hidden="true"
                       />
                       <span
-                        className="absolute inset-0 flex items-center justify-center font-display text-gold/40 text-6xl"
+                        className="absolute inset-0 flex items-center justify-center font-display text-accent/40 text-6xl"
                         aria-hidden="true"
                       >
                         {initiative.placeholder?.initial ?? name.charAt(0)}
@@ -91,7 +91,7 @@ export function Initiatives() {
                 </div>
 
                 <div className="p-6 md:p-7">
-                  <span className="text-subheading text-gold">
+                  <span className="text-subheading text-accent">
                     {t(`items.${initiative.key}.eyebrow`)}
                   </span>
                   <h3 className="mt-3 font-display text-2xl md:text-3xl text-text tracking-tight leading-tight">

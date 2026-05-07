@@ -18,7 +18,7 @@ export function ContactMap() {
 
   const header = (
     <>
-      <span className="text-subheading text-gold">{t("eyebrow")}</span>
+      <span className="text-subheading text-accent">{t("eyebrow")}</span>
       <h3 className="mt-4 text-heading text-text">{t("heading")}</h3>
     </>
   );

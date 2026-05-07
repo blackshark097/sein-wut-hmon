@@ -389,7 +389,6 @@
       "heading": "In the hands of farmers.",
       "body": "From the lower Ayeyarwady to the central dry zone, Shwe Myay Thee reaches farmers at planting season.",
       "image1Alt": "Farmer carrying a Shwe Myay Thee bag in a rice paddy",
-      "image2Alt": "Farmers applying fertilizer in a field at planting season",
       "image3Alt": "Raw material at the Thilawa fertilizer plant",
       "image4Alt": "Workers stacking 50kg bags inside the Thilawa warehouse",
       "image5Alt": "Distribution truck loading at the Thilawa plant",
@@ -436,12 +435,6 @@
     }
   },
   "contact": {
-    "hero": {
-      "ariaLabel": "Contact hero",
-      "eyebrow": "Contact",
-      "heading": "Contact",
-      "intro": "Get in touch with Sein Wut Hmon Group."
-    },
     "cta": {
       "heading": "Connect with <em>Sein Wut Hmon</em>.",
       "intro": "For partnership inquiries and direct contact with the group."

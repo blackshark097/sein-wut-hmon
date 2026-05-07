@@ -20,7 +20,7 @@ export function CompanyOverview() {
 
   const content = (
     <>
-      <p className="text-subheading text-gold">{t("eyebrow")}</p>
+      <p className="text-subheading text-accent">{t("eyebrow")}</p>
       <h2 id="overview-heading" className="mt-4 text-heading text-text">
         {t("heading")}
       </h2>
@@ -30,7 +30,7 @@ export function CompanyOverview() {
       <dl className="mt-10 grid grid-cols-2 gap-y-8 gap-x-6 md:grid-cols-4">
         {STATS.map((stat) => (
           <div key={stat.key} className="flex flex-col gap-1">
-            <dt className="font-display text-2xl md:text-3xl text-gold leading-none tracking-tight tabular-nums">
+            <dt className="font-display text-2xl md:text-3xl text-accent leading-none tracking-tight tabular-nums">
               {stat.value}
             </dt>
             <dd className="text-subheading text-text-muted">
