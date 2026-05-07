@@ -19,7 +19,7 @@ export function Footer() {
         <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <div className="flex items-center gap-6">
             <Image
-              src="/images/legacy/logo.png"
+              src="/images/swh-logo.png"
               alt={t("logoAlt")}
               width={157}
               height={105}
