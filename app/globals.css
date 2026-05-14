@@ -95,6 +95,24 @@ body {
   }
 }
 
+/* === BURMESE TYPOGRAPHY ===
+   Burmese script stacks accents above and below the baseline, so tight
+   English line-heights leave the diacritics cramped. Scoped to :lang(my)
+   so English typography is untouched. */
+:lang(my) .text-display {
+  line-height: 1.4;
+}
+
+:lang(my) .text-heading {
+  line-height: 1.4;
+}
+
+/* Hero h1s set lineHeight via inline style; override with !important. */
+:lang(my) h1.font-display,
+:lang(my) h2.font-display {
+  line-height: 1.4 !important;
+}
+
 /* === GRAIN PULSE === */
 @keyframes grain-pulse {
   0%,
