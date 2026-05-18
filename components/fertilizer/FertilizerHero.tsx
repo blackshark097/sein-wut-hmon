@@ -82,8 +82,19 @@ export function FertilizerHero() {
         </motion.h1>
 
         <motion.p
-          {...fadeUp(0.45)}
-          className="mt-8 max-w-2xl text-base font-normal leading-relaxed text-text-muted md:text-lg md:font-medium"
+          {...fadeUp(0.35)}
+          className="mt-6 max-w-2xl font-display italic text-text-muted"
+          style={{
+            fontSize: "clamp(1.125rem, 2.2vw, 1.5rem)",
+            lineHeight: 1.4,
+          }}
+        >
+          {t("subtitle")}
+        </motion.p>
+
+        <motion.p
+          {...fadeUp(0.55)}
+          className="mt-6 max-w-2xl text-base font-normal leading-relaxed text-text-muted md:text-lg md:font-medium"
         >
           {t("intro")}
         </motion.p>
