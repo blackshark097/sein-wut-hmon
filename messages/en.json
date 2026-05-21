@@ -5,12 +5,12 @@
     "home": {
       "title": "SWH | Building Myanmar's Essential Industries",
       "ogTitle": "Sein Wut Hmon Group, Building Myanmar's Essential Industries",
-      "description": "A diversified Myanmar conglomerate operating across marine resources, industrial Supply, and nationwide Distribution."
+      "description": "A diversified Myanmar conglomerate operating across Marine Resources, Industrial Supply, and Nationwide Distribution."
     },
     "about": {
       "title": "About | SWH",
       "ogTitle": "About, Sein Wut Hmon Group",
-      "description": "Sein Wut Hmon Group, a Myanmar conglomerate building essential industries in Fisheries, industrial Supply, and nationwide Distribution."
+      "description": "Sein Wut Hmon Group, a Myanmar conglomerate building essential industries in Fisheries, Industrial Supply, and Nationwide Distribution."
     },
     "fisheries": {
       "title": "Fisheries | SWH",
@@ -20,12 +20,12 @@
     "distribution": {
       "title": "Trading & Distribution | SWH",
       "ogTitle": "Trading & Distribution, Sein Wut Hmon Group",
-      "description": "Fourteen branches, one hundred forty-five vehicles, two hundred fifty employees. One of Myanmar's most comprehensive Distribution networks, carrying international brands to every region of the country."
+      "description": "Fourteen branches, one hundred forty-five vehicles, two hundred fifty employees. One of Myanmar's most Comprehensive Distribution Networks, carrying international brands to every region of the country."
     },
     "fertilizer": {
       "title": "Fertilizer | SWH",
       "ogTitle": "Fertilizer, Sein Wut Hmon Group",
-      "description": "Shwe Myay Thee calcium silica Fertilizer, manufactured at the Sein Wut Hmon plant in Thilawa Industrial Zone for Myanmar's smallholder and commercial farms."
+      "description": "Shwe Myay Thee Calcium Silica Fertilizer, manufactured at the Sein Wut Hmon plant in Thilawa Industrial Zone for Myanmar's smallholder and commercial farms."
     },
     "csr": {
       "title": "CSR | SWH",
@@ -83,24 +83,24 @@
       "ariaLabel": "Hero",
       "eyebrow": "Sein Wut Hmon Group",
       "heading": "Building Myanmar's Essential Industries",
-      "intro": "A diversified conglomerate powering marine resources, industrial Supply chains, and Distribution networks."
+      "intro": "A diversified conglomerate powering marine resources, Industrial Supply Chains, and Distribution Networks."
     },
     "companyIntro": {
       "eyebrow": "The Group",
       "heading": "About Sein Wut Hmon",
-      "body": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating integrated businesses across marine resources, industrial Supply, and nationwide Distribution.",
+      "body": "Sein Wut Hmon Group is one of Myanmar's leading conglomerates, operating integrated businesses across Marine Resources, Industrial Supply, and Nationwide Distribution.",
       "cta": "About the group"
     },
     "portfolio": {
       "eyebrow": "Portfolio — 03 / 04",
       "headline": "Three <em>integrated</em> divisions",
-      "subhead": "Operating across Myanmar's essential industries, from marine harvest to nationwide Distribution.",
+      "subhead": "Operating across Myanmar's essential industries, From Marine Harvest to Nationwide Distribution.",
       "exploreLabel": "Explore",
       "banners": {
         "distribution": {
           "eyebrow": "Nationwide network",
           "name": "Trading <em>&</em><br></br>Distribution",
-          "blurb": "Fourteen branches. One hundred forty-five vehicles. Two hundred fifty employees. The country's most comprehensive Distribution network."
+          "blurb": "Fourteen branches. One hundred forty-five vehicles. Two hundred fifty employees. The country's most Comprehensive Distribution Network."
         },
         "fisheries": {
           "eyebrow": "Marine harvest · Est. 2000",
@@ -110,7 +110,7 @@
         "fertilizer": {
           "eyebrow": "Owned brand · Thilawa",
           "name": "Fertilizer",
-          "blurb": "Shwe Myay Thee calcium silica Fertilizer, manufactured at the Sein Wut Hmon plant in Thilawa for Myanmar's farmers."
+          "blurb": "Shwe Myay Thee Calcium Silica Fertilizer, manufactured at the Sein Wut Hmon plant in Thilawa for Myanmar's farmers."
         }
       },
       "partnerBrands": {
@@ -136,13 +136,13 @@
       "ariaLabel": "About hero",
       "eyebrow": "The Group",
       "heading": "Our Story",
-      "intro": "From a single Distribution line in Yangon to an integrated group operating across marine resources, industrial Supply, and nationwide Distribution."
+      "intro": "From a Single Distribution line in Yangon to an integrated group operating across Marine Resources, Industrial Supply, and Nationwide Distribution."
     },
     "overview": {
       "eyebrow": "The Business",
       "heading": "An integrated operator",
-      "paragraph1": "Sein Wut Hmon Group operates across marine resources, Fertilizer manufacturing, and nationwide Distribution. The businesses reinforce each other across 14 branch offices in Lower and Upper Myanmar.",
-      "paragraph2": "250+ employees, 145+ Distribution vehicles, 80 motorcycles, and 20 fishing vessels.",
+      "paragraph1": "Sein Wut Hmon Group operates across Marine Resources, Fertilizer Manufacturing, and Nationwide Distribution. The businesses reinforce each other across 14 branch offices in Lower and Upper Myanmar.",
+      "paragraph2": "250+ employees, 145+ Distribution Vehicles, 80 motorcycles, and 20 fishing vessels.",
       "stats": {
         "employees": "Employees across SWH entities",
         "branches": "Branch offices",
@@ -183,15 +183,15 @@
       "ariaLabel": "Fisheries hero",
       "eyebrow": "Fisheries",
       "heading": "A coastline of <em>2,832</em> kilometers. A fleet built to work it.",
-      "intro": "Since 2000, Sein Wut Hmon has operated one of Myanmar's most established commercial fishing fleets. Twenty vessels. A proven Export capability rooted in one of Southeast Asia's richest marine environments.",
+      "intro": "Since 2000, Sein Wut Hmon has operated one of Myanmar's most established commercial fishing fleets. Twenty vessels. A proven export capability rooted in one of Southeast Asia's richest marine environments.",
       "imageAlt": "SWH fishing vessel MYA WUT HMOAN Y 1102 docked under bridge in Yangon"
     },
     "overview": {
       "eyebrow": "The Geography",
       "heading": "Built for the water that built it.",
-      "paragraph1": "Myanmar's marine geography is among the most productive in the region. A <fig>2,832 km coastline</fig>, <fig>0.5 million hectares</fig> of coastal swampland, and <fig>8.2 million hectares</fig> of inland water bodies together yield roughly <fig>70,000 tons</fig> of flood Fisheries output each year.",
+      "paragraph1": "Myanmar's marine geography is among the most productive in the region. A <fig>2,832 km coastline</fig>, <fig>0.5 million hectares</fig> of coastal swampland, and <fig>8.2 million hectares</fig> of inland water bodies together yield roughly <fig>70,000 tons</fig> of Flood Fisheries Output each year.",
       "paragraph2": "SWH's fishery division was built to operate at the scale this geography allows, pairing a modernized fleet with onboard handling, shoreside cold storage, and documented traceability from vessel to market.",
-      "quote": "A single operator from harvest to Export, rare in Myanmar, and deliberately so."
+      "quote": "A single operator from Harvest to Export, rare in Myanmar, and deliberately so."
     },
     "stats": {
       "ariaLabel": "Fisheries key statistics",
@@ -212,7 +212,7 @@
       "ariaLabel": "Fisheries fleet gallery",
       "eyebrow": "Fleet",
       "heading": "Twenty vessels, <em>one coastline</em>.",
-      "body": "The SWH fleet works the full length of Myanmar's 2,832-kilometer coastline year-round. Every vessel is registered, tracked, and operated to international Export standard. The photographs below are from a single port call in Yangon.",
+      "body": "The SWH fleet works the full length of Myanmar's 2,832-kilometer coastline year-round. Every vessel is registered, tracked, and operated to International Export Standard. The photographs below are from a single port call in Yangon.",
       "image1Alt": "SWH fishing vessel MYA WUT HMOAN Y 1102, bow view, moored under bridge in Yangon",
       "image2Alt": "SWH fishing fleet rafted side-by-side at port",
       "image3Alt": "SWH fishing vessel side profile against the waterline",
@@ -236,7 +236,7 @@
         "capture": {
           "eyebrow": "Capture",
           "title": "Wild Capture Operations",
-          "body": "Commercial trawling for high-value marine species, managed to international Export standards.",
+          "body": "Commercial trawling for high-value marine species, managed to International Export Standards.",
           "meta": "EEZ · Export-grade"
         },
         "export": {
@@ -250,7 +250,7 @@
     "cta": {
       "eyebrow": "Partnership",
       "heading": "Partner with <em>Sein Wut Hmon</em>.",
-      "intro": "For Export inquiries, capacity Partnerships, and direct procurement from the SWH fleet.",
+      "intro": "For Export Inquiries, Capacity Partnerships, and Direct Procurement from the SWH fleet.",
       "button": "Get in touch"
     }
   },
@@ -259,7 +259,7 @@
       "ariaLabel": "Distribution hero",
       "eyebrow": "Trading & Distribution",
       "heading": "Myanmar, <em>moved</em>.",
-      "intro": "Fourteen branches. One hundred forty-five vehicles. Two hundred fifty employees. Sein Wut Hmon operates one of Myanmar's most comprehensive Distribution networks, carrying international brands to every region of the country.",
+      "intro": "Fourteen branches. One hundred forty-five vehicles. Two hundred fifty employees. Sein Wut Hmon operates one of Myanmar's most Comprehensive Distribution Networks, carrying international brands to every region of the country.",
       "marginYangon": "Yangon",
       "marginMandalay": "Mandalay",
       "marginNetwork": "Nationwide Network"
@@ -300,13 +300,13 @@
         "categories": {
           "eyebrow": "Categories",
           "title": "Category Breadth",
-          "body": "Consumer Electronics, food and beverage, industrial Lubricants, specialty retail.",
+          "body": "Consumer Electronics, Food and Beverage, Industrial Lubricants, Specialty Retail.",
           "meta": "4 Trade Categories"
         },
         "partnerships": {
           "eyebrow": "Partnerships",
           "title": "Partner Relationships",
-          "body": "Long-term Partnerships with international brands seeking nationwide Distribution in Myanmar.",
+          "body": "Long-Term Partnerships with International Brands seeking Nationwide Distribution in Myanmar.",
           "meta": "International · Long-term"
         }
       }
@@ -315,11 +315,11 @@
       "ariaLabel": "Hisense Electronics",
       "eyebrow": "Electronics",
       "heading": "Consumer Electronics across Myanmar",
-      "body": "Authorized distributor of Hisense Televisions, refrigeration, and display products across Myanmar.",
+      "body": "Authorized distributor of Hisense Televisions, Refrigeration, and Display Products across Myanmar.",
       "bullets": {
         "item1": "Authorized Hisense distributor in Myanmar",
         "item2": "Televisions, refrigeration, displays",
-        "item3": "Retail and commercial channel Distribution"
+        "item3": "Retail and Commercial Channel Distribution"
       },
       "imageAlt": "Hisense brand logo"
     },
@@ -327,7 +327,7 @@
       "ariaLabel": "Skechers Footwear",
       "eyebrow": "Footwear",
       "heading": "Skechers, since <em>2012.</em>",
-      "body": "The exclusive distributor in Myanmar since 2012, covering marketing, Distribution, and retail of Skechers Footwear. Flagship store at Myanmar Plaza. Retail presence across major malls and shopping centers nationwide.",
+      "body": "The exclusive distributor in Myanmar since 2012, covering Marketing, Distribution, and Retail of Skechers Footwear. Flagship store at Myanmar Plaza. Retail presence across major malls and shopping centers nationwide.",
       "bullets": {
         "item1": "Exclusive Skechers distributor in Myanmar since 2012",
         "item2": "Marketing, Distribution, and retail",
@@ -343,17 +343,17 @@
       "bullets": {
         "item1": "OK brand from Singapore and Malaysia",
         "item2": "Sweetened Beverage Creamer, Evaporated Creamer",
-        "item3": "Tea shops, food service, and retail Distribution"
+        "item3": "Tea shops, Food Service, and Retail Distribution"
       },
       "imageAlt": "OK brand logo"
     },
     "nasa": {
       "ariaLabel": "NASA Lubricants",
       "eyebrow": "Lubricants",
-      "heading": "Industrial and automotive Lubricants",
-      "body": "Sole agent of NASA Total Lubricating Solutions from AC Lubricants Sdn Bhd, Malaysia. Industrial and automotive Lubricants nationwide.",
+      "heading": "Industrial and Automotive Lubricants",
+      "body": "Sole agent of NASA Total Lubricating Solutions from AC Lubricants Sdn Bhd, Malaysia. Industrial and Automotive Lubricants nationwide.",
       "bullets": {
-        "item1": "Sole agent of NASA Lubricants in Myanmar",
+        "item1": "Sole Agent of NASA Lubricants in Myanmar",
         "item2": "Industrial and automotive grades",
         "item3": "Nationwide Distribution through the group network"
       },
@@ -362,7 +362,7 @@
     "cta": {
       "eyebrow": "Partnership",
       "heading": "Partner with <em>Sein Wut Hmon</em>.",
-      "intro": "For Distribution inquiries, brand Partnerships, and market entry into Myanmar.",
+      "intro": "For Distribution Inquiries, Brand Partnerships, and Market Entry into Myanmar.",
       "button": "Get in touch"
     }
   },
@@ -373,7 +373,7 @@
       "eyebrow": "A Sein Wut Hmon company",
       "heading": "From Thilawa to the <em>field</em>.",
       "subtitle": "Shwe Myay Thee by MicroLife Myanmar Fertilizer Co., Ltd.",
-      "intro": "Shwe Myay Thee, manufactured at our Thilawa plant. Calcium silica Fertilizer for Myanmar's smallholder and commercial farms, with the green owl mark on every fifty-kilogram bag."
+      "intro": "Shwe Myay Thee, manufactured at our Thilawa plant. Calcium Silica Fertilizer for Myanmar's Smallholder and Commercial Farms, with the green owl mark on every fifty-kilogram bag."
     },
     "overview": {
       "eyebrow": "Owned Brand",
@@ -383,9 +383,9 @@
         "item1": "Sein Wut Hmon-owned brand",
         "item2": "Operated by MicroLife Myanmar Fertilizer Co., Ltd.",
         "item3": "Manufactured at Lot No. B-23, Zone A, Thilawa Special Economic Zone",
-        "item4": "Slag, foliar, and bulk blend Fertilizer manufacturing",
-        "item5": "Granular urea and compound Fertilizer Trading",
-        "item6": "Nationwide Distribution to smallholder and commercial farms"
+        "item4": "Slag, Foliar, and Bulk Blend Fertilizer manufacturing",
+        "item5": "Granular Urea and Compound Fertilizer Trading",
+        "item6": "Nationwide Distribution to Smallholder and Commercial Farms"
       },
       "imageAlt": "Shwe Myay Thee brand logo with green owl mark"
     },
@@ -435,7 +435,7 @@
         "community": {
           "name": "Community Development",
           "eyebrow": "Long term investment",
-          "blurb": "Infrastructure and local Partnerships, where our branches operate."
+          "blurb": "Infrastructure and Local Partnerships, where our branches operate."
         }
       }
     }
@@ -443,7 +443,7 @@
   "contact": {
     "cta": {
       "heading": "Connect with <em>Sein Wut Hmon</em>.",
-      "intro": "For Partnership inquiries and direct contact with the group."
+      "intro": "For Partnership Inquiries and Direct Contact with the group."
     },
     "form": {
       "illustrativeNote": "This form is illustrative. For direct enquiries, email <email>nwa@swh.com.mm</email> or call <phone>+95-9-954326116</phone>.",
