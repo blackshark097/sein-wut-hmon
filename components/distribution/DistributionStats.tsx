@@ -79,7 +79,7 @@ export function DistributionStats() {
       />
       <div
         ref={containerRef}
-        className="relative mx-auto grid max-w-[1280px] grid-cols-2 gap-y-14 gap-x-8 px-6 pt-24 pb-12 md:gap-x-10 md:gap-y-16 md:px-10 md:pt-32 md:pb-16 lg:grid-cols-4"
+        className="relative mx-auto grid max-w-[1280px] grid-cols-2 gap-y-14 gap-x-8 px-6 pt-24 pb-32 md:gap-x-10 md:gap-y-16 md:px-10 md:pt-32 md:pb-44 lg:grid-cols-4"
       >
         {STATS.map((stat, i) => (
           <div key={stat.key} className="group min-w-0 text-left">
