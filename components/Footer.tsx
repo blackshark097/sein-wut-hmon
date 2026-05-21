@@ -30,6 +30,22 @@ export function Footer() {
                 {t("brand")}
               </p>
               <p className="text-caption">{t("address")}</p>
+              <p className="text-caption">
+                <a
+                  href="tel:+959954326116"
+                  className="transition-colors hover:text-text"
+                >
+                  {t("phone")}
+                </a>
+              </p>
+              <p className="text-caption">
+                <a
+                  href="mailto:nwa@swh.com.mm"
+                  className="transition-colors hover:text-text"
+                >
+                  {t("email")}
+                </a>
+              </p>
             </div>
           </div>
 
