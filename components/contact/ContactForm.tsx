@@ -66,7 +66,7 @@ export function ContactForm() {
               ),
               phone: (chunks) => (
                 <a
-                  href="tel:+95973126116"
+                  href="tel:+959954326116"
                   className="text-accent transition-colors hover:text-text"
                 >
                   {chunks}

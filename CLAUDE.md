@@ -60,6 +60,11 @@
 - Never use em dashes in any content.
 - All images use next/image with proper alt text.
 
+## Contact (authoritative)
+- Phone: +95-9-954326116 (Burmese numerals: +၉၅-၉-၉၅၄၃၂၆၁၁၆). Use this everywhere — JSON-LD, tel: links, copy. Old number +95-9-73126116 is retired.
+- Email: nwa@swh.com.mm
+- Address: No-24, Phan Chat Won U Shwe Ohh St., Industrial Zone (2), Hlaing Thar Yar Township, Yangon.
+
 ## Animation rules
 - One animation system per element. Never mix GSAP and Framer Motion on the same element.
 
