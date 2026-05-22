@@ -14,6 +14,13 @@ type DistributionBrandProps = {
   logoWidth: number;
   logoHeight: number;
   headingId: string;
+  /**
+   * When true, this brand panel sits directly after the Stats section, which
+   * has a hard `border-y` divider. Adds extra top padding so the perceived
+   * gap matches the inter-brand rhythm (the divider line otherwise eats some
+   * of the perceived whitespace).
+   */
+  firstAfterDivider?: boolean;
 };
 
 export function DistributionBrand({
@@ -22,6 +29,7 @@ export function DistributionBrand({
   logoWidth,
   logoHeight,
   headingId,
+  firstAfterDivider = false,
 }: DistributionBrandProps) {
   const reduce = useReducedMotion();
   const t = useTranslations(i18nNamespace);
@@ -37,7 +45,11 @@ export function DistributionBrand({
     <section
       aria-labelledby={headingId}
       aria-label={t("ariaLabel")}
-      className="relative bg-bg pb-32 md:pb-44"
+      className={
+        firstAfterDivider
+          ? "relative bg-bg pt-16 pb-32 md:pt-24 md:pb-44"
+          : "relative bg-bg pb-32 md:pb-44"
+      }
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16 lg:gap-20">

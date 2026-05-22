@@ -34,6 +34,7 @@ export default async function DistributionPage({ params }: PageProps) {
         logoWidth={1780}
         logoHeight={291}
         headingId="distribution-hisense-heading"
+        firstAfterDivider
       />
       <DistributionBrand
         i18nNamespace="distribution.skechers"
