@@ -38,14 +38,6 @@ export function Footer() {
                   {t("phone")}
                 </a>
               </p>
-              <p className="text-caption">
-                <a
-                  href="mailto:nwa@swh.com.mm"
-                  className="transition-colors hover:text-text"
-                >
-                  {t("email")}
-                </a>
-              </p>
             </div>
           </div>
 

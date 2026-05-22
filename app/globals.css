@@ -113,6 +113,15 @@ body {
   line-height: 1.4 !important;
 }
 
+/* Home hero heading: Burmese script with stacked diacritics renders much
+   taller than English at the same font-size, overflowing the viewport on
+   first load. Scale the home hero h1 down to ~65% so it fits in roughly
+   the same vertical band as the English version. The h1 uses
+   .text-display + inline fontSize clamp; this override beats both. */
+:lang(my) h1.text-display {
+  font-size: clamp(2rem, 5.2vw, 4.875rem) !important;
+}
+
 /* === GRAIN PULSE === */
 @keyframes grain-pulse {
   0%,
