@@ -133,13 +133,15 @@ export function Hero() {
 
       {/* Leaf watermark from the SWH mark, draws on once via CSS
           (.leaf-draw in globals.css), then stays static. Width-driven
-          sizing (the mark is ~1.76:1 wide) keeps both leaf tips and the
-          stem crossing fully inside the hero at every breakpoint:
-          desktop 97vh wide ~= 55vh tall, capped at 60vw for narrow
-          tablets; mobile 78vw wide so it never reaches the left edge. */}
+          sizing (the mark is ~1.76:1 wide) keeps both leaf tips fully
+          inside the hero at every breakpoint: desktop 97vh wide ~= 55vh
+          tall, capped at 60vw for narrow tablets; mobile 78vw wide so it
+          never reaches the left edge. Anchored bottom-0 so the leaves sit
+          flush with the hero's bottom edge; the stem base cropping at the
+          edge is intentional (natural crop point). */}
       <div
         aria-hidden="true"
-        className="leaf-draw pointer-events-none absolute bottom-[5vh] right-[4vw] z-0 w-[78vw] max-w-[380px] text-white opacity-[0.04] md:w-[97vh] md:max-w-[60vw] md:opacity-[0.06]"
+        className="leaf-draw pointer-events-none absolute bottom-0 right-[4vw] z-0 w-[78vw] max-w-[380px] text-white opacity-[0.04] md:w-[97vh] md:max-w-[60vw] md:opacity-[0.06]"
       >
         <LeafMark className="h-auto w-full" />
       </div>
