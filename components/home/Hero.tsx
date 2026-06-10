@@ -3,9 +3,10 @@
 import { useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { LeafMark } from "./LeafMark";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -13,16 +14,45 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 const GRAIN_URL =
   "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")";
 
+/** Splits a heading segment into word spans the GSAP reveal can stagger.
+ *  Whitespace is preserved as plain text nodes between the spans. */
+function headingWords(text: string, keyPrefix: string, accentClass?: string) {
+  return text.split(/(\s+)/).map((part, i) => {
+    if (part === "") return null;
+    if (/^\s+$/.test(part)) {
+      return <span key={`${keyPrefix}-${i}`}> </span>;
+    }
+    return (
+      <span
+        key={`${keyPrefix}-${i}`}
+        className={
+          accentClass ? `swh-hero-word ${accentClass}` : "swh-hero-word"
+        }
+        style={{ display: "inline-block", willChange: "filter, opacity" }}
+      >
+        {part}
+      </span>
+    );
+  });
+}
+
 export function Hero() {
   const reduce = useReducedMotion();
   const t = useTranslations("home.hero");
+  const locale = useLocale();
+
+  // Italic cyan accent is design language (EN). Burmese gets color only:
+  // Noto Sans Myanmar has no real italic and synthetic oblique breaks
+  // stacked diacritics.
+  const accentClass = locale === "my" ? "text-accent" : "italic text-accent";
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const introRef = useRef<HTMLParagraphElement | null>(null);
 
-  // Word-by-word blur reveal. Runs after mount so the H1 paints in its
-  // final visible state for LCP (Phase 5.2 intent), then GSAP briefly
+  // Word-by-word blur reveal. The words are pre-split into spans in JSX
+  // (so the accent word keeps its styling), and the H1 paints in its
+  // final visible state for LCP (Phase 5.2 intent) before GSAP briefly
   // hides the words and animates them back in. Reduced motion skips the
   // timeline entirely.
   useGSAP(
@@ -38,20 +68,9 @@ export function Hero() {
       const intro = introRef.current;
       if (!heading) return;
 
-      const text = (heading.textContent ?? "").trim();
-      if (!text) return;
-
-      const words = text.split(/\s+/);
-      heading.innerHTML = words
-        .map(
-          (w) =>
-            `<span class="swh-hero-word" style="display:inline-block;will-change:filter,opacity;">${w}</span>`,
-        )
-        .join(" ");
-
-      const wordEls = heading.querySelectorAll<HTMLSpanElement>(
-        ".swh-hero-word",
-      );
+      const wordEls =
+        heading.querySelectorAll<HTMLSpanElement>(".swh-hero-word");
+      if (!wordEls.length) return;
 
       const tl = gsap.timeline();
       tl.from(wordEls, {
@@ -112,6 +131,15 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-bg"
       />
 
+      {/* Leaf watermark from the SWH mark, draws on once via CSS
+          (.leaf-draw in globals.css), then stays static. */}
+      <div
+        aria-hidden="true"
+        className="leaf-draw pointer-events-none absolute -bottom-[5vh] -right-[4vw] z-0 h-[40vh] text-white opacity-[0.04] md:h-[65vh] md:opacity-[0.06]"
+      >
+        <LeafMark className="h-full w-auto" />
+      </div>
+
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 text-center sm:px-10">
         <h1
           ref={headingRef}
@@ -121,7 +149,9 @@ export function Hero() {
             lineHeight: 1.02,
           }}
         >
-          {t("heading")}
+          {headingWords(t("headingPre"), "pre")}
+          {headingWords(t("headingAccent"), "accent", accentClass)}
+          {headingWords(t("headingPost"), "post")}
         </h1>
 
         <p

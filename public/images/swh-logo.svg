@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 157 105" fill="none">
+  <ellipse cx="78.5" cy="52.5" rx="77.5" ry="51.5" fill="#00ADEE" />
+  <!-- SWH letters as stroke paths -->
+  <g stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M57 23 C55.5 20.8 51 20 48.2 21.8 C45.4 23.6 45.6 27.2 48.8 28.8 C52.4 30.6 55.4 31.4 54.8 35 C54.2 38.6 48.2 39.6 44.6 36.8" />
+    <path d="M62 19 L68.5 37 L75.5 20 L82 36 L89 18" />
+    <path d="M99.5 20 L95.5 38.5 M113 21.5 L109 40 M97.6 29 L111.2 30.5" />
+  </g>
+  <!-- Leaves -->
+  <g stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 41 C52 53 73 73 82 103 C45 92 25 68 24 41 Z" />
+    <path d="M131.5 41 C103.5 53 82.5 73 73.5 103 C110.5 92 130.5 68 131.5 41 Z" />
+  </g>
+</svg>

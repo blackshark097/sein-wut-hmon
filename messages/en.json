@@ -81,7 +81,9 @@
     "hero": {
       "ariaLabel": "Hero",
       "eyebrow": "Sein Wut Hmon Group",
-      "heading": "Building Myanmar's Essential Industries",
+      "headingPre": "Building Myanmar's ",
+      "headingAccent": "Essential",
+      "headingPost": " Industries",
       "intro": "A diversified conglomerate powering marine resources, Industrial Supply Chains, and Distribution Networks."
     },
     "companyIntro": {
