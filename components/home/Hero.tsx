@@ -5,8 +5,11 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { LeafMark } from "./LeafMark";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -49,6 +52,7 @@ export function Hero() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const introRef = useRef<HTMLParagraphElement | null>(null);
+  const leafRef = useRef<HTMLDivElement | null>(null);
 
   // Word-by-word blur reveal. The words are pre-split into spans in JSX
   // (so the accent word keeps its styling), and the H1 paints in its
@@ -62,6 +66,22 @@ export function Hero() {
         window.matchMedia("(prefers-reduced-motion: reduce)").matches
       ) {
         return;
+      }
+
+      // Scrubbed fade-out of the leaf watermark as the hero scrolls away.
+      // GSAP only touches the wrapper's opacity; the CSS draw-on animation
+      // (.leaf-draw) lives on the path children, so the systems don't mix.
+      if (leafRef.current) {
+        gsap.to(leafRef.current, {
+          opacity: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "60% top",
+            scrub: true,
+          },
+        });
       }
 
       const heading = headingRef.current;
@@ -132,8 +152,10 @@ export function Hero() {
       />
 
       {/* Leaf watermark from the SWH mark, draws on once via CSS
-          (.leaf-draw in globals.css), then stays static. */}
+          (.leaf-draw in globals.css), then fades out on scroll via the
+          ScrollTrigger tween above. */}
       <div
+        ref={leafRef}
         aria-hidden="true"
         className="leaf-draw pointer-events-none absolute -bottom-[5vh] -right-[4vw] z-0 h-[40vh] text-white opacity-[0.04] md:h-[65vh] md:opacity-[0.06]"
       >
